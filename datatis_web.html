@@ -22,10 +22,17 @@
         }
         
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD-JjNlB-W9_YHh_rRnhN3Go06pTFIrm2ICg&s') center/cover no-repeat;
             color: white;
-            padding: 2rem 0;
+            padding: 4rem 0;
             text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
         }
         
         .container {
@@ -42,7 +49,7 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: white; /* Đã thay đổi từ màu mặc định thành màu trắng */
+            color: white;
         }
         
         h2 {
@@ -144,10 +151,9 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <center><h1>Welcome to Datatis</h1></center>
+        <div class="container header-content">
+            <h1>Welcome to Datatis</h1>
             <p>Welcome to Datatis! At DATATIS, we transform data into actionable insights. Our expertise lies in providing end-to-end data solutions, including Data Warehouse implementation & Data Pipeline to seamlessly organize and integrate your data for maximum efficiency. Data Warehouse Architectures & Modelling to design scalable and optimized data systems tailored to your business, also improving & Angular to unlock valuable insights through intuitive reports and in-depth analysis, and Microsoft Power Apps & Power Automate to enhance productivity with custom applications and automated workflows. Partner with us to elevate your business through data-driven decisions!</p>
-            
         </div>
     </header>
     
