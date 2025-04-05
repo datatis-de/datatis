@@ -1,150 +1,246 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nienkerke Consulting</title>
+    <title>DATATIS - Data Solutions</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            line-height: 1.6;
+            color: #333;
         }
-        .header {
-            background: #000;
+        
+        header {
+            background-color: var(--primary-color);
             color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .header h1 {
-            color: orange;
-            font-size: 24px;
-        }
-        .header h2 {
-            color: cyan;
-            font-size: 20px;
-        }
-        .about {
-            text-align: center;
-            padding: 40px;
-            background: white;
-        }
-        .about img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        .about h2 {
-            color: orange;
-        }
-        .about p {
-            width: 60%;
-            margin: auto;
-        }
-        .services {
-            text-align: center;
-            padding: 40px;
-            background: #f1f1f1;
-        }
-        .services h2 {
-            color: orange;
-        }
-        .philosophy {
-            padding: 40px;
-            background: white;
+            padding: 2rem 0;
             text-align: center;
         }
-        .philosophy h2 {
-            color: orange;
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
         }
-        .philosophy-section {
-            margin-bottom: 30px;
+        
+        h1, h2, h3 {
+            color: var(--dark-color);
         }
-        .contact {
-            padding: 40px;
-            background: #f1f1f1;
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white; /* Đã thay đổi từ màu mặc định thành màu trắng */
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .features {
+            background-color: var(--light-color);
+            padding: 2rem 0;
+        }
+        
+        .feature-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-item h3 {
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-item h3::before {
+            content: "✔";
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
             text-align: center;
         }
-        .contact h2 {
-            color: orange;
-        }
+        
         .contact-info {
+            margin: 1rem 0;
+        }
+        
+        .useful-links {
             display: flex;
             justify-content: center;
-            gap: 50px;
-            margin-top: 20px;
+            gap: 1rem;
+            margin: 1rem 0;
         }
-        .contact-column {
-            text-align: left;
-        }
-        .footer {
-            background: #000;
+        
+        .useful-links a {
             color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 14px;
+            text-decoration: none;
+        }
+        
+        .services-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .services-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .services-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .power-apps-rating {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .power-apps-rating span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Data Integration, Data Analytics, Reporting</h1>
-        <h2>Ihre Vision ist unsere Motivation und Ihre Zufriedenheit unser Ziel!</h2>
-    </div>
-    <div class="about">
-        <img src="profile.jpg" alt="Wim Nienkerke">
-        <h2>Über uns</h2>
-        <p>Erfahren, motiviert und den Anspruch qualitativen Mehrwert zu liefern! Wir beraten und unterstützen Unternehmen...</p>
-    </div>
-    <div class="services">
-        <h2>Unsere Leistungen</h2>
-        <p>Ihre Daten sinnvoll nutzen</p>
-    </div>
+    <header>
+        <div class="container">
+            <center><h1>Welcome to Datatis</h1></center>
+            <p>Welcome to Datatis! At DATATIS, we transform data into actionable insights. Our expertise lies in providing end-to-end data solutions, including Data Warehouse implementation & Data Pipeline to seamlessly organize and integrate your data for maximum efficiency. Data Warehouse Architectures & Modelling to design scalable and optimized data systems tailored to your business, also improving & Angular to unlock valuable insights through intuitive reports and in-depth analysis, and Microsoft Power Apps & Power Automate to enhance productivity with custom applications and automated workflows. Partner with us to elevate your business through data-driven decisions!</p>
+            
+        </div>
+    </header>
     
-    <!-- Nội dung mới thêm từ hình ảnh -->
-    <div class="philosophy">
-        <div class="philosophy-section">
-            <h2>Unsere Arbeitsweise</h2>
-            <p>Wir machen unsere Arbeit aus Leidenschaft! Qualität beginnt bei uns bereits im Entwicklungsprozess.</p>
-        </div>
-        
-        <div class="philosophy-section">
-            <h3>Agile Zusammenarbeit</h3>
-            <p>Unsere Arbeit ist kein Selbstzweck, sondern ein Schritt auf dem Weg zur Verwirklichung Ihrer Vision. Diesen Weg können wir nur in enger Zusammenarbeit gehen, um Ihre Ziele bestmöglich zu erreichen.</p>
-            <p>Mit zertifiziertem Scrum Master Background gestalten wir eine agile Zusammenarbeit, bei der Sie als Product Owner direkten Einfluss auf die Priorisierung der Anforderungen haben und kontinuierlich Feedback aus kurzen Entwicklungszyklen erhalten.</p>
-        </div>
-        
-        <div class="philosophy-section">
-            <h3>Blick über den Tellerrand</h3>
-            <p>Wir sind spezialisiert auf Microsoft Technologien, aber nicht darauf beschränkt, und schauen gerne über den Tellerrand! Um uns am Gesamtkonzept des Projekts zu orientieren und übergeordnete Ziele nicht außer Acht zu lassen, verlassen wir gerne auch unsere Komfortzone.</p>
-            <p>Zum Schutz Ihrer Investitionen und zur Vermeidung unnötiger zusätzlicher Kosten, versuchen wir bei der Umsetzung einen Vendor Lock-in möglichst zu vermeiden sowie bestehende Infrastrukturen und Systeme zu berücksichtigen oder einzubinden.</p>
-        </div>
-    </div>
-    
-    <div class="contact">
-        <h2>Ihr Kontakt zu uns</h2>
-        <p>Haben Sie Fragen?</p>
-        <p>Sprechen Sie uns an!</p>
-        <p>Gerne beraten wir Sie unverbindlich und unkompliziert.</p>
-        
-        <div class="contact-info">
-            <div class="contact-column">
-                <p><strong>NIENKERKE CONSULTING GmbH</strong></p>
-                <p>Im Luchsfeld 33</p>
-                <p>51429 Bergisch Gladbach</p>
+    <main class="container">
+        <section>           
+            <div class="service-card">
+                <h2>Data Warehouse Architecture & Modelling</h2>
+                <p>Design efficient data architecture and models tailored to meet your business objectives.</p>
             </div>
-            <div class="contact-column">
-                <p><strong>Telefon</strong>: +49 (0)2204 976 64 42</p>
-                <p><strong>Fax</strong>: +49 (0)2204 976 64 67</p>
-                <p><strong>Email</strong>: info@nienkerke.de</p>
-                <p><strong>Web</strong>: https://www.nienkerke.de</p>
+            
+            <div class="service-card">
+                <h2>Data Warehouse Implementation & Data Pipeline</h2>
+                <p>Build and deploy robust data warehouses, optimizing data integration and warehouse across multiple sources.</p>
+            </div>
+            
+            <div class="service-card">
+                <h2>Data Reporting & Analysis</h2>
+                <p>Deliver insightful and intuitive reports to drive faster and more effective decision-making.</p>
+            </div>
+            
+            <div class="service-card">
+                <h2>Microsoft Power App & Power Automate</h2>
+                <p>Develop custom applications and automated workflows to enhance productivity and save time.</p>
+            </div>
+        </section>
+        
+        <section class="features">
+            <h2>Features</h2>
+            
+            <div class="feature-item">
+                <h3>Data Warehouse Implementation & Data Pipeline</h3>
+                <p><strong>Approach:</strong> Utilise design methodologies such as SNF, Kimball, and Data Vault 2.0 for robust and scalable data pipelines, supporting integration from various sources like CSV, Excel, GSheet, SAP CO/F/ISO, and MES systems.</p>
+                <p><strong>Tools:</strong> MS SQL Server (SSIS, SSAS, SSMS), Postgres SQL, MySQL, Redshift, Azure/MRS, Docker, Talent Integration Service, Python ETL, SSIS ETL.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h3>Data Warehouse Architecture & Modelling</h3>
+                <p><strong>Approach:</strong> Leverages advanced methodologies like Kimball, Data Vault 2.0, and real-time architectures to create optimized and scalable data models.</p>
+                <p><strong>Tools:</strong> SAP Power Designer, pgModeler, Github, Docker.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h3>Data Reporting & Analysis</h3>
+                <p><strong>Approach:</strong> Combines big data analytics and visualization platforms to deliver insightful and actionable business reports tailored to client needs.</p>
+                <p><strong>Tools:</strong> Tableau, Microsoft Power BI, QIBXView, HIVE, Impala.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h3>Microsoft Power App & Power Automate</h3>
+                <p><strong>Approach:</strong> Focuses on streamlining processes and enhancing efficiency through custom app development and automated workflows.</p>
+                <p><strong>Tools:</strong> Microsoft Power Automate, Python automation scripts.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <h2>DATATIS®</h2>
+            
+            <div class="contact-info">
+                <p>Ten Thanh Commune, Disney Mini District<br>
+                Hal Phong City, Vietnam</p>
+                <p>Phone: +44 0793 661 657<br>
+                Email: privatei.biomarketing@gmail.com</p>
+            </div>
+            
+            <div class="useful-links">
+                <a href="#">Home</a>
+                <a href="#">About us</a>
+                <a href="#">Terms of service</a>
+            </div>
+            
+            <div>
+                <h3>Power Apps</h3>
+                <div class="power-apps-rating">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Our Services</h3>
+                <ul class="services-list">
+                    <li>Data Warehouse implementation & Data Pipeline</li>
+                    <li>Data Warehouse installation & Accessibility</li>
+                    <li>Data Reporting & Analysis</li>
+                    <li>Microsoft Power App & Power Automate</li>
+                </ul>
             </div>
         </div>
-    </div>
-    
-    <div class="footer">
-        <p>Copyright 2025 by NIENKERKE CONSULTING GmbH</p>
-    </div>
+    </footer>
 </body>
 </html>
