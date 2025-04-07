@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DATATIS - Data Solutions</title>
+    <title>DATAIT - Data Solutions</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -23,7 +23,7 @@
         
         header {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD-JjNlB-W9_YHh_rRnhN3Go06pTFIrm2ICg&s') center/cover no-repeat;
+                        url('https://example.com/your-header-image.jpg') center/cover no-repeat;
             color: white;
             padding: 4rem 0;
             text-align: center;
@@ -57,39 +57,116 @@
             margin: 2rem 0 1rem;
             border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 0.5rem;
+            text-align: center;
         }
         
         h3 {
             font-size: 1.5rem;
             color: var(--secondary-color);
+            margin-top: 0;
+        }
+        
+        /* New Services Grid Styles */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
         
         .service-card {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
         }
         
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-image {
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+        
+        /* Existing Feature Styles */
         .features {
             background-color: var(--light-color);
             padding: 2rem 0;
         }
         
-        .feature-item {
-            margin-bottom: 1.5rem;
+        .feature-container {
+            display: flex;
+            margin-bottom: 2rem;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
-        .feature-item h3 {
+        .feature-content {
+            flex: 2;
+            background-color: white;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .feature-image {
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        .feature-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .feature-content h3 {
             display: flex;
             align-items: center;
         }
         
-        .feature-item h3::before {
+        .feature-content h3::before {
             content: "✔";
             color: var(--accent-color);
             margin-right: 0.5rem;
+        }
+        
+        /* Layout xen kẽ trái-phải */
+        .feature-container:nth-child(odd) .feature-content {
+            order: 1;
+        }
+        
+        .feature-container:nth-child(odd) .feature-image {
+            order: 2;
+        }
+        
+        .feature-container:nth-child(even) .feature-content {
+            order: 2;
+        }
+        
+        .feature-container:nth-child(even) .feature-image {
+            order: 1;
         }
         
         footer {
@@ -147,71 +224,143 @@
             background-color: var(--accent-color);
             border-radius: 50%;
         }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-container {
+                flex-direction: column;
+            }
+            
+            .feature-image {
+                height: 200px;
+                order: -1 !important;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <h1>Welcome to Datatis</h1>
-            <p>Welcome to Datatis! At DATATIS, we transform data into actionable insights. Our expertise lies in providing end-to-end data solutions, including Data Warehouse implementation & Data Pipeline to seamlessly organize and integrate your data for maximum efficiency. Data Warehouse Architectures & Modelling to design scalable and optimized data systems tailored to your business, also improving & Angular to unlock valuable insights through intuitive reports and in-depth analysis, and Microsoft Power Apps & Power Automate to enhance productivity with custom applications and automated workflows. Partner with us to elevate your business through data-driven decisions!</p>
+            <h1>Welcome to DATAIT</h1>
+            <p>Welcome to DATAIT! At DATAIT, we transform data into actionable insights. Our expertise lies in providing end-to-end data solutions, including Data Warehouse implementation & Data Pipeline to seamlessly organize and integrate your data for maximum efficiency. Data Warehouse Architectures & Modelling to design scalable and optimized data systems tailored to your business, also improving & Angular to unlock valuable insights through intuitive reports and in-depth analysis, and Microsoft Power Apps & Power Automate to enhance productivity with custom applications and automated workflows. Partner with us to elevate your business through data-driven decisions!</p>
         </div>
     </header>
     
     <main class="container">
-        <section>           
-            <div class="service-card">
-                <h2>Data Warehouse Architecture & Modelling</h2>
-                <p>Design efficient data architecture and models tailored to meet your business objectives.</p>
-            </div>
-            
-            <div class="service-card">
-                <h2>Data Warehouse Implementation & Data Pipeline</h2>
-                <p>Build and deploy robust data warehouses, optimizing data integration and warehouse across multiple sources.</p>
-            </div>
-            
-            <div class="service-card">
-                <h2>Data Reporting & Analysis</h2>
-                <p>Deliver insightful and intuitive reports to drive faster and more effective decision-making.</p>
-            </div>
-            
-            <div class="service-card">
-                <h2>Microsoft Power App & Power Automate</h2>
-                <p>Develop custom applications and automated workflows to enhance productivity and save time.</p>
+        <!-- Updated Services Section with Images -->
+        <section>
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg" alt="Data Warehouse Architecture">
+                    </div>
+                    <div class="service-content">
+                        <h3>Data Warehouse Architecture & Modelling</h3>
+                        <p>Design efficient data architecture and models tailored to meet your business objectives.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg" alt="Data Pipeline">
+                    </div>
+                    <div class="service-content">
+                        <h3>Data Warehouse Implementation & Data Pipeline</h3>
+                        <p>Build and deploy robust data warehouses, optimizing data integration across multiple sources.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg" alt="Data Analysis">
+                    </div>
+                    <div class="service-content">
+                        <h3>Data Reporting & Analysis</h3>
+                        <p>Deliver insightful and intuitive reports to drive faster decision-making.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg" alt="Power Apps">
+                    </div>
+                    <div class="service-content">
+                        <h3>Microsoft Power App & Power Automate</h3>
+                        <p>Develop custom applications and automated workflows to enhance productivity.</p>
+                    </div>
+                </div>
             </div>
         </section>
         
+        <!-- Features Section -->
         <section class="features">
             <h2>Features</h2>
             
-            <div class="feature-item">
-                <h3>Data Warehouse Implementation & Data Pipeline</h3>
-                <p><strong>Approach:</strong> Utilise design methodologies such as SNF, Kimball, and Data Vault 2.0 for robust and scalable data pipelines, supporting integration from various sources like CSV, Excel, GSheet, SAP CO/F/ISO, and MES systems.</p>
-                <p><strong>Tools:</strong> MS SQL Server (SSIS, SSAS, SSMS), Postgres SQL, MySQL, Redshift, Azure/MRS, Docker, Talent Integration Service, Python ETL, SSIS ETL.</p>
+            <!-- Feature 1 -->
+            <div class="feature-container">
+                <div class="feature-content">
+                    <h3>Data Warehouse Implementation & Data Pipeline</h3>
+                    <p><strong>Approach:</strong> Utilise design methodologies such as SNF, Kimball, and Data Vault 2.0 for robust and scalable data pipelines, supporting integration from various sources like CSV, Excel, GSheet, SAP CO/F/ISO, and MES systems.</p>
+                    <p><strong>Tools:</strong> MS SQL Server (SSIS, SSAS, SSMS), Postgres SQL, MySQL, Redshift, Azure/MRS, Docker, Talent Integration Service, Python ETL, SSIS ETL.</p>
+                </div>
+                
+                <div class="feature-image">
+                    <img src="https://techvccloud.mediacdn.vn/zoom/600_315/280518386289090560/2022/5/16/data-warehouse-16526930738282040535659-0-0-501-892-crop-1652693129709611691454.png" alt="Data Warehouse Implementation">
+                </div>
             </div>
             
-            <div class="feature-item">
-                <h3>Data Warehouse Architecture & Modelling</h3>
-                <p><strong>Approach:</strong> Leverages advanced methodologies like Kimball, Data Vault 2.0, and real-time architectures to create optimized and scalable data models.</p>
-                <p><strong>Tools:</strong> SAP Power Designer, pgModeler, Github, Docker.</p>
+            <!-- Feature 2 -->
+            <div class="feature-container">
+                <div class="feature-image">
+                    <img src="https://bkhost.vn/wp-content/uploads/2022/09/data-warehouse-la-gi-1.jpg" alt="Data Warehouse Architecture">
+                </div>
+                
+                <div class="feature-content">
+                    <h3>Data Warehouse Architecture & Modelling</h3>
+                    <p><strong>Approach:</strong> Leverages advanced methodologies like Kimball, Data Vault 2.0, and real-time architectures to create optimized and scalable data models.</p>
+                    <p><strong>Tools:</strong> SAP Power Designer, pgModeler, Github, Docker.</p>
+                </div>
             </div>
             
-            <div class="feature-item">
-                <h3>Data Reporting & Analysis</h3>
-                <p><strong>Approach:</strong> Combines big data analytics and visualization platforms to deliver insightful and actionable business reports tailored to client needs.</p>
-                <p><strong>Tools:</strong> Tableau, Microsoft Power BI, QIBXView, HIVE, Impala.</p>
+            <!-- Feature 3 -->
+            <div class="feature-container">
+                <div class="feature-content">
+                    <h3>Data Reporting & Analysis</h3>
+                    <p><strong>Approach:</strong> Combines big data analytics and visualization platforms to deliver insightful and actionable business reports tailored to client needs.</p>
+                    <p><strong>Tools:</strong> Tableau, Microsoft Power BI, OIKView, HIVE, Impala.</p>
+                </div>
+                
+                <div class="feature-image">
+                    <img src="https://mastering-da.com/wp-content/uploads/2023/07/tong-hop-cac-loai-kho-du-lieu.jpg" alt="Data Reporting & Analysis">
+                </div>
             </div>
             
-            <div class="feature-item">
-                <h3>Microsoft Power App & Power Automate</h3>
-                <p><strong>Approach:</strong> Focuses on streamlining processes and enhancing efficiency through custom app development and automated workflows.</p>
-                <p><strong>Tools:</strong> Microsoft Power Automate, Python automation scripts.</p>
+            <!-- Feature 4 -->
+            <div class="feature-container">
+                <div class="feature-image">
+                    <img src="https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg" alt="Microsoft Power Apps">
+                </div>
+                
+                <div class="feature-content">
+                    <h3>Microsoft Power App & Power Automate</h3>
+                    <p><strong>Approach:</strong> Focuses on streamlining processes and enhancing efficiency through custom app development and automated workflows.</p>
+                    <p><strong>Tools:</strong> Microsoft Power Automate, Python automation scripts.</p>
+                </div>
             </div>
         </section>
     </main>
     
     <footer>
         <div class="container">
-            <h2>DATATIS®</h2>
+            <h2>DATAIT®</h2>
             
             <div class="contact-info">
                 <p>Ten Thanh Commune, Disney Mini District<br>
