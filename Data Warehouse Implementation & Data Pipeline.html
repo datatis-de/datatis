@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Warehouse Implementation & Data Pipeline | DATATIS</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://www.analyticsinsight.net/wp-content/uploads/2020/11/Data-Pipeline.jpg') center/cover no-repeat;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        h1, h2, h3 {
+            color: var(--dark-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-top: 2rem;
+        }
+        
+        /* Content Styles */
+        .intro-section {
+            background-color: var(--light-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--accent-color);
+        }
+        
+        .pipeline-steps {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+        
+        .step-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0 2rem;
+        }
+        
+        .tech-item {
+            background-color: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .cta-section {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .nav-link {
+            color: var(--light-color);
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .tech-stack {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Data Warehouse Implementation & Data Pipeline</h1>
+            <p>Build and deploy robust data warehouses, optimizing data integration across multiple sources</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="intro-section">
+            <h2>Seamless Data Integration for Actionable Insights</h2>
+            <p>At DATATIS, we transform your data architecture into operational reality. Our implementation services ensure your data warehouse is properly deployed with efficient data pipelines that collect, process, and deliver data where it's needed most.</p>
+        </section>
+        
+        <section>
+            <h2>Implementation Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>End-to-End Pipeline Construction</h3>
+                    <p>From source extraction to final consumption layers, we build complete data flows with proper transformation, validation, and error handling.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Incremental Loading</h3>
+                    <p>Smart data loading strategies that only process new or changed data, reducing processing time and resource usage.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Data Quality Framework</h3>
+                    <p>Built-in data validation, cleansing, and monitoring to ensure high-quality data throughout your pipeline.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pipeline-steps">
+            <h2>Our Data Pipeline Process</h2>
+            
+            <div class="step-item">
+                <h4>Source System Analysis</h4>
+                <p>Comprehensive assessment of all data sources including databases, APIs, files, and streaming data.</p>
+            </div>
+            
+            <div class="step-item">
+                <h4>Extraction Strategy</h4>
+                <p>Determining the optimal methods for data extraction with minimal impact on source systems.</p>
+            </div>
+            
+            <div class="step-item">
+                <h4>Transformation Design</h4>
+                <p>Developing business rules and transformation logic to convert raw data into usable information.</p>
+            </div>
+            
+            <div class="step-item">
+                <h4>Loading Mechanism</h4>
+                <p>Implementing efficient loading patterns (full, incremental, CDC) tailored to each data domain.</p>
+            </div>
+            
+            <div class="step-item">
+                <h4>Orchestration & Scheduling</h4>
+                <p>Creating automated workflows with proper dependency management and error recovery.</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Technology Stack</h2>
+            <p>We work with the industry's leading technologies to build your data pipelines:</p>
+            
+            <div class="tech-stack">
+                <span class="tech-item">SQL Server Integration Services</span>
+                <span class="tech-item">Azure Data Factory</span>
+                <span class="tech-item">Informatica PowerCenter</span>
+                <span class="tech-item">Talend</span>
+                <span class="tech-item">Apache NiFi</span>
+                <span class="tech-item">Snowflake</span>
+                <span class="tech-item">Databricks</span>
+                <span class="tech-item">AWS Glue</span>
+                <span class="tech-item">Google Dataflow</span>
+            </div>
+            
+            <h3>Cloud & Hybrid Solutions</h3>
+            <p>Modern implementations leveraging cloud platforms for scalability and cost-efficiency while integrating with on-premises systems when needed.</p>
+            
+            <h3>Real-time Data Processing</h3>
+            <p>For time-sensitive use cases, we implement streaming architectures using technologies like Kafka, Spark Streaming, or Azure Event Hubs.</p>
+        </section>
+        
+        <section class="cta-section">
+            <h2>Ready to Implement Your Data Solution?</h2>
+            <p>Our team can help you build and deploy efficient data pipelines that power your analytics and operations.</p>
+            <a href="#" class="cta-button">Get Started Now</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>DATATIS® - Data Warehouse Solutions</p>
+            <div class="nav-links">
+                <a href="data-warehouse-architecture.html" class="nav-link">Architecture & Modeling</a>
+                <a href="index.html" class="nav-link">Main Page</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
