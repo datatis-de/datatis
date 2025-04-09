@@ -66,7 +66,7 @@
             margin-top: 0;
         }
         
-        /* Updated Services Grid Styles with animations */
+        /* Services Grid Styles */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -76,10 +76,11 @@
         
         .service-card {
             background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                        0 6px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: all 0.5s ease;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -87,28 +88,13 @@
             padding: 1.5rem;
             position: relative;
             z-index: 1;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(231, 76, 60, 0.1) 100%);
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.5s ease;
+            border: 1px solid #e0e0e0;
         }
         
         .service-card:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 15px 30px rgba(52, 152, 219, 0.3);
-        }
-        
-        .service-card:hover::before {
-            opacity: 1;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 
+                        0 12px 24px rgba(0, 0, 0, 0.15);
         }
         
         .service-image {
@@ -118,24 +104,28 @@
             overflow: hidden;
             margin: 0 auto 1.5rem;
             border: 3px solid var(--secondary-color);
-            transition: all 0.5s ease;
-            position: relative;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .service-card:hover .service-image {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+            transform: scale(1.05);
+            background-color: var(--secondary-color);
         }
         
         .service-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
         }
         
         .service-card:hover .service-image img {
             transform: scale(1.1);
+            filter: brightness(0) invert(1);
         }
         
         .service-content {
@@ -154,25 +144,15 @@
         }
         
         .service-content p {
-            transition: transform 0.5s ease;
+            color: #555;
+            transition: color 0.3s ease;
         }
         
         .service-card:hover .service-content p {
-            transform: translateY(5px);
+            color: #333;
         }
         
-        /* Glow effect */
-        @keyframes glow {
-            0% { box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); }
-            50% { box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); }
-            100% { box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); }
-        }
-        
-        .service-card:hover {
-            animation: glow 2s infinite;
-        }
-        
-        /* Existing Feature Styles */
+        /* Features Section */
         .features {
             background-color: var(--light-color);
             padding: 2rem 0;
@@ -217,7 +197,7 @@
             margin-right: 0.5rem;
         }
         
-        /* Layout xen kẽ trái-phải */
+        /* Alternating layout */
         .feature-container:nth-child(odd) .feature-content {
             order: 1;
         }
@@ -234,60 +214,94 @@
             order: 1;
         }
         
+        /* Footer Styles */
         footer {
             background-color: var(--dark-color);
             color: white;
-            padding: 2rem 0;
-            text-align: center;
+            padding: 3rem 0 1rem;
         }
         
-        .contact-info {
-            margin: 1rem 0;
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
         
-        .useful-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1rem 0;
+        .footer-column {
+            padding: 0 1rem;
         }
         
-        .useful-links a {
+        .footer-column h3 {
             color: white;
-            text-decoration: none;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
         }
         
-        .services-list {
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+        
+        .footer-links {
             list-style-type: none;
             padding: 0;
         }
         
-        .services-list li {
-            margin-bottom: 0.5rem;
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        .footer-services {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .footer-services li {
+            margin-bottom: 0.8rem;
             position: relative;
             padding-left: 1.5rem;
         }
         
-        .services-list li::before {
-            content: "•";
+        .footer-services li::before {
+            content: ">";
             color: var(--accent-color);
             position: absolute;
             left: 0;
+            font-size: 1rem;
         }
         
-        .power-apps-rating {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-        
-        .power-apps-rating span {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -303,26 +317,31 @@
                 height: 200px;
                 order: -1 !important;
             }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <h1>Welcome to Datatis</h1>
-            <p>Welcome to Datatis! At Datatis, we transform data into actionable insights. Our expertise lies in providing end-to-end data solutions, including Data Warehouse implementation & Data Pipeline to seamlessly organize and integrate your data for maximum efficiency. Data Warehouse Architectures & Modelling to design scalable and optimized data systems tailored to your business, also improving & Angular to unlock valuable insights through intuitive reports and in-depth analysis, and Microsoft Power Apps & Power Automate to enhance productivity with custom applications and automated workflows. Partner with us to elevate your business through data-driven decisions!</p>
+            <h1>Welcome to DATATIS</h1>
+            <p>Welcome to DATATIS! At DATATIS, we transform data into actionable insights. Our expertise lies in providing end-to-end data solutions, including Data Warehouse implementation & Data Pipeline to seamlessly organize and integrate your data for maximum efficiency. Data Warehouse Architectures & Modelling to design scalable and optimized data systems tailored to your business, also improving & Angular to unlock valuable insights through intuitive reports and in-depth analysis, and Microsoft Power Apps & Power Automate to enhance productivity with custom applications and automated workflows. Partner with us to elevate your business through data-driven decisions!</p>
         </div>
     </header>
     
     <main class="container">
-        <!-- Updated Services Section with Enhanced Animations -->
+        <!-- Services Section -->
         <section>
             <h2>Our Services</h2>
             <div class="services-grid">
                 <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg" alt="Data Warehouse Architecture">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1925/1925161.png" alt="Data Warehouse Architecture">
                     </div>
                     <div class="service-content">
                         <h3>Data Warehouse Architecture & Modelling</h3>
@@ -333,7 +352,7 @@
                 <!-- Service 2 -->
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg" alt="Data Pipeline">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1925/1925153.png" alt="Data Pipeline">
                     </div>
                     <div class="service-content">
                         <h3>Data Warehouse Implementation & Data Pipeline</h3>
@@ -344,7 +363,7 @@
                 <!-- Service 3 -->
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg" alt="Data Analysis">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1925/1925189.png" alt="Data Analysis">
                     </div>
                     <div class="service-content">
                         <h3>Data Reporting & Analysis</h3>
@@ -355,7 +374,7 @@
                 <!-- Service 4 -->
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg" alt="Power Apps">
+                        <img src="https://cdn-icons-png.flaticon.com/512/873/873107.png" alt="Power Apps">
                     </div>
                     <div class="service-content">
                         <h3>Microsoft Power App & Power Automate</h3>
@@ -400,7 +419,7 @@
                 <div class="feature-content">
                     <h3>Data Reporting & Analysis</h3>
                     <p><strong>Approach:</strong> Combines big data analytics and visualization platforms to deliver insightful and actionable business reports tailored to client needs.</p>
-                    <p><strong>Tools:</strong> Tableau, Microsoft Power BI, OIKView, HIVE, Impala.</p>
+                    <p><strong>Tools:</strong> Tableau, Microsoft Power BI, QIBView, HIVE, Impala.</p>
                 </div>
                 
                 <div class="feature-image">
@@ -424,42 +443,42 @@
     </main>
     
     <footer>
-        <div class="container">
-            <h2>DATAIT®</h2>
-            
-            <div class="contact-info">
-                <p>Ten Thanh Commune, Disney Mini District<br>
-                Hal Phong City, Vietnam</p>
-                <p>Phone: +44 0793 661 657<br>
-                Email: privatei.biomarketing@gmail.com</p>
-            </div>
-            
-            <div class="useful-links">
-                <a href="#">Home</a>
-                <a href="#">About us</a>
-                <a href="#">Terms of service</a>
-            </div>
-            
-            <div>
-                <h3>Power Apps</h3>
-                <div class="power-apps-rating">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <div class="footer-container">
+            <!-- Column 1: Contact Info -->
+            <div class="footer-column">
+                <h3>DATATIS®</h3>
+                <div class="footer-contact">
+                    <p>Tan Thanh Commune, Duong Kinh District<br>
+                    Hai Phong City, Vietnam</p>
+                    <p>Phone: <br>
+                    Email: phuviet.biconsultant@gmail.com</p>
                 </div>
             </div>
             
-            <div>
+            <!-- Column 2: Useful Links -->
+            <div class="footer-column">
+                <h3>Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Our Services -->
+            <div class="footer-column">
                 <h3>Our Services</h3>
-                <ul class="services-list">
+                <ul class="footer-services">
                     <li>Data Warehouse implementation & Data Pipeline</li>
                     <li>Data Warehouse installation & Accessibility</li>
                     <li>Data Reporting & Analysis</li>
                     <li>Microsoft Power App & Power Automate</li>
                 </ul>
             </div>
+        </div>
+        
+        <div class="copyright container">
+            <p>&copy; 2023 DATATIS®. All rights reserved.</p>
         </div>
     </footer>
 </body>
