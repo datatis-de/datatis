@@ -75,6 +75,7 @@
         }
         
         .service-card {
+            position: relative;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
@@ -86,9 +87,15 @@
             align-items: center;
             text-align: center;
             padding: 1.5rem;
-            position: relative;
             z-index: 1;
             border: 1px solid #e0e0e0;
+        }
+        
+        .service-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
         }
         
         .service-card:hover {
@@ -291,7 +298,6 @@
         
         .footer-services li::before {
             content: ">";
-            /*color: var(--accent-color);*/
             position: absolute;
             left: 0;
             font-size: 1rem;
@@ -320,7 +326,6 @@
             
             .footer-container {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
         }
     </style>
@@ -340,46 +345,54 @@
             <div class="services-grid">
                 <!-- Service 1 -->
                 <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1925/1925153.png" alt="Data Pipeline">
-                    </div>
-                    <div class="service-content">
-                        <h3>Data Warehouse Implementation & Data Pipeline</h3>
-                        <p>Build and deploy robust data warehouses, optimizing data integration across multiple sources.</p>
-                    </div>
+                    <a href="https://datatis-de.github.io/datatis/Data%20Warehouse%20Implementation%20&%20Data%20Pipeline.html" class="service-card-link">
+                        <div class="service-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1925/1925153.png" alt="Data Pipeline">
+                        </div>
+                        <div class="service-content">
+                            <h3>Data Warehouse Implementation & Data Pipeline</h3>
+                            <p>Build and deploy robust data warehouses, optimizing data integration across multiple sources.</p>
+                        </div>
+                    </a>
                 </div>
                 
                 <!-- Service 2 -->
                 <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1925/1925161.png" alt="Data Warehouse Architecture">
-                    </div>
-                    <div class="service-content">
-                        <h3>Data Warehouse Architecture & Modelling</h3>
-                        <p>Design efficient data architecture and models tailored to meet your business objectives.</p>
-                    </div>
+                    <a href="https://datatis-de.github.io/datatis/Data%20Warehouse%20Architecture%20&%20Modelling.html" class="service-card-link">
+                        <div class="service-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1925/1925161.png" alt="Data Warehouse Architecture">
+                        </div>
+                        <div class="service-content">
+                            <h3>Data Warehouse Architecture & Modelling</h3>
+                            <p>Design efficient data architecture and models tailored to meet your business objectives.</p>
+                        </div>
+                    </a>
                 </div>
                 
                 <!-- Service 3 -->
                 <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1925/1925189.png" alt="Data Analysis">
-                    </div>
-                    <div class="service-content">
-                        <h3>Data Reporting & Analysis</h3>
-                        <p>Deliver insightful and intuitive reports to drive faster decision-making.</p>
-                    </div>
+                    <a href="https://datatis-de.github.io/datatis/Data%20Reporting%20&%20Analysis.html" class="service-card-link">
+                        <div class="service-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1925/1925189.png" alt="Data Analysis">
+                        </div>
+                        <div class="service-content">
+                            <h3>Data Reporting & Analysis</h3>
+                            <p>Deliver insightful and intuitive reports to drive faster decision-making.</p>
+                        </div>
+                    </a>
                 </div>
                 
                 <!-- Service 4 -->
                 <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://cdn-icons-png.flaticon.com/512/873/873107.png" alt="Power Apps">
-                    </div>
-                    <div class="service-content">
-                        <h3>Microsoft Power App & Power Automate</h3>
-                        <p>Develop custom applications and automated workflows to enhance productivity.</p>
-                    </div>
+                    <a href="https://datatis-de.github.io/datatis/Microsoft%20Power%20App%20&%20Power%20Automate.html" class="service-card-link">
+                        <div class="service-image">
+                            <img src="https://cdn-icons-png.flaticon.com/512/873/873107.png" alt="Power Apps">
+                        </div>
+                        <div class="service-content">
+                            <h3>Microsoft Power App & Power Automate</h3>
+                            <p>Develop custom applications and automated workflows to enhance productivity.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -460,8 +473,8 @@
                 <h3>Useful Links</h3>
                 <ul class="footer-links">
                     <li><a href="https://datatis-de.github.io/datatis/datatis_web.html">Home</a></li>
-                    <li><a href="https://datatis-de.github.io/datatis/About us.html">About us</a></li>
-                    <li><a href="https://datatis-de.github.io/datatis/Terms of service.html">Terms of service</a></li>
+                    <li><a href="https://datatis-de.github.io/datatis/About%20us.html">About us</a></li>
+                    <li><a href="https://datatis-de.github.io/datatis/Terms%20of%20service.html">Terms of service</a></li>
                 </ul>
             </div>
             
@@ -469,10 +482,10 @@
             <div class="footer-column">
                 <h3 style="color: white;">Our Services</h3>
                 <ul class="footer-services">
-                    <li><a href="https://datatis-de.github.io/datatis/Data Warehouse Implementation & Data Pipeline.html" style="color: white;">Data Warehouse Implementation & Data Pipeline</a></li>
-                    <li><a href="https://datatis-de.github.io/datatis/Data Warehouse Architecture & Modelling.html" style="color: white;">Data Warehouse Architecture & Modelling</a></li>
-                    <li><a href="https://datatis-de.github.io/datatis/Data Reporting & Analysis.html" style="color: white;">Data Reporting & Analysis</a></li>
-                    <li><a href="https://datatis-de.github.io/datatis/Microsoft Power App & Power Automate.html" style="color: white;">Microsoft Power App & Power Automate</a></li>
+                    <li><a href="https://datatis-de.github.io/datatis/Data%20Warehouse%20Implementation%20&%20Data%20Pipeline.html" style="color: white;">Data Warehouse Implementation & Data Pipeline</a></li>
+                    <li><a href="https://datatis-de.github.io/datatis/Data%20Warehouse%20Architecture%20&%20Modelling.html" style="color: white;">Data Warehouse Architecture & Modelling</a></li>
+                    <li><a href="https://datatis-de.github.io/datatis/Data%20Reporting%20&%20Analysis.html" style="color: white;">Data Reporting & Analysis</a></li>
+                    <li><a href="https://datatis-de.github.io/datatis/Microsoft%20Power%20App%20&%20Power%20Automate.html" style="color: white;">Microsoft Power App & Power Automate</a></li>
                 </ul>
             </div>
         </div>
