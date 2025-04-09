@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Warehouse Architecture & Modelling | DATATIS</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg') center/cover no-repeat;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        h1, h2, h3 {
+            color: var(--dark-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-top: 2rem;
+        }
+        
+        /* Content Styles */
+        .intro-section {
+            background-color: var(--light-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .methodology {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .methodology-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+        
+        .methodology-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .back-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Data Warehouse Architecture & Modelling</h1>
+            <p>Designing efficient data architecture and models tailored to meet your business objectives</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="intro-section">
+            <h2>Transform Your Data into Strategic Assets</h2>
+            <p>At DATATIS, we specialize in designing and implementing robust Data Warehouse architectures that serve as the foundation for your data-driven decision making. Our modeling techniques ensure your data is organized, accessible, and optimized for analytical processing.</p>
+        </section>
+        
+        <section>
+            <h2>Key Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Optimized Performance</h3>
+                    <p>Our architectures are designed for high-speed query performance, ensuring your analytics run smoothly even with large datasets.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Scalable Design</h3>
+                    <p>Future-proof solutions that grow with your business needs, accommodating increasing data volumes without performance degradation.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Business Alignment</h3>
+                    <p>Models specifically tailored to your business processes and KPIs, ensuring relevance and actionable insights.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="methodology">
+            <h2>Our Methodology</h2>
+            
+            <div class="methodology-item">
+                <h4>Requirement Analysis</h4>
+                <p>We begin by thoroughly understanding your business objectives, data sources, and analytical needs to create a solution that delivers real value.</p>
+            </div>
+            
+            <div class="methodology-item">
+                <h4>Conceptual Design</h4>
+                <p>Developing high-level models that map business processes to data structures, establishing the framework for your data warehouse.</p>
+            </div>
+            
+            <div class="methodology-item">
+                <h4>Logical Modeling</h4>
+                <p>Creating detailed models using industry-standard approaches (Kimball, Inmon, or Data Vault) tailored to your specific requirements.</p>
+            </div>
+            
+            <div class="methodology-item">
+                <h4>Physical Implementation</h4>
+                <p>Translating models into optimized database schemas with appropriate indexing, partitioning, and storage strategies.</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Architecture Approaches</h2>
+            <p>We employ the most suitable architecture pattern for your needs:</p>
+            
+            <h3>Enterprise Data Warehouse (EDW)</h3>
+            <p>A centralized repository integrating data from across your organization, providing a single source of truth.</p>
+            
+            <h3>Data Mart Approach</h3>
+            <p>Department-specific warehouses that can be integrated into a larger architecture as needed.</p>
+            
+            <h3>Hybrid Solutions</h3>
+            <p>Combining the best aspects of different approaches to meet complex business requirements.</p>
+        </section>
+        
+        <section class="cta-section">
+            <h2>Ready to Optimize Your Data Architecture?</h2>
+            <p>Our experts can help you design a data warehouse that truly supports your business objectives and analytical needs.</p>
+            <a href="#" class="cta-button">Contact Us Today</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>DATATIS® - Data Warehouse Solutions</p>
+            <a href="index.html" class="back-link">← Back to Main Page</a>
+        </div>
+    </footer>
+</body>
+</html>
