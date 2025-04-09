@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Reporting & Analysis | DATATIS</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://www.datastax.com/wp-content/uploads/2020/04/data-analytics-reporting.jpg') center/cover no-repeat;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        h1, h2, h3 {
+            color: var(--dark-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-top: 2rem;
+        }
+        
+        /* Content Styles */
+        .intro-section {
+            background-color: var(--light-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .methodology {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .methodology-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+        
+        .methodology-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .back-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Data Reporting & Analysis</h1>
+            <p>Deliver insightful and intuitive reports to drive faster decision-making</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="intro-section">
+            <h2>Transform Your Business with Actionable Insights</h2>
+            <p>At DATATIS, we specialize in delivering comprehensive data reporting and analysis solutions that empower organizations to make faster, data-driven decisions. Our reports are designed to be intuitive, actionable, and aligned with your strategic business goals.</p>
+        </section>
+        
+        <section>
+            <h2>Key Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Real-Time Data Insights</h3>
+                    <p>Our reporting solutions provide real-time access to data, ensuring your decisions are based on the most up-to-date information available.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Customizable Dashboards</h3>
+                    <p>Tailor your dashboards to focus on the key metrics that matter most to your business, giving you a comprehensive view of your operations.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h3>Improved Decision Making</h3>
+                    <p>With clear and actionable insights, your decision-makers can quickly identify trends, make predictions, and drive business outcomes effectively.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="methodology">
+            <h2>Our Methodology</h2>
+            
+            <div class="methodology-item">
+                <h4>Data Collection</h4>
+                <p>We start by gathering data from various sources, ensuring completeness and accuracy before processing for reporting.</p>
+            </div>
+            
+            <div class="methodology-item">
+                <h4>Data Processing</h4>
+                <p>Our data engineers clean, transform, and structure the data to ensure it is ready for analysis and reporting.</p>
+            </div>
+            
+            <div class="methodology-item">
+                <h4>Interactive Reports</h4>
+                <p>We design interactive reports that provide dynamic views, helping users explore data and uncover valuable insights on their own.</p>
+            </div>
+            
+            <div class="methodology-item">
+                <h4>Continuous Improvement</h4>
+                <p>We continuously refine and enhance reports based on feedback, ensuring they evolve alongside your business needs.</p>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <h2>Ready to Drive Better Decisions?</h2>
+            <p>Our data reporting and analysis services are designed to give you the insights you need to make faster, more informed decisions.</p>
+            <a href="#" class="cta-button">Contact Us for More Information</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>DATATIS® - Data Reporting & Analysis Solutions</p>
+            <a href="index.html" class="back-link">← Back to Main Page</a>
+        </div>
+    </footer>
+</body>
+</html>
