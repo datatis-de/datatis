@@ -23,7 +23,7 @@
         
         header {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://example.com/your-header-image.jpg') center/cover no-repeat;
+                        url('https://amis.misa.vn/wp-content/uploads/2022/07/kho-du-lieu-hoat-dong.jpg') center/cover no-repeat;
             color: white;
             padding: 4rem 0;
             text-align: center;
@@ -66,45 +66,110 @@
             margin-top: 0;
         }
         
-        /* New Services Grid Styles */
+        /* Updated Services Grid Styles with animations */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            gap: 2rem;
+            margin: 3rem 0;
         }
         
         .service-card {
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: all 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(231, 76, 60, 0.1) 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(52, 152, 219, 0.3);
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
         }
         
         .service-image {
-            height: 150px;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
             overflow: hidden;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--secondary-color);
+            transition: all 0.5s ease;
+            position: relative;
+        }
+        
+        .service-card:hover .service-image {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
         }
         
         .service-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
         }
         
         .service-content {
-            padding: 1.5rem;
+            padding: 0 1rem;
         }
         
         .service-content h3 {
             font-size: 1.3rem;
-            margin-top: 0;
+            margin: 0 0 1rem;
             color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+        
+        .service-card:hover .service-content h3 {
+            color: var(--accent-color);
+        }
+        
+        .service-content p {
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-content p {
+            transform: translateY(5px);
+        }
+        
+        /* Glow effect */
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); }
+            100% { box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); }
+        }
+        
+        .service-card:hover {
+            animation: glow 2s infinite;
         }
         
         /* Existing Feature Styles */
@@ -244,13 +309,13 @@
 <body>
     <header>
         <div class="container header-content">
-            <h1>Welcome to DATAIT</h1>
-            <p>Welcome to DATAIT! At DATAIT, we transform data into actionable insights. Our expertise lies in providing end-to-end data solutions, including Data Warehouse implementation & Data Pipeline to seamlessly organize and integrate your data for maximum efficiency. Data Warehouse Architectures & Modelling to design scalable and optimized data systems tailored to your business, also improving & Angular to unlock valuable insights through intuitive reports and in-depth analysis, and Microsoft Power Apps & Power Automate to enhance productivity with custom applications and automated workflows. Partner with us to elevate your business through data-driven decisions!</p>
+            <h1>Welcome to Datatis</h1>
+            <p>Welcome to Datatis! At Datatis, we transform data into actionable insights. Our expertise lies in providing end-to-end data solutions, including Data Warehouse implementation & Data Pipeline to seamlessly organize and integrate your data for maximum efficiency. Data Warehouse Architectures & Modelling to design scalable and optimized data systems tailored to your business, also improving & Angular to unlock valuable insights through intuitive reports and in-depth analysis, and Microsoft Power Apps & Power Automate to enhance productivity with custom applications and automated workflows. Partner with us to elevate your business through data-driven decisions!</p>
         </div>
     </header>
     
     <main class="container">
-        <!-- Updated Services Section with Images -->
+        <!-- Updated Services Section with Enhanced Animations -->
         <section>
             <h2>Our Services</h2>
             <div class="services-grid">
