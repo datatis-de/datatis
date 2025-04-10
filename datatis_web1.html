@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Data Engineer & AI Specialist | Phu Viet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: 100% 100%;
+            opacity: 0.2;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .profile-section {
+            text-align: left;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .company-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .company-logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .company-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .current-position {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            border: 2px solid var(--accent);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: white;
+        }
+        
+        /* Why Work With Me */
+        .why-me {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 15px auto 0;
+        }
+        
+        .features-horizontal {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .feature-card-horizontal {
+            flex: 1 1 200px;
+            min-width: 200px;
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card-horizontal:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        /* Awards Section */
+        .awards {
+            padding: 60px 0;
+            background-color: #f5f7fa;
+        }
+        
+        .awards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .award-card {
+            flex: 1 1 300px;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .award-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .award-content {
+            padding: 20px;
+        }
+        
+        .award-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Expertise */
+        .expertise {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .skill-category {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-category h3 i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .skill-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        /* Why Choose Me */
+        .why-choose {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+        }
+        
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .benefit {
+            flex: 1 1 200px;
+            max-width: 250px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        /* Contact */
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        .submit-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 30px;
+            width: auto;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-section {
+                text-align: center;
+            }
+            
+            .company-logo {
+                position: static;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .feature-card-horizontal {
+                flex: 1 1 100%;
+            }
+            
+            .skill-category {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="company-logo">
+            <img src="https://thtichluong2.pgdtpthainguyen.edu.vn/upload/50588/20200622/1_7e376c4ca4.jpg" alt="Datatis Logo">
+            <span class="company-name">Datatis</span>
+        </div>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-section">
+                    <div class="current-position">Senior Data Engineer at Datatis</div>
+                    <h1>Phu Viet</h1>
+                    <p class="tagline">AI & Big Data Solutions Specialist</p>
+                    <p>Innovative solutions for your data challenges with 12+ years of experience</p>
+                    <a href="#contact" class="cta-button">Get In Touch</a>
+                </div>
+                <img src="https://thtichluong2.pgdtpthainguyen.edu.vn/upload/50588/20200622/1_7e376c4ca4.jpg" alt="Phu Viet" class="profile-image">
+            </div>
+        </div>
+    </header>
+
+    <!-- Why Work With Me Section -->
+    <section class="why-me">
+        <div class="container">
+            <h2 class="section-title">Why Work With Me?</h2>
+            <div class="features-horizontal">
+                <div class="feature-card-horizontal">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="feature-title">Innovation Leader</h3>
+                    <p>Invented award-winning real-time big data solution for Smart Factory 4.0</p>
+                </div>
+                
+                <div class="feature-card-horizontal">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title">AI Expertise</h3>
+                    <p>3rd prize in company AI competition for practical business applications</p>
+                </div>
+                
+                <div class="feature-card-horizontal">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Proven Track Record</h3>
+                    <p>10+ years delivering high-impact solutions for German enterprises</p>
+                </div>
+                
+                <div class="feature-card-horizontal">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="feature-title">Multilingual</h3>
+                    <p>Fluent in German, English, and Vietnamese for seamless collaboration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="awards">
+        <div class="container">
+            <h2 class="section-title">Awards & Recognition</h2>
+            <div class="awards-container">
+                <div class="award-card">
+                    <img src="https://thietkekhainguyen.com/wp-content/uploads/2019/11/certificate-bang-khen-4843036-min.jpg" alt="Germany Smart Factory 4.0 Award" class="award-image">
+                    <div class="award-content">
+                        <h3 class="award-title">Germany Smart Factory 4.0 Award</h3>
+                        <p>Recognized for developing innovative real-time big data solution that transformed manufacturing processes at Datatis.</p>
+                    </div>
+                </div>
+                
+                <div class="award-card">
+                    <img src="https://thietkekhainguyen.com/wp-content/uploads/2019/11/certificate-bang-khen-4843036-min.jpg" alt="AI Competition 3rd Prize" class="award-image">
+                    <div class="award-content">
+                        <h3 class="award-title">AI Competition 3rd Prize</h3>
+                        <p>Awarded for innovative approach to AI with practical business applications in enterprise settings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise">
+        <div class="container">
+            <h2 class="section-title">My Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Data Architecture</h3>
+                    <ul class="skill-list">
+                        <li>3NF, Kimball, Data Vault 2.0 methodologies</li>
+                        <li>Real-time architectures</li>
+                        <li>SAP Power Designer, pg modeler</li>
+                        <li>Github version control</li>
+                        <li>Docker containerization</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Database Technologies</h3>
+                    <ul class="skill-list">
+                        <li>MS SQL Server (SSIS, SSAS, SSMS, SSRS)</li>
+                        <li>Postgres SQL, MySQL</li>
+                        <li>Redshift data warehousing</li>
+                        <li>Azure/AWS cloud databases</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-exchange-alt"></i> Data Integration</h3>
+                    <ul class="skill-list">
+                        <li>Multiple source formats (CSV, Excel, SAP, MES)</li>
+                        <li>Azure Cloud Migration</li>
+                        <li>Talend, SSIS ETL</li>
+                        <li>Python ETL pipelines</li>
+                        <li>Airflow orchestration</li>
+                        <li>DBT transformation</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tachometer-alt"></i> Optimization</h3>
+                    <ul class="skill-list">
+                        <li>Data warehouse design</li>
+                        <li>Implementation strategies</li>
+                        <li>Performance tuning</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-bar"></i> Analytics</h3>
+                    <ul class="skill-list">
+                        <li>Hadoop ecosystem (HIVE, Impala)</li>
+                        <li>Advanced data analysis</li>
+                        <li>Data visualization</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-pie"></i> Business Intelligence</h3>
+                    <ul class="skill-list">
+                        <li>Tableau Desktop and Server</li>
+                        <li>Microsoft Power BI</li>
+                        <li>Qlikview dashboards</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> Automation</h3>
+                    <ul class="skill-list">
+                        <li>Microsoft Power Automate</li>
+                        <li>Python automation scripts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Me?</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <p>12+ Years of Hands-on Experience in Data Engineering and Analytics</p>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <p>Proven Success in Implementing Award-Winning Solutions</p>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <p>Expertise Across a Wide Range of Data Technologies and Platforms</p>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <p>Strong Communication Skills in German, English, and Vietnamese</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="https://via.placeholder.com/150x50?text=Datatis+Logo" alt="Datatis Logo">
+                <span class="company-name">Datatis</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; <span id="year"></span> Phu Viet. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
