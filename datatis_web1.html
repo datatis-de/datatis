@@ -150,7 +150,6 @@
             text-align: center;
             margin-bottom: 50px;
             font-size: 2.2rem;
-            /* color: var(--primary);*/
             position: relative;
         }
         
@@ -195,6 +194,71 @@
             font-size: 1.2rem;
             margin-bottom: 10px;
             color: var(--primary);
+        }
+
+        /* Modal styles */
+        .report-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 2rem;
+            color: var(--dark);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: var(--accent);
+        }
+        
+        .modal-title {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .modal-body {
+            margin-top: 20px;
+        }
+        
+        .report-image {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        /* Make feature clickable */
+        .feature-clickable {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-clickable:hover {
+            color: var(--secondary);
         }
         
         /* Awards Section */
@@ -448,6 +512,12 @@
             .skill-category {
                 grid-column: 1 / -1;
             }
+
+            .modal-content {
+                width: 90%;
+                margin: 10% auto;
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -482,7 +552,7 @@
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3 class="feature-title">Innovation Leader</h3>
-                    <p>Invented award-winning real-time big data solution for Smart Factory 4.0</p>
+                    <p class="feature-clickable" onclick="showSmartFactoryReport()">Invented award-winning real-time big data solution for Smart Factory 4.0</p>
                 </div>
                 
                 <div class="feature-card-horizontal">
@@ -697,9 +767,54 @@
         </div>
     </footer>
 
+    <!-- Smart Factory Report Modal -->
+    <div id="smartFactoryModal" class="report-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3 class="modal-title">Smart Factory 4.0 Solution Report</h3>
+            <div class="modal-body">
+                <p>Here's a sample report of my award-winning real-time big data solution for Smart Factory 4.0:</p>
+                
+                <!-- Thay thế bằng hình ảnh/pdf báo cáo thực tế của bạn -->
+                <img src="https://via.placeholder.com/800x500?text=Smart+Factory+4.0+Report+Sample" alt="Smart Factory 4.0 Report" class="report-image">
+                
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>Real-time data processing with latency under 50ms</li>
+                    <li>Integrated predictive maintenance algorithms</li>
+                    <li>Custom dashboard for factory floor monitoring</li>
+                    <li>Reduced downtime by 37% in pilot implementation</li>
+                </ul>
+                
+                <p>This solution won the Germany Smart Factory 4.0 Award in 2022.</p>
+                
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="#" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Download Full Report</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Modal functions
+        function showSmartFactoryReport() {
+            document.getElementById('smartFactoryModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('smartFactoryModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('smartFactoryModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
     </script>
 </body>
 </html>
