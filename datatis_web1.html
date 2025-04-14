@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Data Engineer & AI Specialist | Phu Viet</title>
+    <title data-i18n="title">Senior Data Engineer & AI Specialist | Phu Viet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Thêm EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <style>
         :root {
             --primary: #2c3e50;
@@ -98,6 +100,34 @@
         .company-name {
             font-weight: bold;
             font-size: 1.2rem;
+            color: white;
+        }
+        
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+        }
+        
+        .language-selector select {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .language-selector select:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .language-selector select option {
+            background-color: var(--primary);
             color: white;
         }
         
@@ -505,6 +535,12 @@
                 margin-bottom: 20px;
             }
             
+            .language-selector {
+                position: static;
+                text-align: center;
+                margin: 10px 0;
+            }
+            
             .feature-card-horizontal {
                 flex: 1 1 100%;
             }
@@ -531,15 +567,22 @@
         <div class="company-logo">
             <img src="https://thtichluong2.pgdtpthainguyen.edu.vn/upload/50588/20200622/1_7e376c4ca4.jpg" alt="Datatis Logo">
             <span class="company-name">Datatis</span>
-        </div><br><br>
+        </div>
+        <div class="language-selector">
+            <select id="languageSwitch" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+        <br><br>
         <div class="container">
             <div class="header-content">
                 <div class="profile-section">
-                    <div class="current-position">Senior Data Engineer at Datatis</div>
-                    <h1>Phu Viet</h1>
-                    <p class="tagline">AI & Big Data Solutions Specialist</p>
-                    <p>Innovative solutions for your data challenges with 12+ years of experience</p>
-                    <a href="#contact" class="cta-button">Get In Touch</a>
+                    <div class="current-position" data-i18n="header.currentPosition">Senior Data Engineer at Datatis</div>
+                    <h1 data-i18n="header.name">Phu Viet</h1>
+                    <p class="tagline" data-i18n="header.tagline">AI & Big Data Solutions Specialist</p>
+                    <p data-i18n="header.description">Innovative solutions for your data challenges with 12+ years of experience</p>
+                    <a href="#contact" class="cta-button" data-i18n="header.cta">Get In Touch</a>
                 </div>
                 <img src="https://thtichluong2.pgdtpthainguyen.edu.vn/upload/50588/20200622/1_7e376c4ca4.jpg" alt="Phu Viet" class="profile-image">
             </div>
@@ -549,38 +592,35 @@
     <!-- Why Work With Me Section -->
     <section class="why-me">
         <div class="container">
-            <h2 class="section-title">Why Work With Me?</h2>
+            <h2 class="section-title" data-i18n="whyMe.title">Why Work With Me?</h2>
             <div class="features-horizontal">
                 <div class="feature-card-horizontal">
                     <div class="feature-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <h3 class="feature-title">Innovation Leader</h3>
-                    <p>Invented award-winning real-time big data solution for Smart Factory 4.0</p>
+                    <h3 class="feature-title" data-i18n="whyMe.innovationTitle">Innovation Leader</h3>
+                    <p data-i18n="whyMe.innovationDesc">Invented award-winning real-time big data solution for Smart Factory 4.0</p>
                 </div>
-                
                 <div class="feature-card-horizontal">
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3 class="feature-title">AI Expertise</h3>
-                    <p>3rd prize in company AI competition for practical business applications</p>
+                    <h3 class="feature-title" data-i18n="whyMe.aiTitle">AI Expertise</h3>
+                    <p data-i18n="whyMe.aiDesc">3rd prize in company AI competition for practical business applications</p>
                 </div>
-                
                 <div class="feature-card-horizontal">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="feature-title">Proven Track Record</h3>
-                    <p>10+ years delivering high-impact solutions for German enterprises</p>
+                    <h3 class="feature-title" data-i18n="whyMe.trackRecordTitle">Proven Track Record</h3>
+                    <p data-i18n="whyMe.trackRecordDesc">10+ years delivering high-impact solutions for German enterprises</p>
                 </div>
-                
                 <div class="feature-card-horizontal">
                     <div class="feature-icon">
                         <i class="fas fa-language"></i>
                     </div>
-                    <h3 class="feature-title">Multilingual</h3>
-                    <p>Fluent in German, English, and Vietnamese for seamless collaboration</p>
+                    <h3 class="feature-title" data-i18n="whyMe.multilingualTitle">Multilingual</h3>
+                    <p data-i18n="whyMe.multilingualDesc">Fluent in German, English, and Vietnamese for seamless collaboration</p>
                 </div>
             </div>
         </div>
@@ -589,104 +629,90 @@
     <!-- Awards Section -->
     <section class="awards">
         <div class="container">
-            <h2 class="section-title">Awards & Recognition</h2>
+            <h2 class="section-title" data-i18n="awards.title">Awards & Recognition</h2>
             <div class="awards-container">
                 <div class="award-card">
                     <img src="https://thietkekhainguyen.com/wp-content/uploads/2019/11/certificate-bang-khen-4843036-min.jpg" alt="Germany Smart Factory 4.0 Award" class="award-image">
                     <div class="award-content">
-                        <h3 class="award-title">Germany Smart Factory 4.0 Award</h3>
-                        <p>Recognized for developing innovative real-time big data solution that transformed manufacturing processes at Datatis.</p>
+                        <h3 class="award-title" data-i18n="awards.factoryAwardTitle">Germany Smart Factory 4.0 Award</h3>
+                        <p data-i18n="awards.factoryAwardDesc">Recognized for developing innovative real-time big data solution that transformed manufacturing processes at Datatis.</p>
                     </div>
                 </div>
-                
                 <div class="award-card">
                     <img src="https://thietkekhainguyen.com/wp-content/uploads/2019/11/certificate-bang-khen-4843036-min.jpg" alt="AI Competition 3rd Prize" class="award-image">
                     <div class="award-content">
-                        <h3 class="award-title">AI Competition 3rd Prize</h3>
-                        <p>Awarded for innovative approach to AI with practical business applications in enterprise settings.</p>
+                        <h3 class="award-title" data-i18n="awards.aiAwardTitle">AI Competition 3rd Prize</h3>
+                        <p data-i18n="awards.aiAwardDesc">Awarded for innovative approach to AI with practical business applications in enterprise settings.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Expertise Section - Now with clickable categories -->
+    <!-- Expertise Section -->
     <section class="expertise">
         <div class="container">
-            <h2 class="section-title">My Expertise</h2>
+            <h2 class="section-title" data-i18n="expertise.title">My Expertise</h2>
             <div class="skills-grid">
-                <!-- Data Architecture -->
                 <div class="skill-category" onclick="showExpertiseReport('Data Architecture')">
-                    <h3><i class="fas fa-database"></i> Data Architecture</h3>
+                    <h3><i class="fas fa-database"></i> <span data-i18n="expertise.dataArchitecture">Data Architecture</span></h3>
                     <ul class="skill-list">
-                        <li>3NF, Kimball, Data Vault 2.0 methodologies</li>
-                        <li>Real-time architectures</li>
-                        <li>SAP Power Designer, pg modeler</li>
-                        <li>Github version control</li>
-                        <li>Docker containerization</li>
+                        <li data-i18n="expertise.dataArchitectureSkills.1">3NF, Kimball, Data Vault 2.0 methodologies</li>
+                        <li data-i18n="expertise.dataArchitectureSkills.2">Real-time architectures</li>
+                        <li data-i18n="expertise.dataArchitectureSkills.3">SAP Power Designer, pg modeler</li>
+                        <li data-i18n="expertise.dataArchitectureSkills.4">Github version control</li>
+                        <li data-i18n="expertise.dataArchitectureSkills.5">Docker containerization</li>
                     </ul>
                 </div>
-                
-                <!-- Database Technologies -->
                 <div class="skill-category" onclick="showExpertiseReport('Database Technologies')">
-                    <h3><i class="fas fa-server"></i> Database Technologies</h3>
+                    <h3><i class="fas fa-server"></i> <span data-i18n="expertise.databaseTechnologies">Database Technologies</span></h3>
                     <ul class="skill-list">
-                        <li>MS SQL Server (SSIS, SSAS, SSMS, SSRS)</li>
-                        <li>Postgres SQL, MySQL</li>
-                        <li>Redshift data warehousing</li>
-                        <li>Azure/AWS cloud databases</li>
+                        <li data-i18n="expertise.databaseTechnologiesSkills.1">MS SQL Server (SSIS, SSAS, SSMS, SSRS)</li>
+                        <li data-i18n="expertise.databaseTechnologiesSkills.2">Postgres SQL, MySQL</li>
+                        <li data-i18n="expertise.databaseTechnologiesSkills.3">Redshift data warehousing</li>
+                        <li data-i18n="expertise.databaseTechnologiesSkills.4">Azure/AWS cloud databases</li>
                     </ul>
                 </div>
-                
-                <!-- Data Integration -->
                 <div class="skill-category" onclick="showExpertiseReport('Data Integration')">
-                    <h3><i class="fas fa-exchange-alt"></i> Data Integration</h3>
+                    <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="expertise.dataIntegration">Data Integration</span></h3>
                     <ul class="skill-list">
-                        <li>Multiple source formats (CSV, Excel, SAP, MES)</li>
-                        <li>Azure Cloud Migration</li>
-                        <li>Talend, SSIS ETL</li>
-                        <li>Python ETL pipelines</li>
-                        <li>Airflow orchestration</li>
-                        <li>DBT transformation</li>
+                        <li data-i18n="expertise.dataIntegrationSkills.1">Multiple source formats (CSV, Excel, SAP, MES)</li>
+                        <li data-i18n="expertise.dataIntegrationSkills.2">Azure Cloud Migration</li>
+                        <li data-i18n="expertise.dataIntegrationSkills.3">Talend, SSIS ETL</li>
+                        <li data-i18n="expertise.dataIntegrationSkills.4">Python ETL pipelines</li>
+                        <li data-i18n="expertise.dataIntegrationSkills.5">Airflow orchestration</li>
+                        <li data-i18n="expertise.dataIntegrationSkills.6">DBT transformation</li>
                     </ul>
                 </div>
-                
-                <!-- Optimization -->
                 <div class="skill-category" onclick="showExpertiseReport('Optimization')">
-                    <h3><i class="fas fa-tachometer-alt"></i> Optimization</h3>
+                    <h3><i class="fas fa-tachometer-alt"></i> <span data-i18n="expertise.optimization">Optimization</span></h3>
                     <ul class="skill-list">
-                        <li>Data warehouse design</li>
-                        <li>Implementation strategies</li>
-                        <li>Performance tuning</li>
+                        <li data-i18n="expertise.optimizationSkills.1">Data warehouse design</li>
+                        <li data-i18n="expertise.optimizationSkills.2">Implementation strategies</li>
+                        <li data-i18n="expertise.optimizationSkills.3">Performance tuning</li>
                     </ul>
                 </div>
-                
-                <!-- Analytics -->
                 <div class="skill-category" onclick="showExpertiseReport('Analytics')">
-                    <h3><i class="fas fa-chart-bar"></i> Analytics</h3>
+                    <h3><i class="fas fa-chart-bar"></i> <span data-i18n="expertise.analytics">Analytics</span></h3>
                     <ul class="skill-list">
-                        <li>Hadoop ecosystem (HIVE, Impala)</li>
-                        <li>Advanced data analysis</li>
-                        <li>Data visualization</li>
+                        <li data-i18n="expertise.analyticsSkills.1">Hadoop ecosystem (HIVE, Impala)</li>
+                        <li data-i18n="expertise.analyticsSkills.2">Advanced data analysis</li>
+                        <li data-i18n="expertise.analyticsSkills.3">Data visualization</li>
                     </ul>
                 </div>
-                
-                <!-- Business Intelligence -->
                 <div class="skill-category" onclick="showExpertiseReport('Business Intelligence')">
-                    <h3><i class="fas fa-chart-pie"></i> Business Intelligence</h3>
+                    <h3><i class="fas fa-chart-pie"></i> <span data-i18n="expertise.businessIntelligence">Business Intelligence</span></h3>
                     <ul class="skill-list">
-                        <li>Tableau Desktop and Server</li>
-                        <li>Microsoft Power BI</li>
-                        <li>Qlikview dashboards</li>
+                        <li data-i18n="expertise.businessIntelligenceSkills.1">Tableau Desktop and Server</li>
+                        <li data-i18n="expertise.businessIntelligenceSkills.2">Microsoft Power BI</li>
+                        <li data-i18n="expertise.businessIntelligenceSkills.3">Qlikview dashboards</li>
                     </ul>
                 </div>
-                
-                <!-- Automation -->
                 <div class="skill-category" onclick="showExpertiseReport('Automation')">
-                    <h3><i class="fas fa-cogs"></i> Automation</h3>
+                    <h3><i class="fas fa-cogs"></i> <span data-i18n="expertise.automation">Automation</span></h3>
                     <ul class="skill-list">
-                        <li>Microsoft Power Automate</li>
-                        <li>Python automation scripts</li>
+                        <li data-i18n="expertise.automationSkills.1">Microsoft Power Automate</li>
+                        <li data-i18n="expertise.automationSkills.2">Python automation scripts</li>
                     </ul>
                 </div>
             </div>
@@ -696,34 +722,31 @@
     <!-- Why Choose Me Section -->
     <section class="why-choose">
         <div class="container">
-            <h2 class="section-title">Why Choose Me?</h2>
+            <h2 class="section-title" data-i18n="whyChoose.title">Why Choose Me?</h2>
             <div class="benefits">
                 <div class="benefit">
                     <div class="benefit-icon">
                         <i class="fas fa-calendar-check"></i>
                     </div>
-                    <p>12+ Years of Hands-on Experience in Data Engineering and Analytics</p>
+                    <p data-i18n="whyChoose.experience">12+ Years of Hands-on Experience in Data Engineering and Analytics</p>
                 </div>
-                
                 <div class="benefit">
                     <div class="benefit-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <p>Proven Success in Implementing Award-Winning Solutions</p>
+                    <p data-i18n="whyChoose.success">Proven Success in Implementing Award-Winning Solutions</p>
                 </div>
-                
                 <div class="benefit">
                     <div class="benefit-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <p>Expertise Across a Wide Range of Data Technologies and Platforms</p>
+                    <p data-i18n="whyChoose.expertise">Expertise Across a Wide Range of Data Technologies and Platforms</p>
                 </div>
-                
                 <div class="benefit">
                     <div class="benefit-icon">
                         <i class="fas fa-comments"></i>
                     </div>
-                    <p>Strong Communication Skills in German, English, and Vietnamese</p>
+                    <p data-i18n="whyChoose.communication">Strong Communication Skills in German, English, and Vietnamese</p>
                 </div>
             </div>
         </div>
@@ -732,31 +755,28 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
+            <h2 class="section-title" data-i18n="contact.title">Let's Work Together</h2>
             <div class="contact-form">
-                <form>
+                <form id="contactForm">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name" data-i18n="contact.nameLabel">Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email" data-i18n="contact.emailLabel">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="subject">Subject</label>
+                        <label for="subject" data-i18n="contact.subjectLabel">Subject</label>
                         <input type="text" id="subject" name="subject" required>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message" data-i18n="contact.messageLabel">Message</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
-                    
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn" data-i18n="contact.submit">Send Message</button>
                 </form>
+                <div id="formMessage" style="margin-top: 20px; display: none;"></div>
             </div>
         </div>
     </section>
@@ -774,26 +794,15 @@
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>&copy; <span id="year"></span> Phu Viet. All rights reserved.</p>
+            <p data-i18n="footer.copyright">© <span id="year"></span> Phu Viet. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Expertise Report Modal -->
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Phần head giữ nguyên như code của bạn -->
-    <!-- ... -->
-</head>
-<body>
-    <!-- Các phần HTML khác giữ nguyên -->
-    <!-- ... -->
-
-    <!-- Expertise Report Modal -->
     <div id="expertiseReportModal" class="report-modal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h3 class="modal-title" id="expertiseModalTitle">Expertise Report</h3>
+            <span class="close-modal" onclick="closeModal()">×</span>
+            <h3 class="modal-title" id="expertiseModalTitle" data-i18n="modal.title">Expertise Report</h3>
             <div class="modal-body" id="expertiseModalBody">
                 <!-- Content will be inserted here by JavaScript -->
             </div>
@@ -801,197 +810,553 @@
     </div>
 
     <script>
+        // Khởi tạo EmailJS
+        emailjs.init('YOUR_USER_ID'); // Thay bằng User ID từ EmailJS
+
+        // Xử lý gửi biểu mẫu liên hệ
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formMessage = document.getElementById('formMessage');
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+            };
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+                .then(() => {
+                    formMessage.style.display = 'block';
+                    formMessage.style.color = 'green';
+                    formMessage.textContent = translations[localStorage.getItem('language') || 'en']['contact.success'] || 'Message sent successfully!';
+                    document.getElementById('contactForm').reset();
+                })
+                .catch(error => {
+                    formMessage.style.display = 'block';
+                    formMessage.style.color = 'red';
+                    formMessage.textContent = translations[localStorage.getItem('language') || 'en']['contact.error'] || 'Failed to send message.';
+                    console.error('Error:', error);
+                });
+        });
+
+        // Translations object
+        const translations = {
+            en: {
+                "title": "Senior Data Engineer & AI Specialist | Phu Viet",
+                "header.currentPosition": "Senior Data Engineer at Datatis",
+                "header.name": "Phu Viet",
+                "header.tagline": "AI & Big Data Solutions Specialist",
+                "header.description": "Innovative solutions for your data challenges with 12+ years of experience",
+                "header.cta": "Get In Touch",
+                "whyMe.title": "Why Work With Me?",
+                "whyMe.innovationTitle": "Innovation Leader",
+                "whyMe.innovationDesc": "Invented award-winning real-time big data solution for Smart Factory 4.0",
+                "whyMe.aiTitle": "AI Expertise",
+                "whyMe.aiDesc": "3rd prize in company AI competition for practical business applications",
+                "whyMe.trackRecordTitle": "Proven Track Record",
+                "whyMe.trackRecordDesc": "10+ years delivering high-impact solutions for German enterprises",
+                "whyMe.multilingualTitle": "Multilingual",
+                "whyMe.multilingualDesc": "Fluent in German, English, and Vietnamese for seamless collaboration",
+                "awards.title": "Awards & Recognition",
+                "awards.factoryAwardTitle": "Germany Smart Factory 4.0 Award",
+                "awards.factoryAwardDesc": "Recognized for developing innovative real-time big data solution that transformed manufacturing processes at Datatis.",
+                "awards.aiAwardTitle": "AI Competition 3rd Prize",
+                "awards.aiAwardDesc": "Awarded for innovative approach to AI with practical business applications in enterprise settings.",
+                "expertise.title": "My Expertise",
+                "expertise.dataArchitecture": "Data Architecture",
+                "expertise.dataArchitectureSkills.1": "3NF, Kimball, Data Vault 2.0 methodologies",
+                "expertise.dataArchitectureSkills.2": "Real-time architectures",
+                "expertise.dataArchitectureSkills.3": "SAP Power Designer, pg modeler",
+                "expertise.dataArchitectureSkills.4": "Github version control",
+                "expertise.dataArchitectureSkills.5": "Docker containerization",
+                "expertise.databaseTechnologies": "Database Technologies",
+                "expertise.databaseTechnologiesSkills.1": "MS SQL Server (SSIS, SSAS, SSMS, SSRS)",
+                "expertise.databaseTechnologiesSkills.2": "Postgres SQL, MySQL",
+                "expertise.databaseTechnologiesSkills.3": "Redshift data warehousing",
+                "expertise.databaseTechnologiesSkills.4": "Azure/AWS cloud databases",
+                "expertise.dataIntegration": "Data Integration",
+                "expertise.dataIntegrationSkills.1": "Multiple source formats (CSV, Excel, SAP, MES)",
+                "expertise.dataIntegrationSkills.2": "Azure Cloud Migration",
+                "expertise.dataIntegrationSkills.3": "Talend, SSIS ETL",
+                "expertise.dataIntegrationSkills.4": "Python ETL pipelines",
+                "expertise.dataIntegrationSkills.5": "Airflow orchestration",
+                "expertise.dataIntegrationSkills.6": "DBT transformation",
+                "expertise.optimization": "Optimization",
+                "expertise.optimizationSkills.1": "Data warehouse design",
+                "expertise.optimizationSkills.2": "Implementation strategies",
+                "expertise.optimizationSkills.3": "Performance tuning",
+                "expertise.analytics": "Analytics",
+                "expertise.analyticsSkills.1": "Hadoop ecosystem (HIVE, Impala)",
+                "expertise.analyticsSkills.2": "Advanced data analysis",
+                "expertise.analyticsSkills.3": "Data visualization",
+                "expertise.businessIntelligence": "Business Intelligence",
+                "expertise.businessIntelligenceSkills.1": "Tableau Desktop and Server",
+                "expertise.businessIntelligenceSkills.2": "Microsoft Power BI",
+                "expertise.businessIntelligenceSkills.3": "Qlikview dashboards",
+                "expertise.automation": "Automation",
+                "expertise.automationSkills.1": "Microsoft Power Automate",
+                "expertise.automationSkills.2": "Python automation scripts",
+                "whyChoose.title": "Why Choose Me?",
+                "whyChoose.experience": "12+ Years of Hands-on Experience in Data Engineering and Analytics",
+                "whyChoose.success": "Proven Success in Implementing Award-Winning Solutions",
+                "whyChoose.expertise": "Expertise Across a Wide Range of Data Technologies and Platforms",
+                "whyChoose.communication": "Strong Communication Skills in German, English, and Vietnamese",
+                "contact.title": "Let's Work Together",
+                "contact.nameLabel": "Name",
+                "contact.emailLabel": "Email",
+                "contact.subjectLabel": "Subject",
+                "contact.messageLabel": "Message",
+                "contact.submit": "Send Message",
+                "contact.success": "Message sent successfully!",
+                "contact.error": "Failed to send message.",
+                "footer.copyright": "© Phu Viet. All rights reserved.",
+                "modal.title": "Expertise Report",
+                "modal.dataArchitecture.desc": "Comprehensive data architecture solutions with 12+ years experience:",
+                "modal.dataArchitecture.achievements": "Key Achievements:",
+                "modal.dataArchitecture.achievements.1": "Designed and implemented data architectures for 15+ enterprise clients",
+                "modal.dataArchitecture.achievements.2": "Developed real-time data processing systems with under 50ms latency",
+                "modal.dataArchitecture.achievements.3": "Created standardized data modeling practices using SAP Power Designer",
+                "modal.dataArchitecture.achievements.4": "Implemented Git-based version control for database schemas",
+                "modal.dataArchitecture.achievements.5": "Containerized data pipelines reducing deployment time by 70%",
+                "modal.dataArchitecture.methodologies": "Methodologies:",
+                "modal.dataArchitecture.methodologies.1": "Normalized transactional databases for optimal performance",
+                "modal.dataArchitecture.methodologies.2": "Dimensional modeling for analytics and reporting",
+                "modal.dataArchitecture.methodologies.3": "Scalable data warehouse architecture",
+                "modal.databaseTechnologies.desc": "Deep expertise across multiple database platforms:",
+                "modal.databaseTechnologies.skills": "Key Skills:",
+                "modal.databaseTechnologies.skills.1": "15+ years experience with full stack (SSIS, SSAS, SSRS)",
+                "modal.databaseTechnologies.skills.2": "High-availability cluster design",
+                "modal.databaseTechnologies.skills.3": "Petabyte-scale data warehousing",
+                "modal.databaseTechnologies.skills.4": "Azure SQL, Cosmos DB, AWS RDS/Aurora",
+                "modal.databaseTechnologies.optimization": "Performance Optimization:",
+                "modal.databaseTechnologies.optimization.1": "Query tuning reducing runtime from hours to minutes",
+                "modal.databaseTechnologies.optimization.2": "Index strategy development",
+                "modal.databaseTechnologies.optimization.3": "Partitioning for large datasets",
+                "modal.dataIntegration.desc": "End-to-end data integration solutions:",
+                "modal.dataIntegration.capabilities": "Integration Capabilities:",
+                "modal.dataIntegration.capabilities.1": "50+ data source types integrated (SAP, MES, Excel, CSV, etc.)",
+                "modal.dataIntegration.capabilities.2": "Cloud migration strategies with zero downtime",
+                "modal.dataIntegration.capabilities.3": "ETL/ELT pipeline development",
+                "modal.dataIntegration.capabilities.4": "Real-time data streaming architectures",
+                "modal.dataIntegration.tools": "Tools & Technologies:",
+                "modal.dataIntegration.tools.1": "Talend Open Studio and Enterprise Edition",
+                "modal.dataIntegration.tools.2": "Microsoft SSIS with custom components",
+                "modal.dataIntegration.tools.3": "Apache Airflow for workflow orchestration",
+                "modal.dataIntegration.tools.4": "Python-based ETL pipelines",
+                "modal.optimization.desc": "Performance optimization and tuning solutions:",
+                "modal.optimization.services": "Optimization Services:",
+                "modal.optimization.services.1": "Created optimized schemas for analytical workloads",
+                "modal.optimization.services.2": "Developed phased rollout plans for complex systems",
+                "modal.optimization.services.3": "Improved query performance by 300% on average",
+                "modal.optimization.caseStudy": "Case Study: Manufacturing Data Warehouse",
+                "modal.optimization.caseStudyDesc": "Optimized a manufacturing data warehouse that reduced report generation time from 4 hours to 15 minutes through:",
+                "modal.optimization.caseStudy.1": "Partitioning strategy implementation",
+                "modal.optimization.caseStudy.2": "Materialized view optimization",
+                "modal.optimization.caseStudy.3": "Query plan analysis and index tuning",
+                "modal.analytics.desc": "Comprehensive analytics solutions:",
+                "modal.analytics.capabilities": "Analytics Capabilities:",
+                "modal.analytics.capabilities.1": "HIVE, Impala, HBase implementations",
+                "modal.analytics.capabilities.2": "Predictive modeling, trend analysis, anomaly detection",
+                "modal.analytics.capabilities.3": "Interactive dashboards and reports",
+                "modal.analytics.projects": "Key Projects:",
+                "modal.analytics.projects.1": "Real-time production monitoring system using Impala",
+                "modal.analytics.projects.2": "Customer churn prediction model with 85% accuracy",
+                "modal.analytics.projects.3": "Interactive sales performance dashboards",
+                "modal.businessIntelligence.desc": "Enterprise BI solutions for data-driven decision making:",
+                "modal.businessIntelligence.experience": "BI Platform Experience:",
+                "modal.businessIntelligence.experience.1": "Desktop and Server implementations",
+                "modal.businessIntelligence.experience.2": "Enterprise deployments with row-level security",
+                "modal.businessIntelligence.experience.3": "Custom dashboard development",
+                "modal.businessIntelligence.approach": "BI Implementation Approach:",
+                "modal.businessIntelligence.approach.1": "Requirements gathering with business stakeholders",
+                "modal.businessIntelligence.approach.2": "Data model design optimized for BI tools",
+                "modal.businessIntelligence.approach.3": "Dashboard prototyping and user feedback",
+                "modal.businessIntelligence.approach.4": "Performance optimization and deployment",
+                "modal.businessIntelligence.approach.5": "User training and documentation",
+                "modal.automation.desc": "Efficiency through automation solutions:",
+                "modal.automation.capabilities": "Automation Capabilities:",
+                "modal.automation.capabilities.1": "Workflow automation across Office 365",
+                "modal.automation.capabilities.2": "Custom automation for data processes",
+                "modal.automation.success": "Automation Success Stories:",
+                "modal.automation.success.1": "Automated monthly financial reporting process saving 40 hours/month",
+                "modal.automation.success.2": "Data validation scripts that reduced errors by 90%",
+                "modal.automation.success.3": "Self-healing ETL processes that automatically recover from failures",
+                "modal.automation.framework": "Automation Framework:",
+                "modal.automation.frameworkDesc": "Developed a reusable automation framework that includes:",
+                "modal.automation.framework.1": "Error handling and notifications",
+                "modal.automation.framework.2": "Performance logging",
+                "modal.automation.framework.3": "Configuration management",
+                "modal.download": "Download Full Report"
+            },
+            de: {
+                "title": "Senior Data Engineer & KI-Spezialist | Phu Viet",
+                "header.currentPosition": "Senior Data Engineer bei Datatis",
+                "header.name": "Phu Viet",
+                "header.tagline": "Spezialist für KI- und Big-Data-Lösungen",
+                "header.description": "Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung",
+                "header.cta": "Kontakt aufnehmen",
+                "whyMe.title": "Warum mit mir arbeiten?",
+                "whyMe.innovationTitle": "Innovationsführer",
+                "whyMe.innovationDesc": "Erfinder einer preisgekrönten Echtzeit-Big-Data-Lösung für Smart Factory 4.0",
+                "whyMe.aiTitle": "KI-Expertise",
+                "whyMe.aiDesc": "3. Platz im unternehmensinternen KI-Wettbewerb für praktische Geschäftsanwendungen",
+                "whyMe.trackRecordTitle": "Bewährte Erfolgsbilanz",
+                "whyMe.trackRecordDesc": "Über 10 Jahre Erfahrung in der Bereitstellung hochwirksamer Lösungen für deutsche Unternehmen",
+                "whyMe.multilingualTitle": "Mehrsprachig",
+                "whyMe.multilingualDesc": "Fließend in Deutsch, Englisch und Vietnamesisch für nahtlose Zusammenarbeit",
+                "awards.title": "Auszeichnungen & Anerkennung",
+                "awards.factoryAwardTitle": "Deutschland Smart Factory 4.0 Auszeichnung",
+                "awards.factoryAwardDesc": "Anerkannt für die Entwicklung einer innovativen Echtzeit-Big-Data-Lösung, die Fertigungsprozesse bei Datatis transformiert hat.",
+                "awards.aiAwardTitle": "3. Platz im KI-Wettbewerb",
+                "awards.aiAwardDesc": "Ausgezeichnet für innovative Ansätze in der KI mit praktischen Anwendungen im Unternehmensbereich.",
+                "expertise.title": "Meine Expertise",
+                "expertise.dataArchitecture": "Datenarchitektur",
+                "expertise.dataArchitectureSkills.1": "3NF, Kimball, Data Vault 2.0 Methodologien",
+                "expertise.dataArchitectureSkills.2": "Echtzeitarchitekturen",
+                "expertise.dataArchitectureSkills.3": "SAP Power Designer, pg modeler",
+                "expertise.dataArchitectureSkills.4": "Github Versionskontrolle",
+                "expertise.dataArchitectureSkills.5": "Docker Containerisierung",
+                "expertise.databaseTechnologies": "Datenbanktechnologien",
+                "expertise.databaseTechnologiesSkills.1": "MS SQL Server (SSIS, SSAS, SSMS, SSRS)",
+                "expertise.databaseTechnologiesSkills.2": "Postgres SQL, MySQL",
+                "expertise.databaseTechnologiesSkills.3": "Redshift Data Warehousing",
+                "expertise.databaseTechnologiesSkills.4": "Azure/AWS Cloud-Datenbanken",
+                "expertise.dataIntegration": "Datenintegration",
+                "expertise.dataIntegrationSkills.1": "Mehrere Quellformate (CSV, Excel, SAP, MES)",
+                "expertise.dataIntegrationSkills.2": "Azure Cloud-Migration",
+                "expertise.dataIntegrationSkills.3": "Talend, SSIS ETL",
+                "expertise.dataIntegrationSkills.4": "Python ETL-Pipelines",
+                "expertise.dataIntegrationSkills.5": "Airflow Orchestrierung",
+                "expertise.dataIntegrationSkills.6": "DBT Transformation",
+                "expertise.optimization": "Optimierung",
+                "expertise.optimizationSkills.1": "Data Warehouse Design",
+                "expertise.optimizationSkills.2": "Implementierungsstrategien",
+                "expertise.optimizationSkills.3": "Leistungsoptimierung",
+                "expertise.analytics": "Analytik",
+                "expertise.analyticsSkills.1": "Hadoop Ökosystem (HIVE, Impala)",
+                "expertise.analyticsSkills.2": "Fortgeschrittene Datenanalyse",
+                "expertise.analyticsSkills.3": "Datenvisualisierung",
+                "expertise.businessIntelligence": "Business Intelligence",
+                "expertise.businessIntelligenceSkills.1": "Tableau Desktop und Server",
+                "expertise.businessIntelligenceSkills.2": "Microsoft Power BI",
+                "expertise.businessIntelligenceSkills.3": "Qlikview Dashboards",
+                "expertise.automation": "Automatisierung",
+                "expertise.automationSkills.1": "Microsoft Power Automate",
+                "expertise.automationSkills.2": "Python Automatisierungsskripte",
+                "whyChoose.title": "Warum mich wählen?",
+                "whyChoose.experience": "Über 12 Jahre praktische Erfahrung in Data Engineering und Analytik",
+                "whyChoose.success": "Bewährter Erfolg bei der Implementierung preisgekrönter Lösungen",
+                "whyChoose.expertise": "Expertise in einer Vielzahl von Datentechnologien und Plattformen",
+                "whyChoose.communication": "Starke Kommunikationsfähigkeiten in Deutsch, Englisch und Vietnamesisch",
+                "contact.title": "Lass uns zusammenarbeiten",
+                "contact.nameLabel": "Name",
+                "contact.emailLabel": "E-Mail",
+                "contact.subjectLabel": "Betreff",
+                "contact.messageLabel": "Nachricht",
+                "contact.submit": "Nachricht senden",
+                "contact.success": "Nachricht erfolgreich gesendet!",
+                "contact.error": "Fehler beim Senden der Nachricht.",
+                "footer.copyright": "© Phu Viet. Alle Rechte vorbehalten.",
+                "modal.title": "Expertise-Bericht",
+                "modal.dataArchitecture.desc": "Umfassende Lösungen für Datenarchitektur mit über 12 Jahren Erfahrung:",
+                "modal.dataArchitecture.achievements": "Wichtige Erfolge:",
+                "modal.dataArchitecture.achievements.1": "Entwurf und Implementierung von Datenarchitekturen für über 15 Unternehmenskunden",
+                "modal.dataArchitecture.achievements.2": "Entwicklung von Echtzeit-Datenverarbeitungssystemen mit unter 50ms Latenz",
+                "modal.dataArchitecture.achievements.3": "Erstellung standardisierter Datenmodellierungspraktiken mit SAP Power Designer",
+                "modal.dataArchitecture.achievements.4": "Implementierung von Git-basierter Versionskontrolle für Datenbankschemata",
+                "modal.dataArchitecture.achievements.5": "Containerisierte Datenpipelines, die die Bereitstellungszeit um 70% reduziert haben",
+                "modal.dataArchitecture.methodologies": "Methodologien:",
+                "modal.dataArchitecture.methodologies.1": "Normalisierte Transaktionsdatenbanken für optimale Leistung",
+                "modal.dataArchitecture.methodologies.2": "Dimensionale Modellierung für Analysen und Berichte",
+                "modal.dataArchitecture.methodologies.3": "Skalierbare Data-Warehouse-Architektur",
+                "modal.databaseTechnologies.desc": "Tiefgehende Expertise in mehreren Datenbankplattformen:",
+                "modal.databaseTechnologies.skills": "Schlüsselkompetenzen:",
+                "modal.databaseTechnologies.skills.1": "Über 15 Jahre Erfahrung mit dem gesamten Stack (SSIS, SSAS, SSRS)",
+                "modal.databaseTechnologies.skills.2": "Design von Hochverfügbarkeits-Clustern",
+                "modal.databaseTechnologies.skills.3": "Petabyte-großes Data Warehousing",
+                "modal.databaseTechnologies.skills.4": "Azure SQL, Cosmos DB, AWS RDS/Aurora",
+                "modal.databaseTechnologies.optimization": "Leistungsoptimierung:",
+                "modal.databaseTechnologies.optimization.1": "Abfragenoptimierung, die die Laufzeit von Stunden auf Minuten reduziert",
+                "modal.databaseTechnologies.optimization.2": "Entwicklung von Indexstrategien",
+                "modal.databaseTechnologies.optimization.3": "Partitionierung für große Datensätze",
+                "modal.dataIntegration.desc": "End-to-End-Datenintegrationslösungen:",
+                "modal.dataIntegration.capabilities": "Integrationsfähigkeiten:",
+                "modal.dataIntegration.capabilities.1": "Über 50 Datenquellentypen integriert (SAP, MES, Excel, CSV, etc.)",
+                "modal.dataIntegration.capabilities.2": "Cloud-Migrationsstrategien ohne Ausfallzeiten",
+                "modal.dataIntegration.capabilities.3": "Entwicklung von ETL/ELT-Pipelines",
+                "modal.dataIntegration.capabilities.4": "Echtzeit-Datenstreaming-Architekturen",
+                "modal.dataIntegration.tools": "Tools & Technologien:",
+                "modal.dataIntegration.tools.1": "Talend Open Studio und Enterprise Edition",
+                "modal.dataIntegration.tools.2": "Microsoft SSIS mit benutzerdefinierten Komponenten",
+                "modal.dataIntegration.tools.3": "Apache Airflow für Workflow-Orchestrierung",
+                "modal.dataIntegration.tools.4": "Python-basierte ETL-Pipelines",
+                "modal.optimization.desc": "Lösungen für Leistungsoptimierung und Tuning:",
+                "modal.optimization.services": "Optimierungsdienste:",
+                "modal.optimization.services.1": "Erstellung optimierter Schemata für analytische Workloads",
+                "modal.optimization.services.2": "Entwicklung schrittweiser Einführungspläne für komplexe Systeme",
+                "modal.optimization.services.3": "Durchschnittliche Verbesserung der Abfrageleistung um 300%",
+                "modal.optimization.caseStudy": "Fallstudie: Manufacturing Data Warehouse",
+                "modal.optimization.caseStudyDesc": "Optimierung eines Fertigungs-Data-Warehouse, das die Berichtsgenerierungszeit von 4 Stunden auf 15 Minuten reduziert hat durch:",
+                "modal.optimization.caseStudy.1": "Implementierung einer Partitionierungsstrategie",
+                "modal.optimization.caseStudy.2": "Optimierung materialisierter Sichten",
+                "modal.optimization.caseStudy.3": "Analyse von Abfrageplänen und Index-Tuning",
+                "modal.analytics.desc": "Umfassende Analyselösungen:",
+                "modal.analytics.capabilities": "Analyse-Fähigkeiten:",
+                "modal.analytics.capabilities.1": "HIVE, Impala, HBase Implementierungen",
+                "modal.analytics.capabilities.2": "Prädiktive Modellierung, Trendanalyse, Anomalieerkennung",
+                "modal.analytics.capabilities.3": "Interaktive Dashboards und Berichte",
+                "modal.analytics.projects": "Schlüsselprojekte:",
+                "modal.analytics.projects.1": "Echtzeit-Produktionsüberwachungssystem mit Impala",
+                "modal.analytics.projects.2": "Kundenabwanderungs-Vorhersagemodell mit 85% Genauigkeit",
+                "modal.analytics.projects.3": "Interaktive Dashboards für Verkaufsleistung",
+                "modal.businessIntelligence.desc": "Unternehmens-BI-Lösungen für datengetriebene Entscheidungsfindung:",
+                "modal.businessIntelligence.experience": "BI-Plattformerfahrung:",
+                "modal.businessIntelligence.experience.1": "Desktop- und Server-Implementierungen",
+                "modal.businessIntelligence.experience.2": "Unternehmenseinsätze mit Sicherheit auf Zeilenebene",
+                "modal.businessIntelligence.experience.3": "Entwicklung benutzerdefinierter Dashboards",
+                "modal.businessIntelligence.approach": "BI-Implementierungsansatz:",
+                "modal.businessIntelligence.approach.1": "Anforderungserhebung mit Geschäftsinteressenten",
+                "modal.businessIntelligence.approach.2": "Datenmodelldesign optimiert für BI-Tools",
+                "modal.businessIntelligence.approach.3": "Dashboard-Prototyping und Nutzerfeedback",
+                "modal.businessIntelligence.approach.4": "Leistungsoptimierung und Bereitstellung",
+                "modal.businessIntelligence.approach.5": "Benutzerschulung und Dokumentation",
+                "modal.automation.desc": "Effizienz durch Automatisierungslösungen:",
+                "modal.automation.capabilities": "Automatisierungs-Fähigkeiten:",
+                "modal.automation.capabilities.1": "Workflow-Automatisierung über Office 365",
+                "modal.automation.capabilities.2": "Benutzerdefinierte Automatisierung für Datenprozesse",
+                "modal.automation.success": "Automatisierungserfolge:",
+                "modal.automation.success.1": "Automatisierter monatlicher Finanzberichtsprozess, der 40 Stunden/Monat spart",
+                "modal.automation.success.2": "Datenvalidierungsskripte, die Fehler um 90% reduziert haben",
+                "modal.automation.success.3": "Selbstheilende ETL-Prozesse, die automatisch von Fehlern erholen",
+                "modal.automation.framework": "Automatisierungs-Framework:",
+                "modal.automation.frameworkDesc": "Entwicklung eines wiederverwendbaren Automatisierungs-Frameworks, das Folgendes umfasst:",
+                "modal.automation.framework.1": "Fehlerbehandlung und Benachrichtigungen",
+                "modal.automation.framework.2": "Leistungsprotokollierung",
+                "modal.automation.framework.3": "Konfigurationsmanagement",
+                "modal.download": "Vollständigen Bericht herunterladen"
+            }
+        };
+
+        // Language switching logic
+        function changeLanguage(lang) {
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+
+            // Update all elements with data-i18n attributes
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update footer copyright with dynamic year
+            const year = new Date().getFullYear();
+            const copyrightElement = document.querySelector('[data-i18n="footer.copyright"]');
+            if (copyrightElement) {
+                copyrightElement.textContent = translations[lang]["footer.copyright"].replace("Phu Viet", `Phu Viet ${year}`);
+            }
+
+            // Update document title
+            const titleElement = document.querySelector('title');
+            if (titleElement && translations[lang]["title"]) {
+                titleElement.textContent = translations[lang]["title"];
+            }
+
+            // Save language preference
+            localStorage.setItem('language', lang);
+        }
+
+        // Initialize language
+        function initLanguage() {
+            const savedLang = localStorage.getItem('language') || 'en';
+            document.getElementById('languageSwitch').value = savedLang;
+            changeLanguage(savedLang);
+        }
+
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Expertise report data - Updated with detailed content for each category
+        // Expertise report data
         const expertiseReports = {
             'Data Architecture': {
                 title: 'Data Architecture Expertise',
                 content: `
-                    <p>Comprehensive data architecture solutions with 12+ years experience:</p>
-                    <iframe src="https://hieuhpvn.github.io/Luzmo/luzmo_index.html" class="report-iframe"></iframe>
-                    
-                    <h4>Key Achievements:</h4>
+                    <p data-i18n="modal.dataArchitecture.desc">Comprehensive data architecture solutions with 12+ years experience:</p>
+                    <iframe src="https://datatis-de.github.io/datatis/luzmo_report.html" class="report-iframe"></iframe>
+                    <h4 data-i18n="modal.dataArchitecture.achievements">Key Achievements:</h4>
                     <ul>
-                        <li>Designed and implemented data architectures for 15+ enterprise clients</li>
-                        <li>Developed real-time data processing systems with under 50ms latency</li>
-                        <li>Created standardized data modeling practices using SAP Power Designer</li>
-                        <li>Implemented Git-based version control for database schemas</li>
-                        <li>Containerized data pipelines reducing deployment time by 70%</li>
+                        <li data-i18n="modal.dataArchitecture.achievements.1">Designed and implemented data architectures for 15+ enterprise clients</li>
+                        <li data-i18n="modal.dataArchitecture.achievements.2">Developed real-time data processing systems with under 50ms latency</li>
+                        <li data-i18n="modal.dataArchitecture.achievements.3">Created standardized data modeling practices using SAP Power Designer</li>
+                        <li data-i18n="modal.dataArchitecture.achievements.4">Implemented Git-based version control for database schemas</li>
+                        <li data-i18n="modal.dataArchitecture.achievements.5">Containerized data pipelines reducing deployment time by 70%</li>
                     </ul>
-                    
-                    <h4>Methodologies:</h4>
+                    <h4 data-i18n="modal.dataArchitecture.methodologies">Methodologies:</h4>
                     <ul>
-                        <li><strong>3NF:</strong> Normalized transactional databases for optimal performance</li>
-                        <li><strong>Kimball:</strong> Dimensional modeling for analytics and reporting</li>
-                        <li><strong>Data Vault 2.0:</strong> Scalable data warehouse architecture</li>
+                        <li><strong>3NF:</strong> <span data-i18n="modal.dataArchitecture.methodologies.1">Normalized transactional databases for optimal performance</span></li>
+                        <li><strong>Kimball:</strong> <span data-i18n="modal.dataArchitecture.methodologies.2">Dimensional modeling for analytics and reporting</span></li>
+                        <li><strong>Data Vault 2.0:</strong> <span data-i18n="modal.dataArchitecture.methodologies.3">Scalable data warehouse architecture</span></li>
                     </ul>
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="#" class="cta-button" style="padding: 10px 20px;">Download Full Report</a>
+                        <a href="https://datatis-de.github.io/datatis/luzmo_report.html" class="cta-button" data-i18n="modal.download">Download Full Report</a>
                     </div>
                 `
             },
             'Database Technologies': {
                 title: 'Database Technologies Expertise',
                 content: `
-                    <p>Deep expertise across multiple database platforms:</p>
+                    <p data-i18n="modal.databaseTechnologies.desc">Deep expertise across multiple database platforms:</p>
                     <img src="https://img.lovepik.com/photo/50059/8805.jpg_wh860.jpg" class="report-image">
-                    
-                    <h4>Key Skills:</h4>
+                    <h4 data-i18n="modal.databaseTechnologies.skills">Key Skills:</h4>
                     <ul>
-                        <li><strong>MS SQL Server:</strong> 15+ years experience with full stack (SSIS, SSAS, SSRS)</li>
-                        <li><strong>PostgreSQL/MySQL:</strong> High-availability cluster design</li>
-                        <li><strong>Redshift:</strong> Petabyte-scale data warehousing</li>
-                        <li><strong>Cloud Databases:</strong> Azure SQL, Cosmos DB, AWS RDS/Aurora</li>
+                        <li><strong>MS SQL Server:</strong> <span data-i18n="modal.databaseTechnologies.skills.1">15+ years experience with full stack (SSIS, SSAS, SSRS)</span></li>
+                        <li><strong>PostgreSQL/MySQL:</strong> <span data-i18n="modal.databaseTechnologies.skills.2">High-availability cluster design</span></li>
+                        <li><strong>Redshift:</strong> <span data-i18n="modal.databaseTechnologies.skills.3">Petabyte-scale data warehousing</span></li>
+                        <li><strong>Cloud Databases:</strong> <span data-i18n="modal.databaseTechnologies.skills.4">Azure SQL, Cosmos DB, AWS RDS/Aurora</span></li>
                     </ul>
-                    
-                    <h4>Performance Optimization:</h4>
+                    <h4 data-i18n="modal.databaseTechnologies.optimization">Performance Optimization:</h4>
                     <ul>
-                        <li>Query tuning reducing runtime from hours to minutes</li>
-                        <li>Index strategy development</li>
-                        <li>Partitioning for large datasets</li>
+                        <li data-i18n="modal.databaseTechnologies.optimization.1">Query tuning reducing runtime from hours to minutes</li>
+                        <li data-i18n="modal.databaseTechnologies.optimization.2">Index strategy development</li>
+                        <li data-i18n="modal.databaseTechnologies.optimization.3">Partitioning for large datasets</li>
                     </ul>
                 `
             },
             'Data Integration': {
                 title: 'Data Integration Expertise',
                 content: `
-                    <p>End-to-end data integration solutions:</p>
+                    <p data-i18n="modal.dataIntegration.desc">End-to-end data integration solutions:</p>
                     <img src="https://img.lovepik.com/photo/50059/8805.jpg_wh860.jpg" class="report-image">
-                    
-                    <h4>Integration Capabilities:</h4>
+                    <h4 data-i18n="modal.dataIntegration.capabilities">Integration Capabilities:</h4>
                     <ul>
-                        <li>50+ data source types integrated (SAP, MES, Excel, CSV, etc.)</li>
-                        <li>Cloud migration strategies with zero downtime</li>
-                        <li>ETL/ELT pipeline development</li>
-                        <li>Real-time data streaming architectures</li>
+                        <li data-i18n="modal.dataIntegration.capabilities.1">50+ data source types integrated (SAP, MES, Excel, CSV, etc.)</li>
+                        <li data-i18n="modal.dataIntegration.capabilities.2">Cloud migration strategies with zero downtime</li>
+                        <li data-i18n="modal.dataIntegration.capabilities.3">ETL/ELT pipeline development</li>
+                        <li data-i18n="modal.dataIntegration.capabilities.4">Real-time data streaming architectures</li>
                     </ul>
-                    
-                    <h4>Tools & Technologies:</h4>
+                    <h4 data-i18n="modal.dataIntegration.tools">Tools & Technologies:</h4>
                     <ul>
-                        <li>Talend Open Studio and Enterprise Edition</li>
-                        <li>Microsoft SSIS with custom components</li>
-                        <li>Apache Airflow for workflow orchestration</li>
-                        <li>Python-based ETL pipelines</li>
+                        <li data-i18n="modal.dataIntegration.tools.1">Talend Open Studio and Enterprise Edition</li>
+                        <li data-i18n="modal.dataIntegration.tools.2">Microsoft SSIS with custom components</li>
+                        <li data-i18n="modal.dataIntegration.tools.3">Apache Airflow for workflow orchestration</li>
+                        <li data-i18n="modal.dataIntegration.tools.4">Python-based ETL pipelines</li>
                     </ul>
                 `
             },
             'Optimization': {
                 title: 'Data Optimization Expertise',
                 content: `
-                    <p>Performance optimization and tuning solutions:</p>
+                    <p data-i18n="modal.optimization.desc">Performance optimization and tuning solutions:</p>
                     <img src="https://img.lovepik.com/photo/50059/8805.jpg_wh860.jpg" class="report-image">
-                    
-                    <h4>Optimization Services:</h4>
+                    <h4 data-i18n="modal.optimization.services">Optimization Services:</h4>
                     <ul>
-                        <li><strong>Data Warehouse Design:</strong> Created optimized schemas for analytical workloads</li>
-                        <li><strong>Implementation Strategies:</strong> Developed phased rollout plans for complex systems</li>
-                        <li><strong>Performance Tuning:</strong> Improved query performance by 300% on average</li>
+                        <li><strong>Data Warehouse Design:</strong> <span data-i18n="modal.optimization.services.1">Created optimized schemas for analytical workloads</span></li>
+                        <li><strong>Implementation Strategies:</strong> <span data-i18n="modal.optimization.services.2">Developed phased rollout plans for complex systems</span></li>
+                        <li><strong>Performance Tuning:</strong> <span data-i18n="modal.optimization.services.3">Improved query performance by 300% on average</span></li>
                     </ul>
-                    
-                    <h4>Case Study: Manufacturing Data Warehouse</h4>
-                    <p>Optimized a manufacturing data warehouse that reduced report generation time from 4 hours to 15 minutes through:</p>
+                    <h4 data-i18n="modal.optimization.caseStudy">Case Study: Manufacturing Data Warehouse</h4>
+                    <p data-i18n="modal.optimization.caseStudyDesc">Optimized a manufacturing data warehouse that reduced report generation time from 4 hours to 15 minutes through:</p>
                     <ul>
-                        <li>Partitioning strategy implementation</li>
-                        <li>Materialized view optimization</li>
-                        <li>Query plan analysis and index tuning</li>
+                        <li data-i18n="modal.optimization.caseStudy.1">Partitioning strategy implementation</li>
+                        <li data-i18n="modal.optimization.caseStudy.2">Materialized view optimization</li>
+                        <li data-i18n="modal.optimization.caseStudy.3">Query plan analysis and index tuning</li>
                     </ul>
                 `
             },
             'Analytics': {
                 title: 'Advanced Analytics Expertise',
                 content: `
-                    <p>Comprehensive analytics solutions:</p>
+                    <p data-i18n="modal.analytics.desc">Comprehensive analytics solutions:</p>
                     <iframe src="https://example.com/analytics-dashboard" class="report-iframe"></iframe>
-                    
-                    <h4>Analytics Capabilities:</h4>
+                    <h4 data-i18n="modal.analytics.capabilities">Analytics Capabilities:</h4>
                     <ul>
-                        <li><strong>Hadoop Ecosystem:</strong> HIVE, Impala, HBase implementations</li>
-                        <li><strong>Advanced Analysis:</strong> Predictive modeling, trend analysis, anomaly detection</li>
-                        <li><strong>Data Visualization:</strong> Interactive dashboards and reports</li>
+                        <li><strong>Hadoop Ecosystem:</strong> <span data-i18n="modal.analytics.capabilities.1">HIVE, Impala, HBase implementations</span></li>
+                        <li><strong>Advanced Analysis:</strong> <span data-i18n="modal.analytics.capabilities.2">Predictive modeling, trend analysis, anomaly detection</span></li>
+                        <li><strong>Data Visualization:</strong> <span data-i18n="modal.analytics.capabilities.3">Interactive dashboards and reports</span></li>
                     </ul>
-                    
-                    <h4>Key Projects:</h4>
+                    <h4 data-i18n="modal.analytics.projects">Key Projects:</h4>
                     <ul>
-                        <li>Real-time production monitoring system using Impala</li>
-                        <li>Customer churn prediction model with 85% accuracy</li>
-                        <li>Interactive sales performance dashboards</li>
+                        <li data-i18n="modal.analytics.projects.1">Real-time production monitoring system using Impala</li>
+                        <li data-i18n="modal.analytics.projects.2">Customer churn prediction model with 85% accuracy</li>
+                        <li data-i18n="modal.analytics.projects.3">Interactive sales performance dashboards</li>
                     </ul>
                 `
             },
             'Business Intelligence': {
                 title: 'Business Intelligence Expertise',
                 content: `
-                    <p>Enterprise BI solutions for data-driven decision making:</p>
+                    <p data-i18n="modal.businessIntelligence.desc">Enterprise BI solutions for data-driven decision making:</p>
                     <img src="https://img.lovepik.com/photo/50059/8805.jpg_wh860.jpg" class="report-image">
-                    
-                    <h4>BI Platform Experience:</h4>
+                    <h4 data-i18n="modal.businessIntelligence.experience">BI Platform Experience:</h4>
                     <ul>
-                        <li><strong>Tableau:</strong> Desktop and Server implementations</li>
-                        <li><strong>Power BI:</strong> Enterprise deployments with row-level security</li>
-                        <li><strong>QlikView:</strong> Custom dashboard development</li>
+                        <li><strong>Tableau:</strong> <span data-i18n="modal.businessIntelligence.experience.1">Desktop and Server implementations</span></li>
+                        <li><strong>Power BI:</strong> <span data-i18n="modal.businessIntelligence.experience.2">Enterprise deployments with row-level security</span></li>
+                        <li><strong>QlikView:</strong> <span data-i18n="modal.businessIntelligence.experience.3">Custom dashboard development</span></li>
                     </ul>
-                    
-                    <h4>BI Implementation Approach:</h4>
+                    <h4 data-i18n="modal.businessIntelligence.approach">BI Implementation Approach:</h4>
                     <ol>
-                        <li>Requirements gathering with business stakeholders</li>
-                        <li>Data model design optimized for BI tools</li>
-                        <li>Dashboard prototyping and user feedback</li>
-                        <li>Performance optimization and deployment</li>
-                        <li>User training and documentation</li>
+                        <li data-i18n="modal.businessIntelligence.approach.1">Requirements gathering with business stakeholders</li>
+                        <li data-i18n="modal.businessIntelligence.approach.2">Data model design optimized for BI tools</li>
+                        <li data-i18n="modal.businessIntelligence.approach.3">Dashboard prototyping and user feedback</li>
+                        <li data-i18n="modal.businessIntelligence.approach.4">Performance optimization and deployment</li>
+                        <li data-i18n="modal.businessIntelligence.approach.5">User training and documentation</li>
                     </ol>
                 `
             },
             'Automation': {
                 title: 'Process Automation Expertise',
                 content: `
-                    <p>Efficiency through automation solutions:</p>
+                    <p data-i18n="modal.automation.desc">Efficiency through automation solutions:</p>
                     <iframe src="https://example.com/automation-demo" class="report-iframe"></iframe>
-                    
-                    <h4>Automation Capabilities:</h4>
+                    <h4 data-i18n="modal.automation.capabilities">Automation Capabilities:</h4>
                     <ul>
-                        <li><strong>Microsoft Power Automate:</strong> Workflow automation across Office 365</li>
-                        <li><strong>Python Scripts:</strong> Custom automation for data processes</li>
+                        <li><strong>Microsoft Power Automate:</strong> <span data-i18n="modal.automation.capabilities.1">Workflow automation across Office 365</span></li>
+                        <li><strong>Python Scripts:</strong> <span data-i18n="modal.automation.capabilities.2">Custom automation for data processes</span></li>
                     </ul>
-                    
-                    <h4>Automation Success Stories:</h4>
+                    <h4 data-i18n="modal.automation.success">Automation Success Stories:</h4>
                     <ul>
-                        <li>Automated monthly financial reporting process saving 40 hours/month</li>
-                        <li>Data validation scripts that reduced errors by 90%</li>
-                        <li>Self-healing ETL processes that automatically recover from failures</li>
+                        <li data-i18n="modal.automation.success.1">Automated monthly financial reporting process saving 40 hours/month</li>
+                        <li data-i18n="modal.automation.success.2">Data validation scripts that reduced errors by 90%</li>
+                        <li data-i18n="modal.automation.success.3">Self-healing ETL processes that automatically recover from failures</li>
                     </ul>
-                    
-                    <h4>Automation Framework:</h4>
-                    <p>Developed a reusable automation framework that includes:</p>
+                    <h4 data-i18n="modal.automation.framework">Automation Framework:</h4>
+                    <p data-i18n="modal.automation.frameworkDesc">Developed a reusable automation framework that includes:</p>
                     <ul>
-                        <li>Error handling and notifications</li>
-                        <li>Performance logging</li>
-                        <li>Configuration management</li>
+                        <li data-i18n="modal.automation.framework.1">Error handling and notifications</li>
+                        <li data-i18n="modal.automation.framework.2">Performance logging</li>
+                        <li data-i18n="modal.automation.framework.3">Configuration management</li>
                     </ul>
                 `
             }
         };
 
-        // Show expertise report - Improved version with smooth scrolling
+        // Show expertise report
         function showExpertiseReport(category) {
             const report = expertiseReports[category] || {
                 title: category + ' Expertise',
-                content: `<p>Comprehensive report on my ${category} capabilities and experience.</p>
-                          <img src="https://via.placeholder.com/800x400?text=${encodeURIComponent(category)}+Expertise" class="report-image">
-                          <p>With over a decade of experience in ${category}, I've developed proven methodologies and best practices that deliver results.</p>
-                          <h4>Key ${category} Services:</h4>
-                          <ul>
-                              <li>Custom ${category} solutions tailored to your needs</li>
-                              <li>Performance optimization</li>
-                              <li>Implementation best practices</li>
-                              <li>Ongoing support and maintenance</li>
-                          </ul>`
+                content: `
+                    <p data-i18n="modal.default.desc">Comprehensive report on my ${category} capabilities and experience.</p>
+                    <img src="https://via.placeholder.com/800x400?text=${encodeURIComponent(category)}+Expertise" class="report-image">
+                    <p data-i18n="modal.default.experience">With over a decade of experience in ${category}, I've developed proven methodologies and best practices that deliver results.</p>
+                    <h4 data-i18n="modal.default.services">Key ${category} Services:</h4>
+                    <ul>
+                        <li data-i18n="modal.default.services.1">Custom ${category} solutions tailored to your needs</li>
+                        <li data-i18n="modal.default.services.2">Performance optimization</li>
+                        <li data-i18n="modal.default.services.3">Implementation best practices</li>
+                        <li data-i18n="modal.default.services.4">Ongoing support and maintenance</li>
+                    </ul>
+                `
             };
             
             // Set modal content
-            document.getElementById('expertiseModalTitle').textContent = report.title;
+            document.getElementById('expertiseModalTitle').setAttribute('data-i18n', `modal.${category.toLowerCase().replace(' ', '')}.title`);
             document.getElementById('expertiseModalBody').innerHTML = report.content;
+            
+            // Update modal translations
+            const currentLang = localStorage.getItem('language') || 'en';
+            changeLanguage(currentLang);
             
             // Show modal with smooth transition
             const modal = document.getElementById('expertiseReportModal');
@@ -1038,6 +1403,9 @@
                 closeModal();
             }
         };
+
+        // Initialize language on page load
+        initLanguage();
     </script>
 </body>
 </html>
