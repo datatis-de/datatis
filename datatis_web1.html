@@ -195,71 +195,6 @@
             margin-bottom: 10px;
             color: var(--primary);
         }
-
-        /* Modal styles */
-        .report-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            overflow: auto;
-        }
-        
-        .modal-content {
-            background-color: white;
-            margin: 5% auto;
-            padding: 30px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 900px;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
-            position: relative;
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 25px;
-            font-size: 2rem;
-            color: var(--dark);
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .close-modal:hover {
-            color: var(--accent);
-        }
-        
-        .modal-title {
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-        
-        .modal-body {
-            margin-top: 20px;
-        }
-        
-        .report-image {
-            width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        
-        /* Make feature clickable */
-        .feature-clickable {
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-clickable:hover {
-            color: var(--secondary);
-        }
         
         /* Awards Section */
         .awards {
@@ -317,11 +252,14 @@
             border-radius: 10px;
             padding: 25px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
         
         .skill-category:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            background-color: #f0f5f9;
         }
         
         .skill-category h3 {
@@ -480,6 +418,61 @@
             width: auto;
         }
         
+        /* Modal styles */
+        .report-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 2rem;
+            color: var(--dark);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: var(--accent);
+        }
+        
+        .modal-title {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .modal-body {
+            margin-top: 20px;
+        }
+        
+        .report-image {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
@@ -552,7 +545,7 @@
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3 class="feature-title">Innovation Leader</h3>
-                    <p class="feature-clickable" onclick="showSmartFactoryReport()">Invented award-winning real-time big data solution for Smart Factory 4.0</p>
+                    <p>Invented award-winning real-time big data solution for Smart Factory 4.0</p>
                 </div>
                 
                 <div class="feature-card-horizontal">
@@ -606,12 +599,13 @@
         </div>
     </section>
 
-    <!-- Expertise Section -->
+    <!-- Expertise Section - Now with clickable categories -->
     <section class="expertise">
         <div class="container">
             <h2 class="section-title">My Expertise</h2>
             <div class="skills-grid">
-                <div class="skill-category">
+                <!-- Data Architecture -->
+                <div class="skill-category" onclick="showExpertiseReport('Data Architecture')">
                     <h3><i class="fas fa-database"></i> Data Architecture</h3>
                     <ul class="skill-list">
                         <li>3NF, Kimball, Data Vault 2.0 methodologies</li>
@@ -622,7 +616,8 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Database Technologies -->
+                <div class="skill-category" onclick="showExpertiseReport('Database Technologies')">
                     <h3><i class="fas fa-server"></i> Database Technologies</h3>
                     <ul class="skill-list">
                         <li>MS SQL Server (SSIS, SSAS, SSMS, SSRS)</li>
@@ -632,7 +627,8 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Data Integration -->
+                <div class="skill-category" onclick="showExpertiseReport('Data Integration')">
                     <h3><i class="fas fa-exchange-alt"></i> Data Integration</h3>
                     <ul class="skill-list">
                         <li>Multiple source formats (CSV, Excel, SAP, MES)</li>
@@ -644,7 +640,8 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Optimization -->
+                <div class="skill-category" onclick="showExpertiseReport('Optimization')">
                     <h3><i class="fas fa-tachometer-alt"></i> Optimization</h3>
                     <ul class="skill-list">
                         <li>Data warehouse design</li>
@@ -653,7 +650,8 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Analytics -->
+                <div class="skill-category" onclick="showExpertiseReport('Analytics')">
                     <h3><i class="fas fa-chart-bar"></i> Analytics</h3>
                     <ul class="skill-list">
                         <li>Hadoop ecosystem (HIVE, Impala)</li>
@@ -662,7 +660,8 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Business Intelligence -->
+                <div class="skill-category" onclick="showExpertiseReport('Business Intelligence')">
                     <h3><i class="fas fa-chart-pie"></i> Business Intelligence</h3>
                     <ul class="skill-list">
                         <li>Tableau Desktop and Server</li>
@@ -671,7 +670,8 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
+                <!-- Automation -->
+                <div class="skill-category" onclick="showExpertiseReport('Automation')">
                     <h3><i class="fas fa-cogs"></i> Automation</h3>
                     <ul class="skill-list">
                         <li>Microsoft Power Automate</li>
@@ -767,30 +767,13 @@
         </div>
     </footer>
 
-    <!-- Smart Factory Report Modal -->
-    <div id="smartFactoryModal" class="report-modal">
+    <!-- Expertise Report Modal -->
+    <div id="expertiseReportModal" class="report-modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h3 class="modal-title">Smart Factory 4.0 Solution Report</h3>
-            <div class="modal-body">
-                <p>Here's a sample report of my award-winning real-time big data solution for Smart Factory 4.0:</p>
-                
-                <!-- Thay thế bằng hình ảnh/pdf báo cáo thực tế của bạn -->
-                <img src="https://via.placeholder.com/800x500?text=Smart+Factory+4.0+Report+Sample" alt="Smart Factory 4.0 Report" class="report-image">
-                
-                <h4>Key Features:</h4>
-                <ul>
-                    <li>Real-time data processing with latency under 50ms</li>
-                    <li>Integrated predictive maintenance algorithms</li>
-                    <li>Custom dashboard for factory floor monitoring</li>
-                    <li>Reduced downtime by 37% in pilot implementation</li>
-                </ul>
-                
-                <p>This solution won the Germany Smart Factory 4.0 Award in 2022.</p>
-                
-                <div style="margin-top: 30px; text-align: center;">
-                    <a href="#" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Download Full Report</a>
-                </div>
+            <h3 class="modal-title" id="expertiseModalTitle">Expertise Report</h3>
+            <div class="modal-body" id="expertiseModalBody">
+                <!-- Content will be inserted here by JavaScript -->
             </div>
         </div>
     </div>
@@ -799,18 +782,106 @@
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Modal functions
-        function showSmartFactoryReport() {
-            document.getElementById('smartFactoryModal').style.display = 'block';
+        // Expertise report data
+        const expertiseReports = {
+            'Data Architecture': {
+                title: 'Data Architecture Expertise',
+                content: `
+                    <p>Comprehensive data architecture solutions with 12+ years experience:</p>
+                    <iframe src="https://hieuhpvn.github.io/Luzmo/luzmo_index.html" style="width:100%; height:500px; border:1px solid #ddd; border-radius:5px;"></iframe>
+
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li>Designed and implemented data architectures for 15+ enterprise clients</li>
+                        <li>Developed real-time data processing systems with under 50ms latency</li>
+                        <li>Created standardized data modeling practices using SAP Power Designer</li>
+                        <li>Implemented Git-based version control for database schemas</li>
+                        <li>Containerized data pipelines reducing deployment time by 70%</li>
+                    </ul>
+
+                    <h4>Methodologies:</h4>
+                    <ul>
+                        <li><strong>3NF:</strong> Normalized transactional databases for optimal performance</li>
+                        <li><strong>Kimball:</strong> Dimensional modeling for analytics and reporting</li>
+                        <li><strong>Data Vault 2.0:</strong> Scalable data warehouse architecture</li>
+                    </ul>
+
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="https://hieuhpvn.github.io/Luzmo/luzmo_index.html" class="cta-button" style="padding: 10px 20px;" target="_blank">View Full Report</a>
+                    </div>
+                `
+            },
+            'Database Technologies': {
+                title: 'Database Technologies Expertise',
+                content: `
+                    <p>Deep expertise across multiple database platforms:</p>
+                    <img src="https://via.placeholder.com/800x400?text=Database+Technologies+Report" class="report-image">
+                    
+                    <h4>Key Skills:</h4>
+                    <ul>
+                        <li><strong>MS SQL Server:</strong> 15+ years experience with full stack (SSIS, SSAS, SSRS)</li>
+                        <li><strong>PostgreSQL/MySQL:</strong> High-availability cluster design</li>
+                        <li><strong>Redshift:</strong> Petabyte-scale data warehousing</li>
+                        <li><strong>Cloud Databases:</strong> Azure SQL, Cosmos DB, AWS RDS/Aurora</li>
+                    </ul>
+                    
+                    <h4>Performance Optimization:</h4>
+                    <ul>
+                        <li>Query tuning reducing runtime from hours to minutes</li>
+                        <li>Index strategy development</li>
+                        <li>Partitioning for large datasets</li>
+                    </ul>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="#" class="cta-button" style="padding: 10px 20px;">Download Full Report</a>
+                    </div>
+                `
+            },
+            // Add reports for other categories similarly
+            'Data Integration': {
+                title: 'Data Integration Expertise',
+                content: `
+                    <p>End-to-end data integration solutions:</p>
+                    <img src="https://via.placeholder.com/800x400?text=Data+Integration+Report" class="report-image">
+                    
+                    <h4>Integration Capabilities:</h4>
+                    <ul>
+                        <li>50+ data source types integrated (SAP, MES, Excel, CSV, etc.)</li>
+                        <li>Cloud migration strategies with zero downtime</li>
+                        <li>ETL/ELT pipeline development</li>
+                        <li>Real-time data streaming architectures</li>
+                    </ul>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="#" class="cta-button" style="padding: 10px 20px;">Download Full Report</a>
+                    </div>
+                `
+            }
+        };
+
+        // Show expertise report
+        function showExpertiseReport(category) {
+            const report = expertiseReports[category] || {
+                title: category + ' Expertise',
+                content: `<p>Detailed report on ${category} expertise.</p>
+                          <img src="https://via.placeholder.com/800x400?text=${encodeURIComponent(category)}+Report" class="report-image">
+                          <div style="text-align: center; margin-top: 30px;">
+                              <a href="#" class="cta-button" style="padding: 10px 20px;">Download Full Report</a>
+                          </div>`
+            };
+            
+            document.getElementById('expertiseModalTitle').textContent = report.title;
+            document.getElementById('expertiseModalBody').innerHTML = report.content;
+            document.getElementById('expertiseReportModal').style.display = 'block';
         }
         
         function closeModal() {
-            document.getElementById('smartFactoryModal').style.display = 'none';
+            document.getElementById('expertiseReportModal').style.display = 'none';
         }
         
         // Close modal when clicking outside
         window.onclick = function(event) {
-            const modal = document.getElementById('smartFactoryModal');
+            const modal = document.getElementById('expertiseReportModal');
             if (event.target == modal) {
                 closeModal();
             }
