@@ -473,6 +473,13 @@
             margin-bottom: 20px;
         }
         
+        .report-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 5px;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
@@ -510,6 +517,10 @@
                 width: 90%;
                 margin: 10% auto;
                 padding: 20px;
+            }
+            
+            .report-iframe {
+                height: 400px;
             }
         }
     </style>
@@ -788,7 +799,7 @@
                 title: 'Data Architecture Expertise',
                 content: `
                     <p>Comprehensive data architecture solutions with 12+ years experience:</p>
-                    <img src="https://via.placeholder.com/800x400?text=Data+Architecture+Report" class="report-image">
+                    <iframe src="https://hieuhpvn.github.io/Luzmo/luzmo_index.html" class="report-iframe"></iframe>
                     
                     <h4>Key Achievements:</h4>
                     <ul>
@@ -805,10 +816,6 @@
                         <li><strong>Kimball:</strong> Dimensional modeling for analytics and reporting</li>
                         <li><strong>Data Vault 2.0:</strong> Scalable data warehouse architecture</li>
                     </ul>
-                    
-                    <div style="text-align: center; margin-top: 30px;">
-                        <a href="#" class="cta-button" style="padding: 10px 20px;">Download Full Report</a>
-                    </div>
                 `
             },
             'Database Technologies': {
