@@ -811,7 +811,7 @@
 
     <script>
         // Khởi tạo EmailJS
-        emailjs.init('YOUR_USER_ID'); // Thay bằng User ID từ EmailJS
+        emailjs.init('2BzfZQCssY8KQWR0O'); // Thay bằng User ID từ EmailJS
 
         // Xử lý gửi biểu mẫu liên hệ
         document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -825,7 +825,7 @@
                 message: document.getElementById('message').value,
             };
 
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+            emailjs.send('service_vjl2dif', 'template_Ls3W43c', formData)
                 .then(() => {
                     formMessage.style.display = 'block';
                     formMessage.style.color = 'green';
