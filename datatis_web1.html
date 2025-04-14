@@ -779,6 +779,17 @@
     </footer>
 
     <!-- Expertise Report Modal -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Phần head giữ nguyên như code của bạn -->
+    <!-- ... -->
+</head>
+<body>
+    <!-- Các phần HTML khác giữ nguyên -->
+    <!-- ... -->
+
+    <!-- Expertise Report Modal -->
     <div id="expertiseReportModal" class="report-modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
@@ -793,13 +804,13 @@
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Expertise report data
+        // Expertise report data - Updated with detailed content for each category
         const expertiseReports = {
             'Data Architecture': {
                 title: 'Data Architecture Expertise',
                 content: `
                     <p>Comprehensive data architecture solutions with 12+ years experience:</p>
-                    <iframe src="https://hieuhpvn.github.io/Luzmo/luzmo_index.html" class="report-iframe"></iframe>
+                    <iframe src="https://example.com/data-architecture-demo" class="report-iframe"></iframe>
                     
                     <h4>Key Achievements:</h4>
                     <ul>
@@ -822,7 +833,7 @@
                 title: 'Database Technologies Expertise',
                 content: `
                     <p>Deep expertise across multiple database platforms:</p>
-                    <img src="https://via.placeholder.com/800x400?text=Database+Technologies+Report" class="report-image">
+                    <img src="https://img.lovepik.com/photo/50059/8805.jpg_wh860.jpg" class="report-image">
                     
                     <h4>Key Skills:</h4>
                     <ul>
@@ -838,18 +849,13 @@
                         <li>Index strategy development</li>
                         <li>Partitioning for large datasets</li>
                     </ul>
-                    
-                    <div style="text-align: center; margin-top: 30px;">
-                        <a href="#" class="cta-button" style="padding: 10px 20px;">Download Full Report</a>
-                    </div>
                 `
             },
-            // Add reports for other categories similarly
             'Data Integration': {
                 title: 'Data Integration Expertise',
                 content: `
                     <p>End-to-end data integration solutions:</p>
-                    <img src="https://via.placeholder.com/800x400?text=Data+Integration+Report" class="report-image">
+                    <img src="https://img.lovepik.com/photo/50059/8805.jpg_wh860.jpg" class="report-image">
                     
                     <h4>Integration Capabilities:</h4>
                     <ul>
@@ -859,40 +865,176 @@
                         <li>Real-time data streaming architectures</li>
                     </ul>
                     
-                    <div style="text-align: center; margin-top: 30px;">
-                        <a href="#" class="cta-button" style="padding: 10px 20px;">Download Full Report</a>
-                    </div>
+                    <h4>Tools & Technologies:</h4>
+                    <ul>
+                        <li>Talend Open Studio and Enterprise Edition</li>
+                        <li>Microsoft SSIS with custom components</li>
+                        <li>Apache Airflow for workflow orchestration</li>
+                        <li>Python-based ETL pipelines</li>
+                    </ul>
+                `
+            },
+            'Optimization': {
+                title: 'Data Optimization Expertise',
+                content: `
+                    <p>Performance optimization and tuning solutions:</p>
+                    <img src="https://img.lovepik.com/photo/50059/8805.jpg_wh860.jpg" class="report-image">
+                    
+                    <h4>Optimization Services:</h4>
+                    <ul>
+                        <li><strong>Data Warehouse Design:</strong> Created optimized schemas for analytical workloads</li>
+                        <li><strong>Implementation Strategies:</strong> Developed phased rollout plans for complex systems</li>
+                        <li><strong>Performance Tuning:</strong> Improved query performance by 300% on average</li>
+                    </ul>
+                    
+                    <h4>Case Study: Manufacturing Data Warehouse</h4>
+                    <p>Optimized a manufacturing data warehouse that reduced report generation time from 4 hours to 15 minutes through:</p>
+                    <ul>
+                        <li>Partitioning strategy implementation</li>
+                        <li>Materialized view optimization</li>
+                        <li>Query plan analysis and index tuning</li>
+                    </ul>
+                `
+            },
+            'Analytics': {
+                title: 'Advanced Analytics Expertise',
+                content: `
+                    <p>Comprehensive analytics solutions:</p>
+                    <iframe src="https://example.com/analytics-dashboard" class="report-iframe"></iframe>
+                    
+                    <h4>Analytics Capabilities:</h4>
+                    <ul>
+                        <li><strong>Hadoop Ecosystem:</strong> HIVE, Impala, HBase implementations</li>
+                        <li><strong>Advanced Analysis:</strong> Predictive modeling, trend analysis, anomaly detection</li>
+                        <li><strong>Data Visualization:</strong> Interactive dashboards and reports</li>
+                    </ul>
+                    
+                    <h4>Key Projects:</h4>
+                    <ul>
+                        <li>Real-time production monitoring system using Impala</li>
+                        <li>Customer churn prediction model with 85% accuracy</li>
+                        <li>Interactive sales performance dashboards</li>
+                    </ul>
+                `
+            },
+            'Business Intelligence': {
+                title: 'Business Intelligence Expertise',
+                content: `
+                    <p>Enterprise BI solutions for data-driven decision making:</p>
+                    <img src="https://img.lovepik.com/photo/50059/8805.jpg_wh860.jpg" class="report-image">
+                    
+                    <h4>BI Platform Experience:</h4>
+                    <ul>
+                        <li><strong>Tableau:</strong> Desktop and Server implementations</li>
+                        <li><strong>Power BI:</strong> Enterprise deployments with row-level security</li>
+                        <li><strong>QlikView:</strong> Custom dashboard development</li>
+                    </ul>
+                    
+                    <h4>BI Implementation Approach:</h4>
+                    <ol>
+                        <li>Requirements gathering with business stakeholders</li>
+                        <li>Data model design optimized for BI tools</li>
+                        <li>Dashboard prototyping and user feedback</li>
+                        <li>Performance optimization and deployment</li>
+                        <li>User training and documentation</li>
+                    </ol>
+                `
+            },
+            'Automation': {
+                title: 'Process Automation Expertise',
+                content: `
+                    <p>Efficiency through automation solutions:</p>
+                    <iframe src="https://example.com/automation-demo" class="report-iframe"></iframe>
+                    
+                    <h4>Automation Capabilities:</h4>
+                    <ul>
+                        <li><strong>Microsoft Power Automate:</strong> Workflow automation across Office 365</li>
+                        <li><strong>Python Scripts:</strong> Custom automation for data processes</li>
+                    </ul>
+                    
+                    <h4>Automation Success Stories:</h4>
+                    <ul>
+                        <li>Automated monthly financial reporting process saving 40 hours/month</li>
+                        <li>Data validation scripts that reduced errors by 90%</li>
+                        <li>Self-healing ETL processes that automatically recover from failures</li>
+                    </ul>
+                    
+                    <h4>Automation Framework:</h4>
+                    <p>Developed a reusable automation framework that includes:</p>
+                    <ul>
+                        <li>Error handling and notifications</li>
+                        <li>Performance logging</li>
+                        <li>Configuration management</li>
+                    </ul>
                 `
             }
         };
 
-        // Show expertise report
+        // Show expertise report - Improved version with smooth scrolling
         function showExpertiseReport(category) {
             const report = expertiseReports[category] || {
                 title: category + ' Expertise',
-                content: `<p>Detailed report on ${category} expertise.</p>
-                          <img src="https://via.placeholder.com/800x400?text=${encodeURIComponent(category)}+Report" class="report-image">
-                          <div style="text-align: center; margin-top: 30px;">
-                              <a href="#" class="cta-button" style="padding: 10px 20px;">Download Full Report</a>
-                          </div>`
+                content: `<p>Comprehensive report on my ${category} capabilities and experience.</p>
+                          <img src="https://via.placeholder.com/800x400?text=${encodeURIComponent(category)}+Expertise" class="report-image">
+                          <p>With over a decade of experience in ${category}, I've developed proven methodologies and best practices that deliver results.</p>
+                          <h4>Key ${category} Services:</h4>
+                          <ul>
+                              <li>Custom ${category} solutions tailored to your needs</li>
+                              <li>Performance optimization</li>
+                              <li>Implementation best practices</li>
+                              <li>Ongoing support and maintenance</li>
+                          </ul>`
             };
             
+            // Set modal content
             document.getElementById('expertiseModalTitle').textContent = report.title;
             document.getElementById('expertiseModalBody').innerHTML = report.content;
-            document.getElementById('expertiseReportModal').style.display = 'block';
+            
+            // Show modal with smooth transition
+            const modal = document.getElementById('expertiseReportModal');
+            modal.style.display = 'block';
+            modal.style.opacity = 0;
+            
+            let opacity = 0;
+            const fadeIn = setInterval(() => {
+                opacity += 0.1;
+                modal.style.opacity = opacity;
+                if (opacity >= 1) clearInterval(fadeIn);
+            }, 30);
+            
+            // Scroll to top of modal content
+            document.querySelector('.modal-content').scrollTop = 0;
         }
         
+        // Close modal with fade out effect
         function closeModal() {
-            document.getElementById('expertiseReportModal').style.display = 'none';
+            const modal = document.getElementById('expertiseReportModal');
+            let opacity = 1;
+            
+            const fadeOut = setInterval(() => {
+                opacity -= 0.1;
+                modal.style.opacity = opacity;
+                if (opacity <= 0) {
+                    clearInterval(fadeOut);
+                    modal.style.display = 'none';
+                }
+            }, 30);
         }
         
-        // Close modal when clicking outside
+        // Close modal when clicking outside or pressing ESC
         window.onclick = function(event) {
             const modal = document.getElementById('expertiseReportModal');
             if (event.target == modal) {
                 closeModal();
             }
-        }
+        };
+        
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if (evt.key === "Escape") {
+                closeModal();
+            }
+        };
     </script>
 </body>
 </html>
