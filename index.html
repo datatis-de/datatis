@@ -829,13 +829,13 @@
                 .then(() => {
                     formMessage.style.display = 'block';
                     formMessage.style.color = 'green';
-                    formMessage.textContent = translations[localStorage.getItem('language') || 'en']['contact.success'] || 'Message sent successfully!';
+                    formMessage.textContent = translations[localStorage.getItem('language') || 'de']['contact.success'] || 'Message sent successfully!';
                     document.getElementById('contactForm').reset();
                 })
                 .catch(error => {
                     formMessage.style.display = 'block';
                     formMessage.style.color = 'red';
-                    formMessage.textContent = translations[localStorage.getItem('language') || 'en']['contact.error'] || 'Failed to send message.';
+                    formMessage.textContent = translations[localStorage.getItem('language') || 'de']['contact.error'] || 'Failed to send message.';
                     console.error('Error:', error);
                 });
         });
@@ -1096,7 +1096,7 @@
                 "modal.optimization.services.1": "Erstellung optimierter Schemata für analytische Workloads",
                 "modal.optimization.services.2": "Entwicklung schrittweiser Einführungspläne für komplexe Systeme",
                 "modal.optimization.services.3": "Durchschnittliche Verbesserung der Abfrageleistung um 300%",
-                "modal.optimization.caseStudy": "Fallstudie: Manufacturing Data Warehouse",
+                "modal.optimization.caseStudy": "Fallstudie: Manufacturing összeállítás",
                 "modal.optimization.caseStudyDesc": "Optimierung eines Fertigungs-Data-Warehouse, das die Berichtsgenerierungszeit von 4 Stunden auf 15 Minuten reduziert hat durch:",
                 "modal.optimization.caseStudy.1": "Implementierung einer Partitionierungsstrategie",
                 "modal.optimization.caseStudy.2": "Optimierung materialisierter Sichten",
@@ -1170,7 +1170,7 @@
 
         // Initialize language
         function initLanguage() {
-            const savedLang = localStorage.getItem('language') || 'en';
+            const savedLang = localStorage.getItem('language') || 'de';
             document.getElementById('languageSwitch').value = savedLang;
             changeLanguage(savedLang);
         }
@@ -1183,7 +1183,7 @@
             'Data Architecture': {
                 title: 'Data Architecture Expertise',
                 content: `
-                    <p data-i18n="modal.dataArchitecture.desc">Comprehensive data architecture solutions with 12+ years experience:</p>
+                    <p data-i18n="modal.dataArchitecture.desc">Comprehensive data architecture solutions demandas 12+ years experience:</p>
                     <iframe src="https://datatis-de.github.io/datatis/luzmo_report.html" class="report-iframe"></iframe>
                     <h4 data-i18n="modal.dataArchitecture.achievements">Key Achievements:</h4>
                     <ul>
@@ -1355,7 +1355,7 @@
             document.getElementById('expertiseModalBody').innerHTML = report.content;
             
             // Update modal translations
-            const currentLang = localStorage.getItem('language') || 'en';
+            const currentLang = localStorage.getItem('language') || 'de';
             changeLanguage(currentLang);
             
             // Show modal with smooth transition
