@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="title">Senior Data Engineer & AI Specialist | Phu Viet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Thêm EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <style>
         :root {
@@ -36,7 +35,6 @@
             padding: 0 20px;
         }
         
-        /* Header */
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -170,7 +168,6 @@
             color: white;
         }
         
-        /* Why Work With Me */
         .why-me {
             padding: 80px 0;
             background-color: white;
@@ -226,7 +223,6 @@
             color: var(--primary);
         }
         
-        /* Awards Section */
         .awards {
             padding: 60px 0;
             background-color: #f5f7fa;
@@ -299,6 +295,138 @@
             .feature-card-horizontal {
                 flex: 1 1 100%;
             }
+        }
+
+        /* Expertise Section Styling */
+        .expertise {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .skills-grid {
+            display: block;
+        }
+
+        .skill-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .details-container {
+            display: none;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(10px);
+        }
+
+        .details-container.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-details {
+            display: none;
+        }
+
+        .details-container .skill-details.show {
+            display: block;
+        }
+
+        .skill-category {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            background-color: #f0f5f9;
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-category h3 i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .skill-list {
+            list-style-type: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .skill-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .skill-details-content h4 {
+            color: var(--primary);
+            margin: 15px 0 10px;
+        }
+
+        .skill-details-content ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .skill-details-content ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .skill-details-content ul li::before {
+            content: '•';
+            color: var(--secondary);
+            position: absolute;
+            left: -15px;
+        }
+
+        .download-report {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-report:hover {
+            background-color: var(--primary);
         }
     </style>
 </head>
@@ -396,15 +524,15 @@
             </div>
         </div>
     </section>
-      <!-- Expertise Section -->
+
+    <!-- Expertise Section -->
     <section class="expertise">
         <div class="container">
             <h2 class="section-title" data-i18n="expertise.title">My Expertise</h2>
             <div class="skills-grid">
-                <!-- Hàng 1: 3 mục đầu tiên -->
-                <div class="skill-row">
-                    <!-- Data Architecture -->
-                    <div class="skill-category" data-category="dataArchitecture">
+                <!-- First Row: Data Architecture, Database Technologies, Data Integration -->
+                <div class="skill-row" id="first-row">
+                    <div class="skill-category" data-category="dataArchitecture" data-group="group1">
                         <h3><i class="fas fa-database"></i> <span data-i18n="expertise.dataArchitecture">Data Architecture</span></h3>
                         <ul class="skill-list">
                             <li data-i18n="expertise.dataArchitectureSkills.1">3NF, Kimball, Data Vault 2.0 methodologies</li>
@@ -414,8 +542,7 @@
                             <li data-i18n="expertise.dataArchitectureSkills.5">Docker containerization</li>
                         </ul>
                     </div>
-                    <!-- Database Technologies -->
-                    <div class="skill-category" data-category="databaseTechnologies">
+                    <div class="skill-category" data-category="databaseTechnologies" data-group="group1">
                         <h3><i class="fas fa-server"></i> <span data-i18n="expertise.databaseTechnologies">Database Technologies</span></h3>
                         <ul class="skill-list">
                             <li data-i18n="expertise.databaseTechnologiesSkills.1">MS SQL Server (SSIS, SSAS, SSMS, SSRS)</li>
@@ -424,8 +551,7 @@
                             <li data-i18n="expertise.databaseTechnologiesSkills.4">Azure/AWS cloud databases</li>
                         </ul>
                     </div>
-                    <!-- Data Integration -->
-                    <div class="skill-category" data-category="dataIntegration">
+                    <div class="skill-category" data-category="dataIntegration" data-group="group1">
                         <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="expertise.dataIntegration">Data Integration</span></h3>
                         <ul class="skill-list">
                             <li data-i18n="expertise.dataIntegrationSkills.1">Multiple source formats (CSV, Excel, SAP, MES)</li>
@@ -438,9 +564,8 @@
                     </div>
                 </div>
 
-                <!-- Khu vực hiển thị chi tiết -->
-                <div id="details-container">
-                    <!-- Data Architecture Details -->
+                <!-- Details for First Row -->
+                <div id="details-container-group1" class="details-container">
                     <div class="skill-details" id="dataArchitectureDetails">
                         <div class="skill-details-content">
                             <p data-i18n="modal.dataArchitecture.desc">Comprehensive data architecture solutions with 12+ years experience:</p>
@@ -463,7 +588,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Database Technologies Details -->
                     <div class="skill-details" id="databaseTechnologiesDetails">
                         <div class="skill-details-content">
                             <p data-i18n="modal.databaseTechnologies.desc">Deep expertise across multiple database platforms:</p>
@@ -482,7 +606,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Data Integration Details -->
                     <div class="skill-details" id="dataIntegrationDetails">
                         <div class="skill-details-content">
                             <p data-i18n="modal.dataIntegration.desc">End-to-end data integration solutions:</p>
@@ -502,7 +625,38 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Optimization Details -->
+                </div>
+                <!-- End of First Row Details -->
+				                <!-- Second Row: Optimization, Analytics, Business Intelligence -->
+                <div class="skill-row" id="second-row">
+                    <div class="skill-category" data-category="optimization" data-group="group2">
+                        <h3><i class="fas fa-tachometer-alt"></i> <span data-i18n="expertise.optimization">Optimization</span></h3>
+                        <ul class="skill-list">
+                            <li data-i18n="expertise.optimizationSkills.1">Data warehouse design</li>
+                            <li data-i18n="expertise.optimizationSkills.2">Implementation strategies</li>
+                            <li data-i18n="expertise.optimizationSkills.3">Performance tuning</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-category="analytics" data-group="group2">
+                        <h3><i class="fas fa-chart-bar"></i> <span data-i18n="expertise.analytics">Analytics</span></h3>
+                        <ul class="skill-list">
+                            <li data-i18n="expertise.analyticsSkills.1">Hadoop ecosystem (HIVE, Impala)</li>
+                            <li data-i18n="expertise.analyticsSkills.2">Advanced data analysis</li>
+                            <li data-i18n="expertise.analyticsSkills.3">Data visualization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-category="businessIntelligence" data-group="group2">
+                        <h3><i class="fas fa-chart-pie"></i> <span data-i18n="expertise.businessIntelligence">Business Intelligence</span></h3>
+                        <ul class="skill-list">
+                            <li data-i18n="expertise.businessIntelligenceSkills.1">Tableau Desktop and Server</li>
+                            <li data-i18n="expertise.businessIntelligenceSkills.2">Microsoft Power BI</li>
+                            <li data-i18n="expertise.businessIntelligenceSkills.3">Qlikview dashboards</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Details for Second Row -->
+                <div id="details-container-group2" class="details-container">
                     <div class="skill-details" id="optimizationDetails">
                         <div class="skill-details-content">
                             <p data-i18n="modal.optimization.desc">Performance optimization and tuning solutions:</p>
@@ -521,7 +675,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Analytics Details -->
                     <div class="skill-details" id="analyticsDetails">
                         <div class="skill-details-content">
                             <p data-i18n="modal.analytics.desc">Comprehensive analytics solutions:</p>
@@ -539,7 +692,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Business Intelligence Details -->
                     <div class="skill-details" id="businessIntelligenceDetails">
                         <div class="skill-details-content">
                             <p data-i18n="modal.businessIntelligence.desc">Enterprise BI solutions for data-driven decision making:</p>
@@ -559,7 +711,22 @@
                             </ol>
                         </div>
                     </div>
-                    <!-- Automation Details -->
+                </div>
+                <!-- End of Second Row Details -->
+
+                <!-- Third Row: Automation -->
+                <div class="skill-row" id="third-row">
+                    <div class="skill-category" data-category="automation" data-group="group3">
+                        <h3><i class="fas fa-cogs"></i> <span data-i18n="expertise.automation">Automation</span></h3>
+                        <ul class="skill-list">
+                            <li data-i18n="expertise.automationSkills.1">Microsoft Power Automate</li>
+                            <li data-i18n="expertise.automationSkills.2">Python automation scripts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Details for Third Row -->
+                <div id="details-container-group3" class="details-container">
                     <div class="skill-details" id="automationDetails">
                         <div class="skill-details-content">
                             <p data-i18n="modal.automation.desc">Efficiency through automation solutions:</p>
@@ -584,50 +751,11 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Hàng 2: 4 mục còn lại -->
-                <div class="skill-row">
-                    <!-- Optimization -->
-                    <div class="skill-category" data-category="optimization">
-                        <h3><i class="fas fa-tachometer-alt"></i> <span data-i18n="expertise.optimization">Optimization</span></h3>
-                        <ul class="skill-list">
-                            <li data-i18n="expertise.optimizationSkills.1">Data warehouse design</li>
-                            <li data-i18n="expertise.optimizationSkills.2">Implementation strategies</li>
-                            <li data-i18n="expertise.optimizationSkills.3">Performance tuning</li>
-                        </ul>
-                    </div>
-                    <!-- Analytics -->
-                    <div class="skill-category" data-category="analytics">
-                        <h3><i class="fas fa-chart-bar"></i> <span data-i18n="expertise.analytics">Analytics</span></h3>
-                        <ul class="skill-list">
-                            <li data-i18n="expertise.analyticsSkills.1">Hadoop ecosystem (HIVE, Impala)</li>
-                            <li data-i18n="expertise.analyticsSkills.2">Advanced data analysis</li>
-                            <li data-i18n="expertise.analyticsSkills.3">Data visualization</li>
-                        </ul>
-                    </div>
-                    <!-- Business Intelligence -->
-                    <div class="skill-category" data-category="businessIntelligence">
-                        <h3><i class="fas fa-chart-pie"></i> <span data-i18n="expertise.businessIntelligence">Business Intelligence</span></h3>
-                        <ul class="skill-list">
-                            <li data-i18n="expertise.businessIntelligenceSkills.1">Tableau Desktop and Server</li>
-                            <li data-i18n="expertise.businessIntelligenceSkills.2">Microsoft Power BI</li>
-                            <li data-i18n="expertise.businessIntelligenceSkills.3">Qlikview dashboards</li>
-                        </ul>
-                    </div>
-                    <!-- Automation -->
-                    <div class="skill-category" data-category="automation">
-                        <h3><i class="fas fa-cogs"></i> <span data-i18n="expertise.automation">Automation</span></h3>
-                        <ul class="skill-list">
-                            <li data-i18n="expertise.automationSkills.1">Microsoft Power Automate</li>
-                            <li data-i18n="expertise.automationSkills.2">Python automation scripts</li>
-                        </ul>
-                    </div>
-                </div>
+                <!-- End of Third Row Details -->
             </div>
         </div>
     </section>
-
-    <!-- Why Choose Me Section -->
+	    <!-- Why Choose Me Section -->
     <section class="why-choose">
         <div class="container">
             <h2 class="section-title" data-i18n="whyChoose.title">Why Choose Me?</h2>
@@ -689,156 +817,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-logo">
-                <img src="https://thtichluong2.pgdtpthainguyen.edu.vn/upload/50588/20200622/1_7e376c4ca4.jpg" alt="Datatis Logo">
-                <span class="company-name">Datatis</span>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p data-i18n="footer.copyright">© <span id="year"></span> Phu Viet. All rights reserved.</p>
-        </div>
-    </footer>
-
     <style>
-        /* Expertise */
-        .expertise {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .skills-grid {
-            display: block;
-        }
-
-        .skill-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 25px;
-        }
-
-        #details-container {
-            display: none;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 20px 0;
-            opacity: 0;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            transform: translateY(10px);
-        }
-
-        #details-container.show {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .skill-details {
-            display: none;
-        }
-
-        #details-container .skill-details.show {
-            display: block;
-        }
-
-        .skill-category {
-            background-color: var(--light);
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            margin-bottom: 15px;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            background-color: #f0f5f9;
-        }
-
-        .skill-category h3 {
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        .skill-category h3 i {
-            margin-right: 10px;
-            color: var(--secondary);
-        }
-
-        .skill-list {
-            list-style-type: none;
-        }
-
-        .skill-list li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .skill-list li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: var(--secondary);
-            position: absolute;
-            left: 0;
-            top: 2px;
-        }
-
-        .skill-details-content h4 {
-            color: var(--primary);
-            margin: 15px 0 10px;
-        }
-
-        .skill-details-content ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-
-        .skill-details-content ul li {
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        .skill-details-content ul li::before {
-            content: '•';
-            color: var(--secondary);
-            position: absolute;
-            left: -15px;
-        }
-
-        .download-report {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-report:hover {
-            background-color: var(--primary);
-        }
-
         /* Why Choose Me */
         .why-choose {
             padding: 80px 0;
@@ -923,7 +902,25 @@
         .submit-btn:hover {
             background-color: var(--primary);
         }
+    </style>
+	    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="https://thtichluong2.pgdtpthainguyen.edu.vn/upload/50588/20200622/1_7e376c4ca4.jpg" alt="Datatis Logo">
+                <span class="company-name">Datatis</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p data-i18n="footer.copyright">© <span id="year"></span> Phu Viet. All rights reserved.</p>
+        </div>
+    </footer>
 
+    <style>
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -969,7 +966,7 @@
                 grid-column: 1 / -1;
             }
 
-            #details-container {
+            .details-container {
                 margin: 0 10px;
             }
         }
@@ -977,7 +974,7 @@
 
     <script>
         // Khởi tạo EmailJS
-        emailjs.init('YOUR_USER_ID'); // Thay bằng User ID từ EmailJS
+        emailjs.init('2BzfZQCssY8KQWR0O'); // Thay bằng User ID từ EmailJS
 
         // Xử lý gửi biểu mẫu liên hệ
         document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -991,7 +988,7 @@
                 message: document.getElementById('message').value,
             };
 
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+            emailjs.send('service_vjl2dif', 'template_ls3w43c', formData)
                 .then(() => {
                     formMessage.style.display = 'block';
                     formMessage.style.color = 'green';
@@ -1334,17 +1331,19 @@
             changeLanguage(savedLang);
         }
 
-        // Toggle skill details
-        function toggleSkillDetails(category) {
-            const detailsContainer = document.getElementById('details-container');
+        // Toggle skill details for each group
+        function toggleSkillDetails(category, group) {
+            const detailsContainer = document.getElementById(`details-container-${group}`);
             const details = document.getElementById(`${category}Details`);
             
             const isVisible = details.classList.contains('show');
 
-            document.querySelectorAll('.skill-details').forEach(detail => {
+            // Hide all details within the same group
+            document.querySelectorAll(`#details-container-${group} .skill-details`).forEach(detail => {
                 detail.classList.remove('show');
             });
 
+            // Toggle visibility
             if (!isVisible) {
                 details.classList.add('show');
                 detailsContainer.classList.add('show');
@@ -1353,13 +1352,14 @@
             }
         }
 
-        // Thêm sự kiện click cho skill-category
+        // Add click event listeners for skill categories
         document.addEventListener('DOMContentLoaded', () => {
             const skillCategories = document.querySelectorAll('.skill-category');
             skillCategories.forEach(category => {
                 category.addEventListener('click', () => {
                     const categoryName = category.getAttribute('data-category');
-                    toggleSkillDetails(categoryName);
+                    const groupName = category.getAttribute('data-group');
+                    toggleSkillDetails(categoryName, groupName);
                 });
             });
 
