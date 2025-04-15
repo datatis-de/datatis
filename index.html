@@ -426,8 +426,36 @@
         }
 
         .download-report:hover {
-            background-color: var(--primary);
-        }
+			background-color: var(--primary);
+		}
+
+		/* Định dạng iframe cho báo cáo Luzmo */
+		.report-iframe {
+			width: 100%; /* Chiều rộng chiếm toàn bộ container cha */
+			height: 600px; /* Chiều cao cố định để hiển thị toàn bộ báo cáo */
+			min-height: 500px; /* Chiều cao tối thiểu để tránh nội dung bị co lại quá nhiều */
+			border: none; /* Xóa viền */
+			margin: 20px 0; /* Thêm khoảng cách phía trên và dưới iframe */
+		}
+
+		/* Đảm bảo container cha linh hoạt với kích thước iframe */
+		.details-container {
+			width: 100%;
+			max-width: 1200px; /* Giữ độ rộng tối đa nhất quán với container chính */
+			overflow-x: auto; /* Cho phép cuộn ngang nếu nội dung báo cáo vượt quá chiều rộng */
+		}
+
+		.skill-details-content {
+			width: 100%;
+			padding: 20px; /* Đảm bảo có đủ khoảng đệm */
+		}
+
+		/* Điều chỉnh cho màn hình nhỏ */
+		@media (max-width: 768px) {
+			.report-iframe {
+				height: 600px; /* Giảm chiều cao trên màn hình nhỏ để phù hợp */
+			}
+		}
     </style>
 </head>
 <body>
@@ -567,27 +595,35 @@
                 <!-- Details for First Row -->
                 <div id="details-container-group1" class="details-container">
                     <div class="skill-details" id="dataArchitectureDetails">
-                        <div class="skill-details-content">
-                            <p data-i18n="modal.dataArchitecture.desc">Comprehensive data architecture solutions with 12+ years experience:</p>
-                            <h4 data-i18n="modal.dataArchitecture.achievements">Key Achievements:</h4>
-                            <ul>
-                                <li data-i18n="modal.dataArchitecture.achievements.1">Designed and implemented data architectures for 15+ enterprise clients</li>
-                                <li data-i18n="modal.dataArchitecture.achievements.2">Developed real-time data processing systems with under 50ms latency</li>
-                                <li data-i18n="modal.dataArchitecture.achievements.3">Created standardized data modeling practices using SAP Power Designer</li>
-                                <li data-i18n="modal.dataArchitecture.achievements.4">Implemented Git-based version control for database schemas</li>
-                                <li data-i18n="modal.dataArchitecture.achievements.5">Containerized data pipelines reducing deployment time by 70%</li>
-                            </ul>
-                            <h4 data-i18n="modal.dataArchitecture.methodologies">Methodologies:</h4>
-                            <ul>
-                                <li><strong>3NF:</strong> <span data-i18n="modal.dataArchitecture.methodologies.1">Normalized transactional databases for optimal performance</span></li>
-                                <li><strong>Kimball:</strong> <span data-i18n="modal.dataArchitecture.methodologies.2">Dimensional modeling for analytics and reporting</span></li>
-                                <li><strong>Data Vault 2.0:</strong> <span data-i18n="modal.dataArchitecture.methodologies.3">Scalable data warehouse architecture</span></li>
-                            </ul>
-                            <div style="text-align: center; margin-top: 30px;">
-                                <a href="https://datatis-de.github.io/datatis/luzmo_report.html" class="download-report" data-i18n="modal.download">Download Full Report</a>
-                            </div>
-                        </div>
-                    </div>
+						<div class="skill-details-content">
+							<p data-i18n="modal.dataArchitecture.desc">Comprehensive data architecture solutions with 12+ years experience:</p>
+							<!-- Cập nhật iframe với các thuộc tính -->
+							<iframe 
+								src="https://datatis-de.github.io/datatis/luzmo_report.html" 
+								class="report-iframe" 
+								frameborder="0" 
+								allowfullscreen 
+								scrolling="yes"
+							></iframe>
+							<h4 data-i18n="modal.dataArchitecture.achievements">Key Achievements:</h4>
+							<ul>
+								<li data-i18n="modal.dataArchitecture.achievements.1">Designed and implemented data architectures for 15+ enterprise clients</li>
+								<li data-i18n="modal.dataArchitecture.achievements.2">Developed real-time data processing systems with under 50ms latency</li>
+								<li data-i18n="modal.dataArchitecture.achievements.3">Created standardized data modeling practices using SAP Power Designer</li>
+								<li data-i18n="modal.dataArchitecture.achievements.4">Implemented Git-based version control for database schemas</li>
+								<li data-i18n="modal.dataArchitecture.achievements.5">Containerized data pipelines reducing deployment time by 70%</li>
+							</ul>
+							<h4 data-i18n="modal.dataArchitecture.methodologies">Methodologies:</h4>
+							<ul>
+								<li><strong>3NF:</strong> <span data-i18n="modal.dataArchitecture.methodologies.1">Normalized transactional databases for optimal performance</span></li>
+								<li><strong>Kimball:</strong> <span data-i18n="modal.dataArchitecture.methodologies.2">Dimensional modeling for analytics and reporting</span></li>
+								<li><strong>Data Vault 2.0:</strong> <span data-i18n="modal.dataArchitecture.methodologies.3">Scalable data warehouse architecture</span></li>
+							</ul>
+							<div style="text-align: center; margin-top: 30px;">
+								<a href="https://datatis-de.github.io/datatis/luzmo_report.html" class="download-report" data-i18n="modal.download">Download Full Report</a>
+							</div>
+						</div>
+					</div>
                     <div class="skill-details" id="databaseTechnologiesDetails">
                         <div class="skill-details-content">
                             <p data-i18n="modal.databaseTechnologies.desc">Deep expertise across multiple database platforms:</p>
@@ -604,6 +640,9 @@
                                 <li data-i18n="modal.databaseTechnologies.optimization.2">Index strategy development</li>
                                 <li data-i18n="modal.databaseTechnologies.optimization.3">Partitioning for large datasets</li>
                             </ul>
+							<div style="text-align: center; margin-top: 30px;">
+								<a href="https://datatis-de.github.io/datatis/luzmo_report.html" class="download-report" data-i18n="modal.download">Download Full Report</a>
+							</div>
                         </div>
                     </div>
                     <div class="skill-details" id="dataIntegrationDetails">
@@ -623,6 +662,9 @@
                                 <li data-i18n="modal.dataIntegration.tools.3">Apache Airflow for workflow orchestration</li>
                                 <li data-i18n="modal.dataIntegration.tools.4">Python-based ETL pipelines</li>
                             </ul>
+							<div style="text-align: center; margin-top: 30px;">
+								<a href="https://datatis-de.github.io/datatis/luzmo_report.html" class="download-report" data-i18n="modal.download">Download Full Report</a>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -673,6 +715,9 @@
                                 <li data-i18n="modal.optimization.caseStudy.2">Materialized view optimization</li>
                                 <li data-i18n="modal.optimization.caseStudy.3">Query plan analysis and index tuning</li>
                             </ul>
+							<div style="text-align: center; margin-top: 30px;">
+								<a href="https://datatis-de.github.io/datatis/luzmo_report.html" class="download-report" data-i18n="modal.download">Download Full Report</a>
+							</div>
                         </div>
                     </div>
                     <div class="skill-details" id="analyticsDetails">
@@ -690,6 +735,9 @@
                                 <li data-i18n="modal.analytics.projects.2">Customer churn prediction model with 85% accuracy</li>
                                 <li data-i18n="modal.analytics.projects.3">Interactive sales performance dashboards</li>
                             </ul>
+							<div style="text-align: center; margin-top: 30px;">
+								<a href="https://datatis-de.github.io/datatis/luzmo_report.html" class="download-report" data-i18n="modal.download">Download Full Report</a>
+							</div>
                         </div>
                     </div>
                     <div class="skill-details" id="businessIntelligenceDetails">
@@ -709,6 +757,9 @@
                                 <li data-i18n="modal.businessIntelligence.approach.4">Performance optimization and deployment</li>
                                 <li data-i18n="modal.businessIntelligence.approach.5">User training and documentation</li>
                             </ol>
+							<div style="text-align: center; margin-top: 30px;">
+								<a href="https://datatis-de.github.io/datatis/luzmo_report.html" class="download-report" data-i18n="modal.download">Download Full Report</a>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -748,6 +799,9 @@
                                 <li data-i18n="modal.automation.framework.2">Performance logging</li>
                                 <li data-i18n="modal.automation.framework.3">Configuration management</li>
                             </ul>
+							<div style="text-align: center; margin-top: 30px;">
+								<a href="https://datatis-de.github.io/datatis/luzmo_report.html" class="download-report" data-i18n="modal.download">Download Full Report</a>
+							</div>
                         </div>
                     </div>
                 </div>
