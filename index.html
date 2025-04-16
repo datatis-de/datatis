@@ -13,7 +13,7 @@
             --accent: #e74c3c;
             --light: #ecf0f1;
             --dark: #2c3e50;
-            --text: #1a1a1a;
+            --text: #333;
         }
         
         * {
@@ -36,13 +36,12 @@
         }
         
         header {
-            background-image: url('https://wallpapercrafter.com/desktop/2097-city-road-buildings-sky-4k.jpg');
+            background-image: url('https://www.hdwallpapers.in/download/new_york_4k_hd-1366x768.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: #3498db;
-            color: #ffffff;
-            padding: 0px 0 0px;
+            color: white;
+            padding: 55px 0 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -55,16 +54,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.2);
-        }
-        
-        header h1, header .tagline, header p, header .current-position, header .company-name {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        header .cta-button {
-            color: #ffffff;
-            text-shadow: none;
+            background: rgba(0, 0, 0, 0.2); /* Lớp phủ tối để chữ dễ đọc */
         }
         
         .header-content {
@@ -109,21 +99,19 @@
         .company-name {
             font-weight: bold;
             font-size: 1.2rem;
-            color: #ffffff;
+            color: white;
         }
         
         h1 {
             font-size: 2.8rem;
             margin-bottom: 15px;
             font-weight: 700;
-            color: #ffffff;
         }
         
         .tagline {
             font-size: 1.5rem;
             margin-bottom: 30px;
             font-weight: 300;
-            color: #ffffff;
         }
         
         .current-position {
@@ -133,13 +121,12 @@
             border-radius: 20px;
             margin-bottom: 20px;
             font-size: 1rem;
-            color: #ffffff;
         }
         
         .cta-button {
             display: inline-block;
             background-color: var(--accent);
-            color: #ffffff;
+            color: white;
             padding: 12px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -151,25 +138,12 @@
         
         .cta-button:hover {
             background-color: transparent;
-            color: #ffffff;
-        }
-        
-        .upwork-link {
-            color: #e74c3c; /* Màu đỏ (--accent) để nổi bật */
-            text-decoration: underline;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            transition: color 0.3s ease;
-        }
-
-        .upwork-link:hover {
-            color: #c0392b; /* Màu đỏ đậm hơn khi hover */
-            text-decoration: none;
+            color: white;
         }
         
         .why-me {
             padding: 80px 0;
             background-color: white;
-            color: var(--text);
         }
         
         .section-title {
@@ -177,7 +151,6 @@
             margin-bottom: 50px;
             font-size: 2.2rem;
             position: relative;
-            color: var(--text);
         }
         
         .section-title::after {
@@ -223,14 +196,9 @@
             color: var(--primary);
         }
         
-        .feature-card-horizontal p {
-            color: #2c2c2c;
-        }
-        
         .awards {
             padding: 60px 0;
             background-color: #f5f7fa;
-            color: var(--text);
         }
         
         .awards-container {
@@ -264,10 +232,6 @@
             font-size: 1.3rem;
             color: var(--primary);
             margin-bottom: 10px;
-        }
-        
-        .award-content p {
-            color: #2c2c2c;
         }
         
         @media (max-width: 768px) {
@@ -304,7 +268,6 @@
         .expertise {
             padding: 80px 0;
             background-color: white;
-            color: var(--text);
         }
         
         .skills-grid {
@@ -384,7 +347,6 @@
             margin-bottom: 10px;
             position: relative;
             padding-left: 25px;
-            color: #2c2c2c;
         }
 
         .skill-list li::before {
@@ -394,7 +356,7 @@
             color: var(--secondary);
             position: absolute;
             left: 0;
-            top: 2px;
+            sistemul: 2px;
         }
 
         .skill-details-content h4 {
@@ -410,7 +372,6 @@
         .skill-details-content ul li {
             margin-bottom: 10px;
             position: relative;
-            color: #2c2c2c;
         }
 
         .skill-details-content ul li::before {
@@ -420,14 +381,10 @@
             left: -15px;
         }
 
-        .skill-details-content p {
-            color: #2c2c2c;
-        }
-
         .download-report {
             display: inline-block;
             background-color: var(--secondary);
-            color: #ffffff;
+            color: white;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
@@ -467,11 +424,8 @@
         .why-choose {
             padding: 80px 0;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #ffffff;
-        }
-
-        .why-choose .section-title, .why-choose p {
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+            color: white;
+            text-align: center;
         }
 
         .benefits {
@@ -497,14 +451,9 @@
             color: var(--accent);
         }
 
-        .benefit p {
-            color: #ffffff;
-        }
-
         .contact {
             padding: 80px 0;
             background-color: white;
-            color: var(--text);
         }
 
         .contact-form {
@@ -524,7 +473,6 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: var(--text);
         }
 
         .form-group input,
@@ -534,7 +482,6 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
-            color: #2c2c2c;
         }
 
         .form-group textarea {
@@ -543,7 +490,7 @@
 
         .submit-btn {
             background-color: var(--secondary);
-            color: #ffffff;
+            color: white;
             border: none;
             padding: 12px 30px;
             border-radius: 5px;
@@ -559,11 +506,9 @@
 
         footer {
             background-color: var(--dark);
-            color: #ffffff;
-        }
-
-        .footer-logo .company-name {
-            color: #ffffff;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
         }
 
         .social-links {
@@ -571,7 +516,7 @@
         }
 
         .social-links a {
-            color: #ffffff;
+            color: white;
             font-size: 1.5rem;
             margin: 0 10px;
             transition: color 0.3s ease;
@@ -594,10 +539,6 @@
             width: auto;
         }
 
-        footer p {
-            color: #d1d1d1;
-        }
-
         .language-toggle {
             position: absolute;
             top: 20px;
@@ -607,7 +548,7 @@
 
         .language-toggle select {
             background-color: rgba(255,255,255,0.2);
-            color: #ffffff;
+            color: white;
             border: none;
             padding: 8px 25px 8px 15px;
             border-radius: 20px;
@@ -633,7 +574,7 @@
 
         .language-toggle select option {
             background-color: var(--primary);
-            color: #ffffff;
+            color: white;
         }
 
         @media (max-width: 768px) {
@@ -668,7 +609,6 @@
                 <option value="en" data-translate="lang_en">English</option>
             </select>
         </div>
-        <br><br> 
         <div class="container">
             <div class="header-content">
                 <div class="profile-section">
@@ -678,16 +618,16 @@
                     <p data-translate="header_description">Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung</p>
                     <span style="font-size: 20px;"> 
                         <span data-translate="cta_text">Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?</span> 
-                        <a href="https://www.upwork.com/freelancers/~0119cf54e69a5f33b7" class="upwork-link" data-translate="upwork_link">Kontaktieren Sie mich jetzt auf Upwork!</a>
+                        <a href="https://www.upwork.com/your-profile-link" data-translate="upwork_link">Kontaktieren Sie mich über Upwork!</a>
                     </span><br>
                     <a href="#contact" class="cta-button" data-translate="contact_button">Kontakt aufnehmen</a>
                 </div>
-                <img src="https://scontent.fhan5-2.fna.fbcdn.net/v/t1.15752-9/490986994_1746615289542986_7091326455826440454_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHsh4O8CboFeMNM6Hvs0rTEDyuxFXZ0eFwPK7EVdnR4XB-TvHT1NdNH_8RjW8zFjFCnpWCG-YwbFHLVA8ehkqe3&_nc_ohc=QpaZ3_qAwUIQ7kNvwFmgD3c&_nc_oc=AdlE211BTsK_f2H4slwou3VEMUSI17IQ5XWa0TXplfBrWxDlslnViaeGncEBIEPGBHSNcLcK9Xw27O801kR4MZnS&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fhan5-2.fna&oh=03_Q7cD2AHq1C2Y1LbzEsYgrDTZrzk6l3iRLpGDTWO51qp3K90fMw&oe=682699BD" alt="Phu Viet" style="width: 300px; height: 400px;">
+                <img src="https://scontent.fhan5-2.fna.fbcdn.net/v/t1.15752-9/490986994_1746615289542986_7091326455826440454_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHsh4O8CboFeMNM6Hvs0rTEDyuxFXZ0eFwPK7EVdnR4XB-TvHT1NdNH_8RjW8zFjFCnpWCG-YwbFHLVA8ehkqe3&_nc_ohc=QpaZ3_qAwUIQ7kNvwFmgD3c&_nc_oc=AdlE211BTsK_f2H4slwou3VEMUSI17IQ5XWa0TXplfBrWxDlslnViaeGncEBIEPGBHSNcLcK9Xw27O801kR4MZnS&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fhan5-2.fna&oh=03_Q7cD2AHq1C2Y1LbzEsYgrDTZrzk6l3iRLpGDTWO51qp3K90fMw&oe=682699BD" alt="Phu Viet" style="width: 220px; height: 300px;">
             </div>
         </div>
     </header>
-	
-	<section class="awards">
+  
+    <section class="awards">
         <div class="container">
             <h2 class="section-title" data-translate="awards_title">Auszeichnungen & Anerkennung</h2>
             <div class="awards-container">
@@ -706,7 +646,7 @@
                     </div>
                 </div>
                 <div class="award-card">
-                    <img src="https://mediusware.com/_next/image?url=https%3A%2F%2Fmw-hr.sgp1.digitaloceanspaces.com%2Fmedia%2Faward_images%2Fimage_2024_06_26T12_23_40_122Z_1_LrAvLXv.png&w=1080&q=75" alt="Top 1 % Freelancer Upwork & Top Rated Plus" class="award-image">
+                    <img src="https://mediusware.com/_next/image?url=https%3A%2F%2Fmw-hr.sgp1.digitaloceanspaces.com%2Fmedia%2Faward_images%2Fimage_2024_06_26T12_23_40_122Z_1_LrAvLXv.png&w=640&q=75" alt="Top 1 % Freelancer Upwork & Top Rated Plus" class="award-image">
                     <div class="award-content">
                         <h3 class="award-title" data-translate="award_upwork_title">Top 1 % Freelancer Upwork & Top Rated Plus</h3>
                         <p data-translate="award_upwork_desc">Anerkannt als einer der besten 1 % der Freelancer auf Upwork und "Top-bewertet" für hervorragende Arbeitsqualität, 100 % Kundenzufriedenheit, das Lösen komplexer Herausforderungen und das Überzeugen internationaler Kunden.</p>
@@ -751,6 +691,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="expertise">
         <div class="container">
@@ -1090,7 +1031,7 @@
             tagline: "Spezialist für KI- und Big-Data-Lösungen",
             header_description: "Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung",
             cta_text: "Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?",
-            upwork_link: "Kontaktieren Sie mich jetzt auf Upwork!",
+            upwork_link: "Kontaktieren Sie mich über Upwork!",
             contact_button: "Kontakt aufnehmen",
             why_me_title: "Warum mit mir arbeiten?",
             feature_innovation_title: "Innovationsführer",
@@ -1241,7 +1182,7 @@
             tagline: "Specialist in AI and Big Data Solutions",
             header_description: "Innovative solutions for your data challenges with over 12 years of experience",
             cta_text: "Ready to transform your data into groundbreaking solutions?",
-            upwork_link: "Contact me now on Upwork!",
+            upwork_link: "Contact me via Upwork!",
             contact_button: "Get in Touch",
             why_me_title: "Why Work With Me?",
             feature_innovation_title: "Innovation Leader",
