@@ -36,7 +36,11 @@
         }
         
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-image: url('https://media.istockphoto.com/id/1411304340/vi/anh/hai-t%C3%B2a-nh%C3%A0-hi%E1%BB%87n-%C4%91%E1%BA%A1i-v%E1%BB%9Bi-c%E1%BB%ADa-s%E1%BB%95-k%C3%ADnh-thi%E1%BA%BFt-k%E1%BA%BF-ki%E1%BA%BFn-tr%C3%BAc-c%E1%BB%A7a-c%C3%A1c-t%C3%B2a-nh%C3%A0-kh%C3%B4ng-gian-v%C4%83n-ph%C3%B2ng.jpg?s=612x612&w=0&k=20&c=d53GQ2xstLb95f1bbRUP3pIHrvzACbWBu9BXSBRAayc=');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #3498db; /* Thêm dòng này để đổi màu nền */
             color: white;
             padding: 60px 0 80px;
             text-align: center;
@@ -51,9 +55,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
-            background-size: 100% 100%;
-            opacity: 0.2;
+            background: rgba(0, 0, 0, 0.1); /* Lớp phủ tối để chữ dễ đọc */
         }
         
         .header-content {
@@ -355,7 +357,7 @@
             color: var(--secondary);
             position: absolute;
             left: 0;
-            top: 2px;
+            sistemul: 2px;
         }
 
         .skill-details-content h4 {
@@ -618,14 +620,43 @@
                     <p data-translate="header_description">Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung</p>
                     <span style="font-size: 20px;"> 
                         <span data-translate="cta_text">Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?</span> 
-                        <a href="https://www.upwork.com/your-profile-link" data-translate="upwork_link">Kontaktieren Sie mich jetzt auf Upwork!</a>
+                        <a href="https://www.upwork.com/freelancers/~0119cf54e69a5f33b7" data-translate="upwork_link">Kontaktieren Sie mich jetzt auf Upwork!</a>
                     </span><br>
                     <a href="#contact" class="cta-button" data-translate="contact_button">Kontakt aufnehmen</a>
                 </div>
                 <img src="https://scontent.fhan5-2.fna.fbcdn.net/v/t1.15752-9/490986994_1746615289542986_7091326455826440454_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHsh4O8CboFeMNM6Hvs0rTEDyuxFXZ0eFwPK7EVdnR4XB-TvHT1NdNH_8RjW8zFjFCnpWCG-YwbFHLVA8ehkqe3&_nc_ohc=QpaZ3_qAwUIQ7kNvwFmgD3c&_nc_oc=AdlE211BTsK_f2H4slwou3VEMUSI17IQ5XWa0TXplfBrWxDlslnViaeGncEBIEPGBHSNcLcK9Xw27O801kR4MZnS&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fhan5-2.fna&oh=03_Q7cD2AHq1C2Y1LbzEsYgrDTZrzk6l3iRLpGDTWO51qp3K90fMw&oe=682699BD" alt="Phu Viet" style="width: 300px; height: 400px;">
             </div>
         </div>
-    </header>
+    </header><br><br>
+	
+	<section class="awards">
+        <div class="container">
+            <h2 class="section-title" data-translate="awards_title">Auszeichnungen & Anerkennung</h2>
+            <div class="awards-container">
+                <div class="award-card">
+                    <img src="https://res.cloudinary.com/sternwald-systems/image/upload/ar_16:9,c_crop,f_auto,h_844,q_auto,w_1500,x_0,y_0/v1/hugoprd/BILD_HIGHRES/D31D55080386FE89E0531408060A5EF5/FC02E65D2BEC85B7EEC176773FB2BE0C" alt="Deutschland Smart Factory 4.0 Auszeichnung" class="award-image">
+                    <div class="award-content">
+                        <h3 class="award-title" data-translate="award_factory_title">Deutschland Smart Factory 4.0 Auszeichnung</h3>
+                        <p data-translate="award_factory_desc">Anerkannt für die Entwicklung einer innovativen Echtzeit-Big-Data-Lösung, die Fertigungsprozesse bei Datatis transformiert hat.</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <img src="https://png.pngtree.com/thumb_back/fh260/background/20241029/pngtree-world-cup-winner-golden-trophy-clipart-image_16402842.jpg" alt="3. Platz im KI-Wettbewerb" class="award-image">
+                    <div class="award-content">
+                        <h3 class="award-title" data-translate="award_ai_title">3. Platz im KI-Wettbewerb</h3>
+                        <p data-translate="award_ai_desc">Ausgezeichnet für innovative Ansätze in der KI mit praktischen Anwendungen im Unternehmensbereich.</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <img src="https://morganoverholt.com/wp-content/uploads/2021/05/Upwork-badges-top-rated-plus-1024x512.jpg" alt="Top 1 % Freelancer Upwork & Top Rated Plus" class="award-image">
+                    <div class="award-content">
+                        <h3 class="award-title" data-translate="award_upwork_title">Top 1 % Freelancer Upwork & Top Rated Plus</h3>
+                        <p data-translate="award_upwork_desc">Anerkannt als einer der besten 1 % der Freelancer auf Upwork und "Top-bewertet" für hervorragende Arbeitsqualität, 100 % Kundenzufriedenheit, das Lösen komplexer Herausforderungen und das Überzeugen internationaler Kunden.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="why-me">
         <div class="container">
@@ -658,35 +689,6 @@
                     </div>
                     <h3 class="feature-title" data-translate="feature_multilingual_title">Mehrsprachig</h3>
                     <p data-translate="feature_multilingual_desc">Fließend in Deutsch, Englisch und Vietnamesisch für nahtlose Zusammenarbeit</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="awards">
-        <div class="container">
-            <h2 class="section-title" data-translate="awards_title">Auszeichnungen & Anerkennung</h2>
-            <div class="awards-container">
-                <div class="award-card">
-                    <img src="https://res.cloudinary.com/sternwald-systems/image/upload/ar_16:9,c_crop,f_auto,h_844,q_auto,w_1500,x_0,y_0/v1/hugoprd/BILD_HIGHRES/D31D55080386FE89E0531408060A5EF5/FC02E65D2BEC85B7EEC176773FB2BE0C" alt="Deutschland Smart Factory 4.0 Auszeichnung" class="award-image">
-                    <div class="award-content">
-                        <h3 class="award-title" data-translate="award_factory_title">Deutschland Smart Factory 4.0 Auszeichnung</h3>
-                        <p data-translate="award_factory_desc">Anerkannt für die Entwicklung einer innovativen Echtzeit-Big-Data-Lösung, die Fertigungsprozesse bei Datatis transformiert hat.</p>
-                    </div>
-                </div>
-                <div class="award-card">
-                    <img src="https://st3.depositphotos.com/3312217/18230/v/450/depositphotos_182306534-stock-illustration-bronze-trophy-cup-with-laurel.jpg" alt="3. Platz im KI-Wettbewerb" class="award-image">
-                    <div class="award-content">
-                        <h3 class="award-title" data-translate="award_ai_title">3. Platz im KI-Wettbewerb</h3>
-                        <p data-translate="award_ai_desc">Ausgezeichnet für innovative Ansätze in der KI mit praktischen Anwendungen im Unternehmensbereich.</p>
-                    </div>
-                </div>
-                <div class="award-card">
-                    <img src="https://pbs.twimg.com/media/EcpTyItU4AI4Z2Y.png" alt="Top 1 % Freelancer Upwork & Top Rated Plus" class="award-image">
-                    <div class="award-content">
-                        <h3 class="award-title" data-translate="award_upwork_title">Top 1 % Freelancer Upwork & Top Rated Plus</h3>
-                        <p data-translate="award_upwork_desc">Anerkannt als einer der besten 1 % der Freelancer auf Upwork und "Top-bewertet" für hervorragende Arbeitsqualität, 100 % Kundenzufriedenheit, das Lösen komplexer Herausforderungen und das Überzeugen internationaler Kunden.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -740,7 +742,7 @@
                                 allowfullscreen 
                                 scrolling="yes"
                             ></iframe>
-                            <h4 data-translate="data_architecture_details_success">Wichtige Erfolge:</h4>
+                            <h4 data-translate="data_architecture_details_success">Wichtige Erfolge:</h</h4>
                             <ul>
                                 <li data-translate="data_architecture_details_success_1">Entwurf und Implementierung von Datenarchitekturen für über 15 Unternehmenskunden</li>
                                 <li data-translate="data_architecture_details_success_2">Entwicklung von Echtzeit-Datenverarbeitungssystemen mit unter 50ms Latenz</li>
@@ -1020,399 +1022,397 @@
             <p data-translate="footer_copyright">© <span id="year"></span> Phu Viet. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
-	<script>
-    // Dữ liệu dịch ngôn ngữ
-		const translations = {
-			de: {
-				title: "Senior Data Engineer & KI-Spezialist | Phu Viet",
-				lang_de: "Deutsch",
-				lang_en: "English",
-				current_position: "Senior Data Engineer",
-				tagline: "Spezialist für KI- und Big-Data-Lösungen",
-				header_description: "Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung",
-				cta_text: "Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?",
-				upwork_link: "Kontaktieren Sie mich jetzt auf Upwork!",
-				contact_button: "Kontakt aufnehmen",
-				why_me_title: "Warum mit mir arbeiten?",
-				feature_innovation_title: "Innovationsführer",
-				feature_innovation_desc: "Erfinder einer preisgekrönten Echtzeit-Big-Data-Lösung für Smart Factory 4.0",
-				feature_ai_title: "KI-Expertise",
-				feature_ai_desc: "3. Platz im unternehmensinternen KI-Wettbewerb für praktische Geschäftsanwendungen",
-				feature_track_record_title: "Bewährte Erfolgsbilanz",
-				feature_track_record_desc: "Über 10 Jahre Erfahrung in der Bereitstellung hochwirksamer Lösungen für deutsche Unternehmen",
-				feature_multilingual_title: "Mehrsprachig",
-				feature_multilingual_desc: "Fließend in Deutsch, Englisch und Vietnamesisch für nahtlose Zusammenarbeit",
-				awards_title: "Auszeichnungen & Anerkennung",
-				award_factory_title: "Deutschland Smart Factory 4.0 Auszeichnung",
-				award_factory_desc: "Anerkannt für die Entwicklung einer innovativen Echtzeit-Big-Data-Lösung, die Fertigungsprozesse bei Datatis transformiert hat.",
-				award_ai_title: "3. Platz im KI-Wettbewerb",
-				award_ai_desc: "Ausgezeichnet für innovative Ansätze in der KI mit praktischen Anwendungen im Unternehmensbereich.",
-				award_upwork_title: "Top 1 % Freelancer Upwork & Top Rated Plus",
-				award_upwork_desc: "Anerkannt als einer der besten 1 % der Freelancer auf Upwork und 'Top-bewertet' für hervorragende Arbeitsqualität, 100 % Kundenzufriedenheit, das Lösen komplexer Herausforderungen und das Überzeugen internationaler Kunden.",
-				expertise_title: "Meine Expertise",
-				skill_data_architecture: "Datenarchitektur",
-				skill_data_architecture_1: "3NF, Kimball, Data Vault 2.0 Methodologien",
-				skill_data_architecture_2: "Echtzeitarchitekturen",
-				skill_data_architecture_3: "SAP Power Designer, pg modeler",
-				skill_data_architecture_4: "Github Versionskontrolle",
-				skill_data_architecture_5: "Docker Containerisierung",
-				skill_database_technologies: "Datenbanktechnologien",
-				skill_database_technologies_1: "MS SQL Server (SSIS, SSAS, SSMS, SSRS)",
-				skill_database_technologies_2: "Postgres SQL, MySQL",
-				skill_database_technologies_3: "Redshift Data Warehousing",
-				skill_database_technologies_4: "Azure/AWS Cloud-Datenbanken",
-				skill_data_integration: "Datenintegration",
-				skill_data_integration_1: "Mehrere Quellformate (CSV, Excel, SAP, MES)",
-				skill_data_integration_2: "Azure Cloud-Migration",
-				skill_data_integration_3: "Talend, SSIS ETL",
-				skill_data_integration_4: "Python ETL-Pipelines",
-				skill_data_integration_5: "Airflow Orchestrierung",
-				skill_data_integration_6: "DBT Transformation",
-				data_architecture_details_intro: "Umfassende Lösungen für Datenarchitektur mit über 12 Jahren Erfahrung:",
-				data_architecture_details_success: "Wichtige Erfolge:",
-				data_architecture_details_success_1: "Entwurf und Implementierung von Datenarchitekturen für über 15 Unternehmenskunden",
-				data_architecture_details_success_2: "Entwicklung von Echtzeit-Datenverarbeitungssystemen mit unter 50ms Latenz",
-				data_architecture_details_success_3: "Erstellung standardisierter Datenmodellierungspraktiken mit SAP Power Designer",
-				data_architecture_details_success_4: "Implementierung von Git-basierter Versionskontrolle für Datenbankschemata",
-				data_architecture_details_success_5: "Containerisierte Datenpipelines, die die Bereitstellungszeit um 70% reduziert haben",
-				data_architecture_details_methods: "Methodologien:",
-				data_architecture_details_methods_1: "Normalisierte Transaktionsdatenbanken für optimale Leistung",
-				data_architecture_details_methods_2: "Dimensionale Modellierung für Analysen und Berichte",
-				data_architecture_details_methods_3: "Skalierbare Data-Warehouse-Architektur",
-				database_technologies_details_intro: "Tiefgehende Expertise in mehreren Datenbankplattformen:",
-				database_technologies_details_competencies: "Schlüsselkompetenzen:",
-				database_technologies_details_competencies_1: "Über 15 Jahre Erfahrung mit dem gesamten Stack (SSIS, SSAS, SSRS)",
-				database_technologies_details_competencies_2: "Design von Hochverfügbarkeits-Clustern",
-				database_technologies_details_competencies_3: "Petabyte-großes Data Warehousing",
-				database_technologies_details_competencies_4: "Azure SQL, Cosmos DB, AWS RDS/Aurora",
-				database_technologies_details_optimization: "Leistungsoptimierung:",
-				database_technologies_details_optimization_1: "Abfragenoptimierung, die die Laufzeit von Stunden auf Minuten reduziert",
-				database_technologies_details_optimization_2: "Entwicklung von Indexstrategien",
-				database_technologies_details_optimization_3: "Partitionierung für große Datensätze",
-				data_integration_details_intro: "End-to-End-Datenintegrationslösungen:",
-				data_integration_details_capabilities: "Integrationsfähigkeiten:",
-				data_integration_details_capabilities_1: "Über 50 Datenquellentypen integriert (SAP, MES, Excel, CSV, etc.)",
-				data_integration_details_capabilities_2: "Cloud-Migrationsstrategien ohne Ausfallzeiten",
-				data_integration_details_capabilities_3: "Entwicklung von ETL/ELT-Pipelines",
-				data_integration_details_capabilities_4: "Echtzeit-Datenstreaming-Architekturen",
-				data_integration_details_tools: "Tools & Technologien:",
-				data_integration_details_tools_1: "Talend Open Studio und Enterprise Edition",
-				data_integration_details_tools_2: "Microsoft SSIS mit benutzerdefinierten Komponenten",
-				data_integration_details_tools_3: "Apache Airflow für Workflow-Orchestrierung",
-				data_integration_details_tools_4: "Python-basierte ETL-Pipelines",
-				skill_optimization: "Optimierung",
-				skill_optimization_1: "Data Warehouse Design",
-				skill_optimization_2: "Implementierungsstrategien",
-				skill_optimization_3: "Leistungsoptimierung",
-				skill_analytics: "Analytik",
-				skill_analytics_1: "Hadoop Ökosystem (HIVE, Impala)",
-				skill_analytics_2: "Fortgeschrittene Datenanalyse",
-				skill_analytics_3: "Datenvisualisierung",
-				skill_business_intelligence: "Business Intelligence",
-				skill_business_intelligence_1: "Tableau Desktop und Server",
-				skill_business_intelligence_2: "Microsoft Power BI",
-				skill_business_intelligence_3: "Qlikview Dashboards",
-				optimization_details_intro: "Lösungen für Leistungsoptimierung und Tuning:",
-				optimization_details_services: "Optimierungsdienste:",
-				optimization_details_services_1: "Erstellung optimierter Schemata für analytische Workloads",
-				optimization_details_services_2: "Entwicklung schrittweiser Einführungspläne für komplexe Systeme",
-				optimization_details_services_3: "Durchschnittliche Verbesserung der Abfrageleistung um 300%",
-				optimization_details_case_study: "Fallstudie: Manufacturing Data Warehouse",
-				optimization_details_case_study_desc: "Optimierung eines Fertigungs-Data-Warehouse, das die Berichtsgenerierungszeit von 4 Stunden auf 15 Minuten reduziert hat durch:",
-				optimization_details_case_study_1: "Implementierung einer Partitionierungsstrategie",
-				optimization_details_case_study_2: "Optimierung materialisierter Sichten",
-				optimization_details_case_study_3: "Analyse von Abfrageplänen und Index-Tuning",
-				analytics_details_intro: "Umfassende Analyselösungen:",
-				analytics_details_capabilities: "Analyse-Fähigkeiten:",
-				analytics_details_capabilities_1: "HIVE, Impala, HBase Implementierungen",
-				analytics_details_capabilities_2: "Prädiktive Modellierung, Trendanalyse, Anomalieerkennung",
-				analytics_details_capabilities_3: "Interaktive Dashboards und Berichte",
-				analytics_details_projects: "Schlüsselprojekte:",
-				analytics_details_projects_1: "Echtzeit-Produktionsüberwachungssystem mit Impala",
-				analytics_details_projects_2: "Kundenabwanderungs-Vorhersagemodell mit 85% Genauigkeit",
-				analytics_details_projects_3: "Interaktive Dashboards für Verkaufsleistung",
-				business_intelligence_details_intro: "Unternehmens-BI-Lösungen für datengetriebene Entscheidungsfindung:",
-				business_intelligence_details_platforms: "BI-Plattformerfahrung:",
-				business_intelligence_details_platforms_1: "Desktop- und Server-Implementierungen",
-				business_intelligence_details_platforms_2: "Unternehmenseinsätze mit Sicherheit auf Zeilenebene",
-				business_intelligence_details_platforms_3: "Entwicklung benutzerdefinierter Dashboards",
-				business_intelligence_details_approach: "BI-Implementierungsansatz:",
-				business_intelligence_details_approach_1: "Anforderungserhebung mit Geschäftsinteressenten",
-				business_intelligence_details_approach_2: "Datenmodelldesign optimiert für BI-Tools",
-				business_intelligence_details_approach_3: "Dashboard-Prototyping und Nutzerfeedback",
-				business_intelligence_details_approach_4: "Leistungsoptimierung und Bereitstellung",
-				business_intelligence_details_approach_5: "Benutzerschulung und Dokumentation",
-				skill_automation: "Automatisierung",
-				skill_automation_1: "Microsoft Power Automate",
-				skill_automation_2: "Python Automatisierungsskripte",
-				automation_details_intro: "Effizienz durch Automatisierungslösungen:",
-				automation_details_capabilities: "Automatisierungs-Fähigkeiten:",
-				automation_details_capabilities_1: "Workflow-Automatisierung über Office 365",
-				automation_details_capabilities_2: "Benutzerdefinierte Automatisierung für Datenprozesse",
-				automation_details_successes: "Automatisierungserfolge:",
-				automation_details_successes_1: "Automatisierter monatlicher Finanzberichtsprozess, der 40 Stunden/Monat spart",
-				automation_details_successes_2: "Datenvalidierungsskripte, die Fehler um 90% reduziert haben",
-				automation_details_successes_3: "Selbstheilende ETL-Prozesse, die automatisch von Fehlern erholen",
-				automation_details_framework: "Automatisierungs-Framework:",
-				automation_details_framework_desc: "Entwicklung eines wiederverwendbaren Automatisierungs-Frameworks, das Folgendes umfasst:",
-				automation_details_framework_1: "Fehlerbehandlung und Benachrichtigungen",
-				automation_details_framework_2: "Leistungsprotokollierung",
-				automation_details_framework_3: "Konfigurationsmanagement",
-				download_report: "Vollständigen Bericht herunterladen",
-				why_choose_title: "Warum mich wählen?",
-				benefit_experience: "Über 12 Jahre praktische Erfahrung in Data Engineering und Analytik",
-				benefit_success: "Bewährter Erfolg bei der Implementierung preisgekrönter Lösungen",
-				benefit_expertise: "Expertise in einer Vielzahl von Datentechnologien und Plattformen",
-				benefit_communication: "Starke Kommunikationsfähigkeiten in Deutsch, Englisch und Vietnamesisch",
-				contact_title: "Lass uns zusammenarbeiten",
-				form_name: "Name",
-				form_email: "E-Mail",
-				form_subject: "Betreff",
-				form_message: "Nachricht",
-				form_submit: "Nachricht senden",
-				form_message_status_success: "Nachricht erfolgreich gesendet!",
-				form_message_status_error: "Fehler beim Senden der Nachricht.",
-				footer_copyright: "© <span id='year'></span> Phu Viet. Alle Rechte vorbehalten."
-			},
-			en: {
-				title: "Senior Data Engineer & AI Specialist | Phu Viet",
-				lang_de: "German",
-				lang_en: "English",
-				current_position: "Senior Data Engineer",
-				tagline: "Specialist in AI and Big Data Solutions",
-				header_description: "Innovative solutions for your data challenges with over 12 years of experience",
-				cta_text: "Ready to transform your data into groundbreaking solutions?",
-				upwork_link: "Contact me now on Upwork!",
-				contact_button: "Get in Touch",
-				why_me_title: "Why Work With Me?",
-				feature_innovation_title: "Innovation Leader",
-				feature_innovation_desc: "Inventor of an award-winning real-time big data solution for Smart Factory 4.0",
-				feature_ai_title: "AI Expertise",
-				feature_ai_desc: "3rd place in a corporate AI competition for practical business applications",
-				feature_track_record_title: "Proven Track Record",
-				feature_track_record_desc: "Over 10 years of experience delivering high-impact solutions for German companies",
-				feature_multilingual_title: "Multilingual",
-				feature_multilingual_desc: "Fluent in German, English, and Vietnamese for seamless collaboration",
-				awards_title: "Awards & Recognition",
-				award_factory_title: "Germany Smart Factory 4.0 Award",
-				award_factory_desc: "Recognized for developing an innovative real-time big data solution that transformed manufacturing processes at Datatis.",
-				award_ai_title: "3rd Place in AI Competition",
-				award_ai_desc: "Awarded for innovative AI approaches with practical business applications.",
-				award_upwork_title: "Top 1% Freelancer Upwork & Top Rated Plus",
-				award_upwork_desc: "Recognized as one of the top 1% freelancers on Upwork and 'Top Rated' for outstanding work quality, 100% client satisfaction, solving complex challenges, and impressing international clients.",
-				expertise_title: "My Expertise",
-				skill_data_architecture: "Data Architecture",
-				skill_data_architecture_1: "3NF, Kimball, Data Vault 2.0 Methodologies",
-				skill_data_architecture_2: "Real-time Architectures",
-				skill_data_architecture_3: "SAP Power Designer, pg modeler",
-				skill_data_architecture_4: "Github Version Control",
-				skill_data_architecture_5: "Docker Containerization",
-				skill_database_technologies: "Database Technologies",
-				skill_database_technologies_1: "MS SQL Server (SSIS, SSAS, SSMS, SSRS)",
-				skill_database_technologies_2: "Postgres SQL, MySQL",
-				skill_database_technologies_3: "Redshift Data Warehousing",
-				skill_database_technologies_4: "Azure/AWS Cloud Databases",
-				skill_data_integration: "Data Integration",
-				skill_data_integration_1: "Multiple Source Formats (CSV, Excel, SAP, MES)",
-				skill_data_integration_2: "Azure Cloud Migration",
-				skill_data_integration_3: "Talend, SSIS ETL",
-				skill_data_integration_4: "Python ETL Pipelines",
-				skill_data_integration_5: "Airflow Orchestration",
-				skill_data_integration_6: "DBT Transformation",
-				data_architecture_details_intro: "Comprehensive data architecture solutions with over 12 years of experience:",
-				data_architecture_details_success: "Key Achievements:",
-				data_architecture_details_success_1: "Designed and implemented data architectures for over 15 enterprise clients",
-				data_architecture_details_success_2: "Developed real-time data processing systems with sub-50ms latency",
-				data_architecture_details_success_3: "Created standardized data modeling practices using SAP Power Designer",
-				data_architecture_details_success_4: "Implemented Git-based version control for database schemas",
-				data_architecture_details_success_5: "Containerized data pipelines, reducing deployment time by 70%",
-				data_architecture_details_methods: "Methodologies:",
-				data_architecture_details_methods_1: "Normalized transactional databases for optimal performance",
-				data_architecture_details_methods_2: "Dimensional modeling for analytics and reporting",
-				data_architecture_details_methods_3: "Scalable data warehouse architecture",
-				database_technologies_details_intro: "Deep expertise in multiple database platforms:",
-				database_technologies_details_competencies: "Key Competencies:",
-				database_technologies_details_competencies_1: "Over 15 years of experience with the full stack (SSIS, SSAS, SSRS)",
-				database_technologies_details_competencies_2: "Design of high-availability clusters",
-				database_technologies_details_competencies_3: "Petabyte-scale data warehousing",
-				database_technologies_details_competencies_4: "Azure SQL, Cosmos DB, AWS RDS/Aurora",
-				database_technologies_details_optimization: "Performance Optimization:",
-				database_technologies_details_optimization_1: "Query optimization reducing runtime from hours to minutes",
-				database_technologies_details_optimization_2: "Development of indexing strategies",
-				database_technologies_details_optimization_3: "Partitioning for large datasets",
-				data_integration_details_intro: "End-to-end data integration solutions:",
-				data_integration_details_capabilities: "Integration Capabilities:",
-				data_integration_details_capabilities_1: "Integrated over 50 data source types (SAP, MES, Excel, CSV, etc.)",
-				data_integration_details_capabilities_2: "Cloud migration strategies with zero downtime",
-				data_integration_details_capabilities_3: "Development of ETL/ELT pipelines",
-				data_integration_details_capabilities_4: "Real-time data streaming architectures",
-				data_integration_details_tools: "Tools & Technologies:",
-				data_integration_details_tools_1: "Talend Open Studio and Enterprise Edition",
-				data_integration_details_tools_2: "Microsoft SSIS with custom components",
-				data_integration_details_tools_3: "Apache Airflow for workflow orchestration",
-				data_integration_details_tools_4: "Python-based ETL pipelines",
-				skill_optimization: "Optimization",
-				skill_optimization_1: "Data Warehouse Design",
-				skill_optimization_2: "Implementation Strategies",
-				skill_optimization_3: "Performance Optimization",
-				skill_analytics: "Analytics",
-				skill_analytics_1: "Hadoop Ecosystem (HIVE, Impala)",
-				skill_analytics_2: "Advanced Data Analysis",
-				skill_analytics_3: "Data Visualization",
-				skill_business_intelligence: "Business Intelligence",
-				skill_business_intelligence_1: "Tableau Desktop and Server",
-				skill_business_intelligence_2: "Microsoft Power BI",
-				skill_business_intelligence_3: "QlikView Dashboards",
-				optimization_details_intro: "Solutions for performance optimization and tuning:",
-				optimization_details_services: "Optimization Services:",
-				optimization_details_services_1: "Creation of optimized schemas for analytical workloads",
-				optimization_details_services_2: "Development of phased implementation plans for complex systems",
-				optimization_details_services_3: "Average query performance improvement of 300%",
-				optimization_details_case_study: "Case Study: Manufacturing Data Warehouse",
-				optimization_details_case_study_desc: "Optimized a manufacturing data warehouse, reducing report generation time from 4 hours to 15 minutes by:",
-				optimization_details_case_study_1: "Implementing a partitioning strategy",
-				optimization_details_case_study_2: "Optimizing materialized views",
-				optimization_details_case_study_3: "Query plan analysis and index tuning",
-				analytics_details_intro: "Comprehensive analytics solutions:",
-				analytics_details_capabilities: "Analytics Capabilities:",
-				analytics_details_capabilities_1: "HIVE, Impala, HBase implementations",
-				analytics_details_capabilities_2: "Predictive modeling, trend analysis, anomaly detection",
-				analytics_details_capabilities_3: "Interactive dashboards and reports",
-				analytics_details_projects: "Key Projects:",
-				analytics_details_projects_1: "Real-time production monitoring system using Impala",
-				analytics_details_projects_2: "Customer churn prediction model with 85% accuracy",
-				analytics_details_projects_3: "Interactive dashboards for sales performance",
-				business_intelligence_details_intro: "Enterprise BI solutions for data-driven decision-making:",
-				business_intelligence_details_platforms: "BI Platform Experience:",
-				business_intelligence_details_platforms_1: "Desktop and Server implementations",
-				business_intelligence_details_platforms_2: "Enterprise deployments with row-level security",
-				business_intelligence_details_platforms_3: "Custom dashboard development",
-				business_intelligence_details_approach: "BI Implementation Approach:",
-				business_intelligence_details_approach_1: "Requirements gathering with business stakeholders",
-				business_intelligence_details_approach_2: "Data model design optimized for BI tools",
-				business_intelligence_details_approach_3: "Dashboard prototyping and user feedback",
-				business_intelligence_details_approach_4: "Performance optimization and deployment",
-				business_intelligence_details_approach_5: "User training and documentation",
-				skill_automation: "Automation",
-				skill_automation_1: "Microsoft Power Automate",
-				skill_automation_2: "Python Automation Scripts",
-				automation_details_intro: "Efficiency through automation solutions:",
-				automation_details_capabilities: "Automation Capabilities:",
-				automation_details_capabilities_1: "Workflow automation across Office 365",
-				automation_details_capabilities_2: "Custom automation for data processes",
-				automation_details_successes: "Automation Successes:",
-				automation_details_successes_1: "Automated monthly financial reporting process, saving 40 hours/month",
-				automation_details_successes_2: "Data validation scripts reducing errors by 90%",
-				automation_details_successes_3: "Self-healing ETL processes with automatic error recovery",
-				automation_details_framework: "Automation Framework:",
-				automation_details_framework_desc: "Developed a reusable automation framework that includes:",
-				automation_details_framework_1: "Error handling and notifications",
-				automation_details_framework_2: "Performance logging",
-				automation_details_framework_3: "Configuration management",
-				download_report: "Download Full Report",
-				why_choose_title: "Why Choose Me?",
-				benefit_experience: "Over 12 years of hands-on experience in Data Engineering and Analytics",
-				benefit_success: "Proven success in implementing award-winning solutions",
-				benefit_expertise: "Expertise across a wide range of data technologies and platforms",
-				benefit_communication: "Strong communication skills in German, English, and Vietnamese",
-				contact_title: "Let's Work Together",
-				form_name: "Name",
-				form_email: "Email",
-				form_subject: "Subject",
-				form_message: "Message",
-				form_submit: "Send Message",
-				form_message_status_success: "Message sent successfully!",
-				form_message_status_error: "Error sending message.",
-				footer_copyright: "© <span id='year'></span> Phu Viet. All Rights Reserved."
-			}
-		};
+    <script>
+    const translations = {
+        de: {
+            title: "Senior Data Engineer & KI-Spezialist | Phu Viet",
+            lang_de: "Deutsch",
+            lang_en: "English",
+            current_position: "Senior Data Engineer",
+            tagline: "Spezialist für KI- und Big-Data-Lösungen",
+            header_description: "Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung",
+            cta_text: "Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?",
+            upwork_link: "Kontaktieren Sie mich jetzt auf Upwork!",
+            contact_button: "Kontakt aufnehmen",
+            why_me_title: "Warum mit mir arbeiten?",
+            feature_innovation_title: "Innovationsführer",
+            feature_innovation_desc: "Erfinder einer preisgekrönten Echtzeit-Big-Data-Lösung für Smart Factory 4.0",
+            feature_ai_title: "KI-Expertise",
+            feature_ai_desc: "3. Platz im unternehmensinternen KI-Wettbewerb für praktische Geschäftsanwendungen",
+            feature_track_record_title: "Bewährte Erfolgsbilanz",
+            feature_track_record_desc: "Über 10 Jahre Erfahrung in der Bereitstellung hochwirksamer Lösungen für deutsche Unternehmen",
+            feature_multilingual_title: "Mehrsprachig",
+            feature_multilingual_desc: "Fließend in Deutsch, Englisch und Vietnamesisch für nahtlose Zusammenarbeit",
+            awards_title: "Auszeichnungen & Anerkennung",
+            award_factory_title: "Deutschland Smart Factory 4.0 Auszeichnung",
+            award_factory_desc: "Anerkannt für die Entwicklung einer innovativen Echtzeit-Big-Data-Lösung, die Fertigungsprozesse bei Datatis transformiert hat.",
+            award_ai_title: "3. Platz im KI-Wettbewerb",
+            award_ai_desc: "Ausgezeichnet für innovative Ansätze in der KI mit praktischen Anwendungen im Unternehmensbereich.",
+            award_upwork_title: "Top 1 % Freelancer Upwork & Top Rated Plus",
+            award_upwork_desc: "Anerkannt als einer der besten 1 % der Freelancer auf Upwork und 'Top-bewertet' für hervorragende Arbeitsqualität, 100 % Kundenzufriedenheit, das Lösen komplexer Herausforderungen und das Überzeugen internationaler Kunden.",
+            expertise_title: "Meine Expertise",
+            skill_data_architecture: "Datenarchitektur",
+            skill_data_architecture_1: "3NF, Kimball, Data Vault 2.0 Methodologien",
+            skill_data_architecture_2: "Echtzeitarchitekturen",
+            skill_data_architecture_3: "SAP Power Designer, pg modeler",
+            skill_data_architecture_4: "Github Versionskontrolle",
+            skill_data_architecture_5: "Docker Containerisierung",
+            skill_database_technologies: "Datenbanktechnologien",
+            skill_database_technologies_1: "MS SQL Server (SSIS, SSAS, SSMS, SSRS)",
+            skill_database_technologies_2: "Postgres SQL, MySQL",
+            skill_database_technologies_3: "Redshift Data Warehousing",
+            skill_database_technologies_4: "Azure/AWS Cloud-Datenbanken",
+            skill_data_integration: "Datenintegration",
+            skill_data_integration_1: "Mehrere Quellformate (CSV, Excel, SAP, MES)",
+            skill_data_integration_2: "Azure Cloud-Migration",
+            skill_data_integration_3: "Talend, SSIS ETL",
+            skill_data_integration_4: "Python ETL-Pipelines",
+            skill_data_integration_5: "Airflow Orchestrierung",
+            skill_data_integration_6: "DBT Transformation",
+            data_architecture_details_intro: "Umfassende Lösungen für Datenarchitektur mit über 12 Jahren Erfahrung:",
+            data_architecture_details_success: "Wichtige Erfolge:",
+            data_architecture_details_success_1: "Entwurf und Implementierung von Datenarchitekturen für über 15 Unternehmenskunden",
+            data_architecture_details_success_2: "Entwicklung von Echtzeit-Datenverarbeitungssystemen mit unter 50ms Latenz",
+            data_architecture_details_success_3: "Erstellung standardisierter Datenmodellierungspraktiken mit SAP Power Designer",
+            data_architecture_details_success_4: "Implementierung von Git-basierter Versionskontrolle für Datenbankschemata",
+            data_architecture_details_success_5: "Containerisierte Datenpipelines, die die Bereitstellungszeit um 70% reduziert haben",
+            data_architecture_details_methods: "Methodologien:",
+            data_architecture_details_methods_1: "Normalisierte Transaktionsdatenbanken für optimale Leistung",
+            data_architecture_details_methods_2: "Dimensionale Modellierung für Analysen und Berichte",
+            data_architecture_details_methods_3: "Skalierbare Data-Warehouse-Architektur",
+            database_technologies_details_intro: "Tiefgehende Expertise in mehreren Datenbankplattformen:",
+            database_technologies_details_competencies: "Schlüsselkompetenzen:",
+            database_technologies_details_competencies_1: "Über 15 Jahre Erfahrung mit dem gesamten Stack (SSIS, SSAS, SSRS)",
+            database_technologies_details_competencies_2: "Design von Hochverfügbarkeits-Clustern",
+            database_technologies_details_competencies_3: "Petabyte-großes Data Warehousing",
+            database_technologies_details_competencies_4: "Azure SQL, Cosmos DB, AWS RDS/Aurora",
+            database_technologies_details_optimization: "Leistungsoptimierung:",
+            database_technologies_details_optimization_1: "Abfragenoptimierung, die die Laufzeit von Stunden auf Minuten reduziert",
+            database_technologies_details_optimization_2: "Entwicklung von Indexstrategien",
+            database_technologies_details_optimization_3: "Partitionierung für große Datensätze",
+            data_integration_details_intro: "End-to-End-Datenintegrationslösungen:",
+            data_integration_details_capabilities: "Integrationsfähigkeiten:",
+            data_integration_details_capabilities_1: "Über 50 Datenquellentypen integriert (SAP, MES, Excel, CSV, etc.)",
+            data_integration_details_capabilities_2: "Cloud-Migrationsstrategien ohne Ausfallzeiten",
+            data_integration_details_capabilities_3: "Entwicklung von ETL/ELT-Pipelines",
+            data_integration_details_capabilities_4: "Echtzeit-Datenstreaming-Architekturen",
+            data_integration_details_tools: "Tools & Technologien:",
+            data_integration_details_tools_1: "Talend Open Studio und Enterprise Edition",
+            data_integration_details_tools_2: "Microsoft SSIS mit benutzerdefinierten Komponenten",
+            data_integration_details_tools_3: "Apache Airflow für Workflow-Orchestrierung",
+            data_integration_details_tools_4: "Python-basierte ETL-Pipelines",
+            skill_optimization: "Optimierung",
+            skill_optimization_1: "Data Warehouse Design",
+            skill_optimization_2: "Implementierungsstrategien",
+            skill_optimization_3: "Leistungsoptimierung",
+            skill_analytics: "Analytik",
+            skill_analytics_1: "Hadoop Ökosystem (HIVE, Impala)",
+            skill_analytics_2: "Fortgeschrittene Datenanalyse",
+            skill_analytics_3: "Datenvisualisierung",
+            skill_business_intelligence: "Business Intelligence",
+            skill_business_intelligence_1: "Tableau Desktop und Server",
+            skill_business_intelligence_2: "Microsoft Power BI",
+            skill_business_intelligence_3: "Qlikview Dashboards",
+            optimization_details_intro: "Lösungen für Leistungsoptimierung und Tuning:",
+            optimization_details_services: "Optimierungsdienste:",
+            optimization_details_services_1: "Erstellung optimierter Schemata für analytische Workloads",
+            optimization_details_services_2: "Entwicklung schrittweiser Einführungspläne für komplexe Systeme",
+            optimization_details_services_3: "Durchschnittliche Verbesserung der Abfrageleistung um 300%",
+            optimization_details_case_study: "Fallstudie: Manufacturing Data Warehouse",
+            optimization_details_case_study_desc: "Optimierung eines Fertigungs-Data-Warehouse, das die Berichtsgenerierungszeit von 4 Stunden auf 15 Minuten reduziert hat durch:",
+            optimization_details_case_study_1: "Implementierung einer Partitionierungsstrategie",
+            optimization_details_case_study_2: "Optimierung materialisierter Sichten",
+            optimization_details_case_study_3: "Analyse von Abfrageplänen und Index-Tuning",
+            analytics_details_intro: "Umfassende Analyselösungen:",
+            analytics_details_capabilities: "Analyse-Fähigkeiten:",
+            analytics_details_capabilities_1: "HIVE, Impala, HBase Implementierungen",
+            analytics_details_capabilities_2: "Prädiktive Modellierung, Trendanalyse, Anomalieerkennung",
+            analytics_details_capabilities_3: "Interaktive Dashboards und Berichte",
+            analytics_details_projects: "Schlüsselprojekte:",
+            analytics_details_projects_1: "Echtzeit-Produktionsüberwachungssystem mit Impala",
+            analytics_details_projects_2: "Kundenabwanderungs-Vorhersagemodell mit 85% Genauigkeit",
+            analytics_details_projects_3: "Interaktive Dashboards für Verkaufsleistung",
+            business_intelligence_details_intro: "Unternehmens-BI-Lösungen für datengetriebene Entscheidungsfindung:",
+            business_intelligence_details_platforms: "BI-Plattformerfahrung:",
+            business_intelligence_details_platforms_1: "Desktop- und Server-Implementierungen",
+            business_intelligence_details_platforms_2: "Unternehmenseinsätze mit Sicherheit auf Zeilenebene",
+            business_intelligence_details_platforms_3: "Entwicklung benutzerdefinierter Dashboards",
+            business_intelligence_details_approach: "BI-Implementierungsansatz:",
+            business_intelligence_details_approach_1: "Anforderungserhebung mit Geschäftsinteressenten",
+            business_intelligence_details_approach_2: "Datenmodelldesign optimiert für BI-Tools",
+            business_intelligence_details_approach_3: "Dashboard-Prototyping und Nutzerfeedback",
+            business_intelligence_details_approach_4: "Leistungsoptimierung und Bereitstellung",
+            business_intelligence_details_approach_5: "Benutzerschulung und Dokumentation",
+            skill_automation: "Automatisierung",
+            skill_automation_1: "Microsoft Power Automate",
+            skill_automation_2: "Python Automatisierungsskripte",
+            automation_details_intro: "Effizienz durch Automatisierungslösungen:",
+            automation_details_capabilities: "Automatisierungs-Fähigkeiten:",
+            automation_details_capabilities_1: "Workflow-Automatisierung über Office 365",
+            automation_details_capabilities_2: "Benutzerdefinierte Automatisierung für Datenprozesse",
+            automation_details_successes: "Automatisierungserfolge:",
+            automation_details_successes_1: "Automatisierter monatlicher Finanzberichtsprozess, der 40 Stunden/Monat spart",
+            automation_details_successes_2: "Datenvalidierungsskripte, die Fehler um 90% reduziert haben",
+            automation_details_successes_3: "Selbstheilende ETL-Prozesse, die automatisch von Fehlern erholen",
+            automation_details_framework: "Automatisierungs-Framework:",
+            automation_details_framework_desc: "Entwicklung eines wiederverwendbaren Automatisierungs-Frameworks, das Folgendes umfasst:",
+            automation_details_framework_1: "Fehlerbehandlung und Benachrichtigungen",
+            automation_details_framework_2: "Leistungsprotokollierung",
+            automation_details_framework_3: "Konfigurationsmanagement",
+            download_report: "Vollständigen Bericht herunterladen",
+            why_choose_title: "Warum mich wählen?",
+            benefit_experience: "Über 12 Jahre praktische Erfahrung in Data Engineering und Analytik",
+            benefit_success: "Bewährter Erfolg bei der Implementierung preisgekrönter Lösungen",
+            benefit_expertise: "Expertise in einer Vielzahl von Datentechnologien und Plattformen",
+            benefit_communication: "Starke Kommunikationsfähigkeiten in Deutsch, Englisch und Vietnamesisch",
+            contact_title: "Lass uns zusammenarbeiten",
+            form_name: "Name",
+            form_email: "E-Mail",
+            form_subject: "Betreff",
+            form_message: "Nachricht",
+            form_submit: "Nachricht senden",
+            form_message_status_success: "Nachricht erfolgreich gesendet!",
+            form_message_status_error: "Fehler beim Senden der Nachricht.",
+            footer_copyright: "© <span id='year'></span> Phu Viet. Alle Rechte vorbehalten."
+        },
+        en: {
+            title: "Senior Data Engineer & AI Specialist | Phu Viet",
+            lang_de: "German",
+            lang_en: "English",
+            current_position: "Senior Data Engineer",
+            tagline: "Specialist in AI and Big Data Solutions",
+            header_description: "Innovative solutions for your data challenges with over 12 years of experience",
+            cta_text: "Ready to transform your data into groundbreaking solutions?",
+            upwork_link: "Contact me now on Upwork!",
+            contact_button: "Get in Touch",
+            why_me_title: "Why Work With Me?",
+            feature_innovation_title: "Innovation Leader",
+            feature_innovation_desc: "Inventor of an award-winning real-time big data solution for Smart Factory 4.0",
+            feature_ai_title: "AI Expertise",
+            feature_ai_desc: "3rd place in a corporate AI competition for practical business applications",
+            feature_track_record_title: "Proven Track Record",
+            feature_track_record_desc: "Over 10 years of experience delivering high-impact solutions for German companies",
+            feature_multilingual_title: "Multilingual",
+            feature_multilingual_desc: "Fluent in German, English, and Vietnamese for seamless collaboration",
+            awards_title: "Awards & Recognition",
+            award_factory_title: "Germany Smart Factory 4.0 Award",
+            award_factory_desc: "Recognized for developing an innovative real-time big data solution that transformed manufacturing processes at Datatis.",
+            award_ai_title: "3rd Place in AI Competition",
+            award_ai_desc: "Awarded for innovative AI approaches with practical business applications.",
+            award_upwork_title: "Top 1% Freelancer Upwork & Top Rated Plus",
+            award_upwork_desc: "Recognized as one of the top 1% freelancers on Upwork and 'Top Rated' for outstanding work quality, 100% client satisfaction, solving complex challenges, and impressing international clients.",
+            expertise_title: "My Expertise",
+            skill_data_architecture: "Data Architecture",
+            skill_data_architecture_1: "3NF, Kimball, Data Vault 2.0 Methodologies",
+            skill_data_architecture_2: "Real-time Architectures",
+            skill_data_architecture_3: "SAP Power Designer, pg modeler",
+            skill_data_architecture_4: "Github Version Control",
+            skill_data_architecture_5: "Docker Containerization",
+            skill_database_technologies: "Database Technologies",
+            skill_database_technologies_1: "MS SQL Server (SSIS, SSAS, SSMS, SSRS)",
+            skill_database_technologies_2: "Postgres SQL, MySQL",
+            skill_database_technologies_3: "Redshift Data Warehousing",
+            skill_database_technologies_4: "Azure/AWS Cloud Databases",
+            skill_data_integration: "Data Integration",
+            skill_data_integration_1: "Multiple Source Formats (CSV, Excel, SAP, MES)",
+            skill_data_integration_2: "Azure Cloud Migration",
+            skill_data_integration_3: "Talend, SSIS ETL",
+            skill_data_integration_4: "Python ETL Pipelines",
+            skill_data_integration_5: "Airflow Orchestration",
+            skill_data_integration_6: "DBT Transformation",
+            data_architecture_details_intro: "Comprehensive data architecture solutions with over 12 years of experience:",
+            data_architecture_details_success: "Key Achievements:",
+            data_architecture_details_success_1: "Designed and implemented data architectures for over 15 enterprise clients",
+            data_architecture_details_success_2: "Developed real-time data processing systems with sub-50ms latency",
+            data_architecture_details_success_3: "Created standardized data modeling practices using SAP Power Designer",
+            data_architecture_details_success_4: "Implemented Git-based version control for database schemas",
+            data_architecture_details_success_5: "Containerized data pipelines, reducing deployment time by 70%",
+            data_architecture_details_methods: "Methodologies:",
+            data_architecture_details_methods_1: "Normalized transactional databases for optimal performance",
+            data_architecture_details_methods_2: "Dimensional modeling for analytics and reporting",
+            data_architecture_details_methods_3: "Scalable data warehouse architecture",
+            database_technologies_details_intro: "Deep expertise in multiple database platforms:",
+            database_technologies_details_competencies: "Key Competencies:",
+            database_technologies_details_competencies_1: "Over 15 years of experience with the full stack (SSIS, SSAS, SSRS)",
+            database_technologies_details_competencies_2: "Design of high-availability clusters",
+            database_technologies_details_competencies_3: "Petabyte-scale data warehousing",
+            database_technologies_details_competencies_4: "Azure SQL, Cosmos DB, AWS RDS/Aurora",
+            database_technologies_details_optimization: "Performance Optimization:",
+            database_technologies_details_optimization_1: "Query optimization reducing runtime from hours to minutes",
+            database_technologies_details_optimization_2: "Development of indexing strategies",
+            database_technologies_details_optimization_3: "Partitioning for large datasets",
+            data_integration_details_intro: "End-to-end data integration solutions:",
+            data_integration_details_capabilities: "Integration Capabilities:",
+            data_integration_details_capabilities_1: "Integrated over 50 data source types (SAP, MES, Excel, CSV, etc.)",
+            data_integration_details_capabilities_2: "Cloud migration strategies with zero downtime",
+            data_integration_details_capabilities_3: "Development of ETL/ELT pipelines",
+            data_integration_details_capabilities_4: "Real-time data streaming architectures",
+            data_integration_details_tools: "Tools & Technologies:",
+            data_integration_details_tools_1: "Talend Open Studio and Enterprise Edition",
+            data_integration_details_tools_2: "Microsoft SSIS with custom components",
+            data_integration_details_tools_3: "Apache Airflow for workflow orchestration",
+            data_integration_details_tools_4: "Python-based ETL pipelines",
+            skill_optimization: "Optimization",
+            skill_optimization_1: "Data Warehouse Design",
+            skill_optimization_2: "Implementation Strategies",
+            skill_optimization_3: "Performance Optimization",
+            skill_analytics: "Analytics",
+            skill_analytics_1: "Hadoop Ecosystem (HIVE, Impala)",
+            skill_analytics_2: "Advanced Data Analysis",
+            skill_analytics_3: "Data Visualization",
+            skill_business_intelligence: "Business Intelligence",
+            skill_business_intelligence_1: "Tableau Desktop and Server",
+            skill_business_intelligence_2: "Microsoft Power BI",
+            skill_business_intelligence_3: "QlikView Dashboards",
+            optimization_details_intro: "Solutions for performance optimization and tuning:",
+            optimization_details_services: "Optimization Services:",
+            optimization_details_services_1: "Creation of optimized schemas for analytical workloads",
+            optimization_details_services_2: "Development of phased implementation plans for complex systems",
+            optimization_details_services_3: "Average query performance improvement of 300%",
+            optimization_details_case_study: "Case Study: Manufacturing Data Warehouse",
+            optimization_details_case_study_desc: "Optimized a manufacturing data warehouse, reducing report generation time from 4 hours to 15 minutes by:",
+            optimization_details_case_study_1: "Implementing a partitioning strategy",
+            optimization_details_case_study_2: "Optimizing materialized views",
+            optimization_details_case_study_3: "Analyzing query plans and index tuning",
+            analytics_details_intro: "Comprehensive analytics solutions:",
+            analytics_details_capabilities: "Analytics Capabilities:",
+            analytics_details_capabilities_1: "HIVE, Impala, HBase implementations",
+            analytics_details_capabilities_2: "Predictive modeling, trend analysis, anomaly detection",
+            analytics_details_capabilities_3: "Interactive dashboards and reports",
+            analytics_details_projects: "Key Projects:",
+            analytics_details_projects_1: "Real-time production monitoring system using Impala",
+            analytics_details_projects_2: "Customer churn prediction model with 85% accuracy",
+            analytics_details_projects_3: "Interactive dashboards for sales performance",
+            business_intelligence_details_intro: "Enterprise BI solutions for data-driven decision-making:",
+            business_intelligence_details_platforms: "BI Platform Experience:",
+            business_intelligence_details_platforms_1: "Desktop and Server implementations",
+            business_intelligence_details_platforms_2: "Enterprise deployments with row-level security",
+            business_intelligence_details_platforms_3: "Development of custom dashboards",
+            business_intelligence_details_approach: "BI Implementation Approach:",
+            business_intelligence_details_approach_1: "Requirement gathering with business stakeholders",
+            business_intelligence_details_approach_2: "Data model design optimized for BI tools",
+            business_intelligence_details_approach_3: "Dashboard prototyping and user feedback",
+            business_intelligence_details_approach_4: "Performance optimization and deployment",
+            business_intelligence_details_approach_5: "User training and documentation",
+            skill_automation: "Automation",
+            skill_automation_1: "Microsoft Power Automate",
+            skill_automation_2: "Python Automation Scripts",
+            automation_details_intro: "Efficiency through automation solutions:",
+            automation_details_capabilities: "Automation Capabilities:",
+            automation_details_capabilities_1: "Workflow automation across Office 365",
+            automation_details_capabilities_2: "Custom automation for data processes",
+            automation_details_successes: "Automation Successes:",
+            automation_details_successes_1: "Automated monthly financial reporting process, saving 40 hours/month",
+            automation_details_successes_2: "Data validation scripts reducing errors by 90%",
+            automation_details_successes_3: "Self-healing ETL processes that automatically recover from errors",
+            automation_details_framework: "Automation Framework:",
+            automation_details_framework_desc: "Developed a reusable automation framework that includes:",
+            automation_details_framework_1: "Error handling and notifications",
+            automation_details_framework_2: "Performance logging",
+            automation_details_framework_3: "Configuration management",
+            download_report: "Download Full Report",
+            why_choose_title: "Why Choose Me?",
+            benefit_experience: "Over 12 years of hands-on experience in data engineering and analytics",
+            benefit_success: "Proven success in implementing award-winning solutions",
+            benefit_expertise: "Expertise across a wide range of data technologies and platforms",
+            benefit_communication: "Strong communication skills in German, English, and Vietnamese",
+            contact_title: "Let’s Work Together",
+            form_name: "Name",
+            form_email: "Email",
+            form_subject: "Subject",
+            form_message: "Message",
+            form_submit: "Send Message",
+            form_message_status_success: "Message sent successfully!",
+            form_message_status_error: "Error sending message.",
+            footer_copyright: "© <span id='year'></span> Phu Viet. All rights reserved."
+        }
+    };
+        // Hàm chuyển đổi ngôn ngữ
+        function toggleLanguage(lang) {
+            document.documentElement.lang = lang;
+            localStorage.setItem('language', lang);
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                let text = translations[lang][key] || translations['de'][key];
+                if (key === 'footer_copyright') {
+                    text = text.replace('<span id="year"></span>', new Date().getFullYear());
+                }
+                element.innerHTML = text;
+            });
+            document.title = translations[lang].title || translations['de'].title;
+        }
 
-		// Hàm chuyển đổi ngôn ngữ
-		function toggleLanguage(lang) {
-			document.documentElement.lang = lang;
-			localStorage.setItem('language', lang);
-			document.querySelectorAll('[data-translate]').forEach(element => {
-				const key = element.getAttribute('data-translate');
-				let text = translations[lang][key] || translations['de'][key];
-				if (key === 'footer_copyright') {
-					text = text.replace('<span id="year"></span>', new Date().getFullYear());
-				}
-				element.innerHTML = text;
-			});
-			document.title = translations[lang].title || translations['de'].title;
-		}
+        // Khởi tạo ngôn ngữ khi tải trang
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('language') || 'de';
+            document.querySelector('select').value = savedLang;
+            toggleLanguage(savedLang);
 
-		// Khởi tạo ngôn ngữ khi tải trang
-		document.addEventListener('DOMContentLoaded', () => {
-			const savedLang = localStorage.getItem('language') || 'de';
-			document.querySelector('select').value = savedLang;
-			toggleLanguage(savedLang);
+            // Cập nhật năm trong footer
+            document.getElementById('year').textContent = new Date().getFullYear();
 
-			// Cập nhật năm trong footer
-			document.getElementById('year').textContent = new Date().getFullYear();
+            // Xử lý toggle cho các danh mục kỹ năng
+            const skillCategories = document.querySelectorAll('.skill-category');
+            skillCategories.forEach(category => {
+                category.addEventListener('click', () => {
+                    const group = category.getAttribute('data-group');
+                    const categoryName = category.getAttribute('data-category');
+                    const detailsContainer = document.getElementById(`details-container-${group}`);
+                    const skillDetails = document.getElementById(`${categoryName}Details`);
 
-			// Xử lý toggle cho các danh mục kỹ năng
-			const skillCategories = document.querySelectorAll('.skill-category');
-			skillCategories.forEach(category => {
-				category.addEventListener('click', () => {
-					const group = category.getAttribute('data-group');
-					const categoryName = category.getAttribute('data-category');
-					const detailsContainer = document.getElementById(`details-container-${group}`);
-					const skillDetails = document.getElementById(`${categoryName}Details`);
+                    // Kiểm tra nếu container đã hiển thị và đang hiển thị đúng danh mục
+                    const isContainerVisible = detailsContainer.classList.contains('show');
+                    const isCurrentCategoryVisible = skillDetails.classList.contains('show');
 
-					// Kiểm tra nếu container đã hiển thị và đang hiển thị đúng danh mục
-					const isContainerVisible = detailsContainer.classList.contains('show');
-					const isCurrentCategoryVisible = skillDetails.classList.contains('show');
+                    if (isContainerVisible && isCurrentCategoryVisible) {
+                        // Nếu container đang hiển thị và danh mục đang được hiển thị, ẩn nó đi
+                        detailsContainer.classList.remove('show');
+                        skillDetails.classList.remove('show');
+                    } else {
+                        // Ẩn tất cả các chi tiết trong container hiện tại
+                        detailsContainer.querySelectorAll('.skill-details').forEach(detail => {
+                            detail.classList.remove('show');
+                        });
 
-					if (isContainerVisible && isCurrentCategoryVisible) {
-						// Nếu container đang hiển thị và danh mục đang được hiển thị, ẩn nó đi
-						detailsContainer.classList.remove('show');
-						skillDetails.classList.remove('show');
-					} else {
-						// Ẩn tất cả các chi tiết trong container hiện tại
-						detailsContainer.querySelectorAll('.skill-details').forEach(detail => {
-							detail.classList.remove('show');
-						});
+                        // Hiển thị container và chi tiết của danh mục được nhấp
+                        detailsContainer.classList.add('show');
+                        skillDetails.classList.add('show');
 
-						// Hiển thị container và chi tiết của danh mục được nhấp
-						detailsContainer.classList.add('show');
-						skillDetails.classList.add('show');
+                        // Cuộn đến container chi tiết
+                        detailsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
 
-						// Cuộn đến container chi tiết
-						detailsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-					}
-				});
-			});
+            emailjs.init("2BzfZQCssY8KQWR0O"); 
 
-			emailjs.init("2BzfZQCssY8KQWR0O"); 
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
 
-			const contactForm = document.getElementById('contactForm');
-			const formMessage = document.getElementById('formMessage');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
 
-			contactForm.addEventListener('submit', (e) => {
-				e.preventDefault();
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
 
-				const formData = {
-					name: document.getElementById('name').value,
-					email: document.getElementById('email').value,
-					subject: document.getElementById('subject').value,
-					message: document.getElementById('message').value
-				};
-
-				emailjs.send("service_vjl2dif", "template_ls3w43c", formData) 
-					.then(() => {
-						formMessage.style.display = 'block';
-						formMessage.style.color = 'green';
-						formMessage.textContent = translations[savedLang].form_message_status_success;
-						contactForm.reset();
-					}, (error) => {
-						formMessage.style.display = 'block';
-						formMessage.style.color = 'red';
-						formMessage.textContent = translations[savedLang].form_message_status_error;
-						console.error('EmailJS error:', error);
-					});
-			});
-		});
-	</script>
+                emailjs.send("service_vjl2dif", "template_ls3w43c", formData) 
+                    .then(() => {
+                        formMessage.style.display = 'block';
+                        formMessage.style.color = 'green';
+                        formMessage.textContent = translations[savedLang].form_message_status_success;
+                        contactForm.reset();
+                    }, (error) => {
+                        formMessage.style.display = 'block';
+                        formMessage.style.color = 'red';
+                        formMessage.textContent = translations[savedLang].form_message_status_error;
+                        console.error('EmailJS error:', error);
+                    });
+            });
+        });
+    </script>
 </body>
 </html>
