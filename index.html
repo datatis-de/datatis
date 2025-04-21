@@ -36,15 +36,16 @@
         }
         
         header {
-            background-image: url('https://mail.google.com/mail/u/0?ui=2&ik=badd89d88e&attid=0.1&permmsgid=msg-f:1829727188714575720&th=19647f2f0f34d768&view=fimg&fur=ip&permmsgid=msg-f:1829727188714575720&sz=s0-l75-ft&attbid=ANGjdJ_GPJnDNpzcij2bSdPKu2isyJPhFJel1GlZ8kmky-S4URO1mGlGXQ3tNYFkMxwk0te95xAHlSMYHRwAvHHFYWm56pQFu2eUeRTZxWXN9x6lbMuITi543MLgn1c&disp=emb&realattid=ii_m9miec9t0&zw');
+            background-image: url('https://png.pngtree.com/background/20250217/original/pngtree-a-walkway-over-two-tall-buildings-at-night-picture-image_13057308.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             color: white;
-            padding: 20px 0 20px;
+            padding: 20px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 0px; /* Đặt chiều cao tối thiểu để ảnh nền hiển thị đầy đủ */
         }
         
         header::before {
@@ -61,10 +62,10 @@
             position: relative;
             z-index: 1;
             display: flex;
-            align-items: center;
             justify-content: center;
             gap: 50px;
             flex-wrap: wrap;
+            padding-bottom: 20px;
         }
         
         .profile-section {
@@ -75,11 +76,14 @@
         
         .profile-image {
             width: 250px;
-            height: 250px;
-            border-radius: 50%;
+            height: 300px;
             object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 0px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.0);
+            position: absolute;
+            bottom: -20px; /* Đặt phần dưới của ảnh ở đáy header */
+            right: 0px; /* Đặt ảnh ở phía bên phải */
+            z-index: 0; /* Đảm bảo ảnh nằm trên lớp phủ tối */
         }
         
         .company-logo {
@@ -433,6 +437,13 @@
                 text-align: center;
             }
             
+            .profile-image {
+                position: relative; /* Trở lại position relative trên mobile */
+                right: auto;
+                margin: 0 auto;
+                bottom: auto;
+            }
+            
             .company-logo {
                 position: static;
                 justify-content: center;
@@ -619,7 +630,7 @@
         
         .why-choose {
             padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: url('https://png.pngtree.com/background/20250217/original/pngtree-a-walkway-over-two-tall-buildings-at-night-picture-image_13057308.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
         }
@@ -635,7 +646,7 @@
         .benefit {
             flex: 1 1 200px;
             max-width: 250px;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255,255,255,0.2);
             border-radius: 10px;
             padding: 25px;
             backdrop-filter: blur(5px);
@@ -751,10 +762,11 @@
                     <p>Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung</p>
                     <span style="font-size: 20px;"> 
                         Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln? 
-                        <a href="https://www.upwork.com/freelancers/~0119cf54e69a5f33b7">Kontaktieren Sie mich über Upwork!</a>
+                        <a href="https://i.imgur.com/mshYpZT.png">Kontaktieren Sie mich über Upwork!</a>
                     </span><br>
                     <a href="#contact" class="cta-button">Kontakt aufnehmen</a>
                 </div>
+                <img src="https://i.imgur.com/mshYpZT.png" alt="Phu Viet Profile" class="profile-image">
             </div>
         </div>
     </header>
@@ -1034,7 +1046,7 @@
                     <div class="skill-details" id="businessIntelligenceDetails">
                         <div class="skill-details-content">
                             <p>Unternehmens-BI-Lösungen für datengetriebene Entscheidungsfindung:</p><br>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScnBTnT3-7IPQUvgOOZqSPowVmPas19geQ0w&s" style="width: 500px; height: 500px;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ScnBTnT3-7IPQUvgOOZqSPowVmPas19geQ0w&s" style="width: 500px; height: 500px;">
                             <h4>BI-Plattformerfahrung:</h4>
                             <ul>
                                 <li><strong>Tableau:</strong> Desktop- und Server-Implementierungen</li>
@@ -1125,7 +1137,7 @@
                     <div class="skill-details" id="googleAnalyticsDetails">
                         <div class="skill-details-content">
                             <p>Web-Analyse mit Google Analytics:</p><br>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2kJ5L8v7e7WvK8vYqW7p0qL6yN8qXz5h5g&s" style="width: 500px; height: 400px;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:T2kJ5L8v7e7WvK8vYqW7p0qL6yN8qXz5h5g&s" style="width: 500px; height: 400px;">
                             <h4>Google Analytics-Fähigkeiten:</h4>
                             <ul>
                                 <li><strong>Web-Tracking:</strong> Analyse von Nutzerverhalten und Traffic-Quellen</li>
