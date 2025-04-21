@@ -45,7 +45,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 0px; /* Đặt chiều cao tối thiểu để ảnh nền hiển thị đầy đủ */
+            min-height: 0px;
         }
         
         header::before {
@@ -70,32 +70,44 @@
         }
         
         .profile-section {
-            flex: 7; /* Chiếm 50% chiều rộng, bên trái */
+            flex: 7;
             min-width: 300px;
-            text-align: right; /* Căn phải trong phần của nó */
-            padding-right: 20px; /* Thêm khoảng cách bên phải */
-            order: 1; /* Đặt bên trái */
-            margin-right: 20px; /* Thêm margin để đẩy sang phải 100px */
+            text-align: right;
+            padding-right: 20px;
+            order: 1;
+            margin-right: 20px;
+        }
+        
+        .profile-section h1 {
+            font-weight: bold;
+            font-size: 35px;
+            margin-top: 30px; /* Hạ thấp chữ "Phu Viet" */
+        }
+        
+        .profile-section .tagline {
+            font-size: 33px;
+            font-weight: bold;
+            margin-top: -30px; /* Hạ thấp chữ "Spezialist für KI- und Big-Data-Lösungen" */
         }
         
         .profile-image-container {
-            flex: 3; /* Chiếm 50% chiều rộng, bên phải */
+            flex: 3;
             min-width: 300px;
-            text-align: left; /* Căn trái trong phần của nó */
-            padding-left: 0px; /* Thêm khoảng cách bên trái */
+            text-align: left;
+            padding-left: 0px;
             position: relative;
-            order: 2; /* Đặt bên phải */
+            order: 2;
         }
         
         .profile-image {
             width: 250px;
-            height: 350px;
+            height: 340px;
             object-fit: cover;
             border: 0px solid white;
             box-shadow: 0 5px 15px rgba(0,0,0,0.0);
-            position: relative; /* Bỏ absolute để ảnh căn trái tự nhiên */
+            position: relative;
             bottom: -5px;
-            margin-left: 10px; /* Đẩy ảnh sang phải 20px */
+            margin-left: 10px;
         }
         
         .company-logo {
@@ -150,6 +162,7 @@
             transition: all 0.3s ease;
             margin-top: 20px;
             border: 2px solid var(--accent);
+            font-size: 22px;
         }
         
         .cta-button:hover {
@@ -345,6 +358,13 @@
             transform: translateY(-5px);
         }
         
+        .testimonial-logo {
+            display: block;
+            width: 100px;
+            height: auto;
+            margin: 0 auto 15px;
+        }
+        
         .testimonial-text {
             font-style: italic;
             color: var(--text);
@@ -448,13 +468,13 @@
             .profile-section {
                 text-align: center;
                 padding-right: 0;
-                order: 1; /* Trên mobile, đặt chữ lên trên ảnh */
+                order: 1;
             }
             
             .profile-image-container {
                 text-align: center;
                 padding-left: 0;
-                order: 2; /* Đặt ảnh dưới chữ trên mobile */
+                order: 2;
             }
             
             .company-logo {
@@ -769,14 +789,14 @@
         <div class="container">
             <div class="header-content">
                 <div class="profile-section">
-                    <h1 style="font-weight: bold;font-size: 35px;">Phu Viet</h1>
-                    <p class="tagline" style="font-size: 33px; font-weight: bold;">Spezialist für KI- und Big-Data-Lösungen</p>
+                    <h1>Phu Viet</h1>
+                    <p class="tagline">Spezialist für KI- und Big-Data-Lösungen</p>
                     <p style="font-weight: bold;font-size: 18px;">Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung</p>
                     <span style="font-size: 22px; font-weight: bold;"> 
                         Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?<br>
                         <a href="https://i.imgur.com/mshYpZT.png">Kontaktieren Sie mich über Upwork!</a>
                     </span><br>
-                    <a href="#contact" class="cta-button" style="font-size: 22px;">Kontakt aufnehmen</a>
+                    <a href="#contact" class="cta-button">Kontakt aufnehmen</a>
                 </div>
                 <div class="profile-image-container">
                     <img src="https://i.imgur.com/mshYpZT.png" alt="Phu Viet Profile" class="profile-image">
@@ -819,21 +839,24 @@
             <h2 class="section-title">Was Kunden sagen</h2>
             <div class="testimonials-container">
                 <div class="testimonial-card" data-testimonial="bosch">
+                    <img src="https://c0.klipartz.com/pngpicture/1006/243/gratis-png-logo-robert-bosch-gmbh-alternador-producto-bateria-electrica-bosch-thumbnail.png" alt="Bosch Logo" class="testimonial-logo">
+                    <p class="testimonial-author">Bosch Deutschland</p>
                     <i class="fas fa-quote-left quote-icon"></i>
                     <p class="testimonial-text">"Herr Phạm war ein Innovationstreiber... eines sehr erfolgreichen datengetriebenen Service „Rapid Pivot“, welcher in kürzester Zeit Massendaten pivotiert und in dieser Art neu am Markt und bei Bosch ist."</p>
-                    <p class="testimonial-author">Bosch Deutschland</p>
                     <p class="testimonial-role"></p>
                 </div>
                 <div class="testimonial-card" data-testimonial="solarworld">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/SolarWorld_logo.svg" alt="SolarWorld Logo" class="testimonial-logo">
+                    <p class="testimonial-author">SolarWorld Deutschland</p>
                     <i class="fas fa-quote-left quote-icon"></i>
                     <p class="testimonial-text">"Herr Pham verfügt über umfassende und vielseitige Fachkenntnisse, die er jederzeit sicher und gekonnt in der Praxis einsetzte. Er bildete sich stets in eigener Initiative beruflich weiter und war dabei immer sehr erfolgreich."</p>
-                    <p class="testimonial-author">SolarWorld Deutschland</p>
                     <p class="testimonial-role"></p>
                 </div>
                 <div class="testimonial-card" data-testimonial="upwork">
+                    <img src="https://images.icon-icons.com/3781/PNG/512/upwork_icon_231982.png" alt="Upwork Logo" class="testimonial-logo">
+                    <p class="testimonial-author">Upwork Deutschland Kunde 1M USD</p>
                     <i class="fas fa-quote-left quote-icon"></i>
                     <p class="testimonial-text">"Phu, it was an honor working with you. You are very talented and an expert when it comes to BI and Databases. I really would love to continue working with u. Best Regards Daniel."</p>
-                    <p class="testimonial-author">Upwork Deutschland Kunde 1M USD</p>
                     <p class="testimonial-role"></p>
                 </div>
             </div>
