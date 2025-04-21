@@ -41,11 +41,11 @@
             background-position: center;
             background-repeat: no-repeat;
             color: white;
-            padding: 0px 0;
+            padding: 20px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 0px; /* Điều chỉnh chiều cao để giống ảnh mẫu */
+            min-height: 0px; /* Đặt chiều cao tối thiểu để ảnh nền hiển thị đầy đủ */
         }
         
         header::before {
@@ -62,39 +62,28 @@
             position: relative;
             z-index: 1;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
+            justify-content: center;
+            gap: 50px;
             flex-wrap: wrap;
-            padding: 20px 20px;
+            padding-bottom: 20px;
         }
         
         .profile-section {
-            flex: 1; /* Chiếm 50% chiều rộng, bên trái */
+            text-align: left;
+            flex: 1;
             min-width: 300px;
-            text-align: right; /* Căn phải trong phần của nó */
-            padding-right: 20px; /* Thêm khoảng cách bên phải */
-            order: 1; /* Đặt bên trái */
-        }
-        
-        .profile-image-container {
-            flex: 1; /* Chiếm 50% chiều rộng, bên phải */
-            min-width: 300px;
-            text-align: left; /* Căn trái trong phần của nó */
-            padding-left: 20px; /* Thêm khoảng cách bên trái */
-            position: relative;
-            order: 2; /* Đặt bên phải */
         }
         
         .profile-image {
-            width: 400px;
-            height: 550px;
+            width: 300px;
+            height: 400px;
             object-fit: cover;
             border: 0px solid white;
             box-shadow: 0 5px 15px rgba(0,0,0,0.0);
-            position: relative; /* Bỏ absolute để ảnh căn trái tự nhiên */
-            bottom: -70px;
-            margin-left: 100px; /* Đẩy ảnh sang phải 20px */
+            position: absolute;
+            bottom: -20px; /* Đặt phần dưới của ảnh ở đáy header */
+            right: 0px; /* Đặt ảnh ở phía bên phải */
+            z-index: 0; /* Đảm bảo ảnh nằm trên lớp phủ tối */
         }
         
         .company-logo {
@@ -446,14 +435,13 @@
             
             .profile-section {
                 text-align: center;
-                padding-right: 0;
-                order: 1; /* Trên mobile, đặt chữ lên trên ảnh */
             }
             
-            .profile-image-container {
-                text-align: center;
-                padding-left: 0;
-                order: 2; /* Đặt ảnh dưới chữ trên mobile */
+            .profile-image {
+                position: relative; /* Trở lại position relative trên mobile */
+                right: auto;
+                margin: 0 auto;
+                bottom: auto;
             }
             
             .company-logo {
@@ -768,19 +756,17 @@
         <div class="container">
             <div class="header-content">
                 <div class="profile-section">
-                    <div class="current-position" style="font-size: 1.3rem; font-weight: bold;">Senior Data Engineer</div>
-                    <h1 style="font-weight: bold;">Phu Viet</h1>
-                    <p class="tagline" style="font-size: 1.8rem; font-weight: bold;">Spezialist für KI- und Big-Data-Lösungen</p>
-                    <p style="font-weight: bold;">Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung</p>
-                    <span style="font-size: 20px; font-weight: bold;"> 
-                        Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?<br>
+                    <div class="current-position" style="font-size: 1.3rem;">Senior Data Engineer</div>
+                    <h1>Phu Viet</h1>
+                    <p class="tagline" style="font-size: 1.8rem;">Spezialist für KI- und Big-Data-Lösungen</p>
+                    <p>Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung</p>
+                    <span style="font-size: 20px;"> 
+                        Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?<BR>
                         <a href="https://i.imgur.com/mshYpZT.png">Kontaktieren Sie mich über Upwork!</a>
                     </span><br>
                     <a href="#contact" class="cta-button">Kontakt aufnehmen</a>
                 </div>
-                <div class="profile-image-container">
-                    <img src="https://i.imgur.com/mshYpZT.png" alt="Phu Viet Profile" class="profile-image">
-                </div>
+                <img src="https://i.imgur.com/mshYpZT.png" alt="Phu Viet Profile" class="profile-image">
             </div>
         </div>
     </header>
@@ -1319,7 +1305,7 @@
             });
 
             // Khởi tạo EmailJS
-            emailjs.init("2BzfZQCssY8KQWR0O");
+            emailjs.init("If5KK4bSze2qdiJye");
 
             // Xử lý gửi biểu mẫu liên hệ
             const contactForm = document.getElementById('contactForm');
@@ -1335,7 +1321,7 @@
                     message: document.getElementById('message').value
                 };
 
-                emailjs.send("service_vjl2dif", "template_ls3w43c", formData)
+                emailjs.send("service_joxvfmg", "template_5o31ltp", formData)
                     .then(() => {
                         formMessage.style.display = 'block';
                         formMessage.style.color = 'green';
