@@ -22,7 +22,8 @@
       "@type": "WebSite",
       "name": "Phu Viet - Data Science & Web Development",
       "url": "https://datatis.org",
-      "keywords": ["data science", "AI", "big data", "coding", "datatis", "data analytics", "smart factory", "business intelligence" ,"data engineer" ,"KI" ,"Dateningenieur" ,"Datenvisualisierung" ,"sql" ,"python" ,"tableau" ,"power bi" ]
+      "keywords": ["data science", "AI", "big data", "coding", "datatis", "data analytics", "smart factory", "business intelligence", "data engineer", "KI", "Dateningenieur", "Datenvisualisierung", "sql", "python", "tableau", "power bi"],
+      "logo": "https://i.imgur.com/mshYpZT.png"
     }
     </script>
     <style>
@@ -207,7 +208,7 @@
             width: 80px;
             height: 4px;
             background-color: var(--secondary);
-            margin: 10px auto 30px; /* Đã sửa để nâng gạch dưới và tạo khoảng cách */
+            margin: 10px auto 30px;
         }
         
         .features-horizontal {
@@ -763,6 +764,49 @@
             background-color: var(--primary);
         }
         
+        .contact-info {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+        
         footer {
             background-color: var(--dark);
             color: white;
@@ -1284,6 +1328,16 @@
                     <button type="submit" class="submit-btn">Nachricht senden</button>
                 </form>
                 <div id="formMessage" style="margin-top: 20px; display: none;"></div>
+            </div>
+            <div class="contact-info">
+                <h3>Meine Adresse</h3>
+                <p>Datatis Office</p>
+                <p>123 Musterstraße, 10115 Berlin, Deutschland</p>
+                <p>Telefon: <a href="tel:+491234567890">+49 123 456 7890</a></p>
+                <p>E-Mail: <a href="mailto:contact@datatis.org">contact@datatis.org</a></p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.856783976381!2d13.391684315616714!3d52.51703697981139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8515353a1341d%3A0x37b5a2b2b5e6a!2sBerlin%2C%20Germany!5e0!3m2!1sen!2sde!4v1697691234567!5m2!1sen!2sde" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
