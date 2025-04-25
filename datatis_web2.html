@@ -91,7 +91,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.15);
         }
         
         .header-content {
@@ -108,42 +108,42 @@
         .profile-section {
             flex: 7;
             min-width: 300px;
-            text-align: right;
-            padding-right: 20px;
-            order: 1;
-            margin-right: 20px;
+            text-align: left; /* Chuyển chữ sang bên trái */
+            padding-left: 20px; /* Thêm padding bên trái */
+            order: 2; /* Đặt thứ tự để chữ ở bên phải */
+            margin-left: 20px;
         }
         
         .profile-section h1 {
             font-weight: bold;
-            font-size: 35px;
-            margin-top: 30px;
+            font-size: 40px;
+            margin-top: 45px;
         }
         
         .profile-section .tagline {
-            font-size: 33px;
+            font-size: 35px;
             font-weight: bold;
-            margin-top: -30px;
+            margin-top: -25px;
         }
         
         .profile-image-container {
             flex: 3;
             min-width: 300px;
-            text-align: left;
-            padding-left: 0px;
+            text-align: right; /* Chuyển ảnh sang bên phải */
+            padding-right: 0px; /* Thêm padding bên phải */
             position: relative;
-            order: 2;
+            order: 1; /* Đặt thứ tự để ảnh ở bên trái */
         }
         
         .profile-image {
-            width: 250px;
-            height: 340px;
+            width: 300px;
+            height: 400px;
             object-fit: cover;
             border: 0px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.0);
+            box-shadow: 0 15px 15px rgba(0,0,0,0.0);
             position: relative;
-            bottom: -5px;
-            margin-left: 10px;
+            bottom: -7px;
+            margin-right: 1px; /* Điều chỉnh margin để căn chỉnh */
         }
         
         .company-logo {
@@ -317,7 +317,7 @@
         
         .feature-details-content ul li {
             margin-bottom: 10px;
-            position: relative;
+            position flint: relative;
         }
         
         .feature-details-content ul li::before {
@@ -503,14 +503,14 @@
             
             .profile-section {
                 text-align: center;
-                padding-right: 0;
-                order: 1;
+                padding-left: 0;
+                order: 2;
             }
             
             .profile-image-container {
                 text-align: center;
-                padding-left: 0;
-                order: 2;
+                padding-right: 0;
+                order: 1;
             }
             
             .company-logo {
@@ -851,6 +851,9 @@
         </div>
         <div class="container">
             <div class="header-content">
+                <div class="profile-image-container">
+                    <img src="https://i.imgur.com/Nz5Q2MH.png" alt="Phu Viet - Data Science Specialist" class="profile-image">
+                </div>
                 <div class="profile-section">
                     <h1>Phu Viet</h1>
                     <p class="tagline">Spezialist für KI- und Big-Data-Lösungen</p>
@@ -860,9 +863,6 @@
                         <a href="https://www.upwork.com/freelancers/phuviet">Kontaktieren Sie mich über Upwork!</a>
                     </span><br>
                     <a href="#contact" class="cta-button">Kontakt aufnehmen</a>
-                </div>
-                <div class="profile-image-container">
-                    <img src="https://i.imgur.com/npCMDce.png" alt="Phu Viet - Data Science Specialist" class="profile-image">
                 </div>
             </div>
         </div>
