@@ -91,7 +91,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.15);
         }
         
         .header-content {
@@ -118,19 +118,28 @@
             font-weight: bold;
             font-size: 35px;
             margin-top: 30px;
+            -webkit-text-stroke: 0.2px black; /* Viền đen */
+            text-stroke: 0.2px black;
         }
         
         .profile-section .tagline {
             font-size: 33px;
             font-weight: bold;
             margin-top: -30px;
+            -webkit-text-stroke: 0.2px black; /* Viền đen */
+            text-stroke: 0.2px black;
+        }
+        
+        .profile-section p, .profile-section span {
+            -webkit-text-stroke: 0.1px black; /* Viền đen mỏng hơn cho p và span */
+            text-stroke: 0.1px black;
         }
         
         .profile-image-container {
             flex: 3;
             min-width: 300px;
             text-align: left;
-            padding-left: 0px;
+            padding-left: 30px;
             position: relative;
             order: 2;
         }
@@ -1274,7 +1283,7 @@
                     <div class="benefit-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <p>Bewährter Erfolg bei der Implementierung preisgekrönter Lösungen</p>
+                    <p>Bewährter Erfolg bei der Implementierung preisgekrönten Lösungen</p>
                 </div>
                 <div class="benefit">
                     <div class="benefit-icon">
