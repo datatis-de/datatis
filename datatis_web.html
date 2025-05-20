@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Data Engineer & KI-Spezialist | Phu Viet</title>
+    <title>Phu Viet | Data Science & Big Data Specialist</title>
+    <meta name="description" content="Phu Viet - Data Science und KI-Spezialist mit über 12 Jahren Erfahrung in Big Data, Web Development und innovativen Lösungen.">
+    <meta name="keywords" content="data science, web development, AI, big data, coding, datatis, machine learning, data analytics, web design, software development, programming, python, javascript, data visualization, cloud computing, devops, cybersecurity, blockchain, iot, deep learning, nlp, sql, nosql, frontend, backend, fullstack, ui design, ux design, tech, innovation, KI ,Dateningenieur ,Datenvisualisierung ,sql ,python ,tableau ,power bi">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.imgur.com/ts0Pv22.png">
+    <!-- Google Analytics -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4K1XLQND0L"></script>
     <script>
@@ -12,8 +19,30 @@
         gtag('js', new Date());
         gtag('config', 'G-4K1XLQND0L');
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Phu Viet - Data Science & Web Development",
+      "url": "https://datatis.org",
+      "keywords": ["data science", "AI", "big data", "coding", "datatis", "data analytics", "smart factory", "business intelligence", "data engineer", "KI", "Dateningenieur", "Datenvisualisierung", "sql", "python", "tableau", "power bi"],
+      "logo": "https://i.imgur.com/ts0Pv22.png"
+    }
+    </script>
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Datatis",
+      "url": "https://datatis.org",
+      "logo": "https://i.imgur.com/ts0Pv22.png",
+      "sameAs": [
+        "https://datatis.org/index.html"
+      ]
+    }
+    </script>
     <style>
         :root {
             --primary: #2c3e50;
@@ -44,16 +73,16 @@
         }
         
         header {
-            background-image: url('https://i.imgur.com/B1DOt4A.png');
+            background-image: url('https://i.imgur.com/y9BC7Ne.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             color: white;
-            padding: 20px 0;
+            padding: 0px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 0px; /* Đặt chiều cao tối thiểu để ảnh nền hiển thị đầy đủ */
+            min-height: 0px;
         }
         
         header::before {
@@ -63,35 +92,68 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.15);
         }
         
         .header-content {
             position: relative;
             z-index: 1;
             display: flex;
-            justify-content: center;
-            gap: 50px;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
             flex-wrap: wrap;
-            padding-bottom: 20px;
+            padding: 0px 20px;
         }
         
         .profile-section {
-            text-align: left;
-            flex: 1;
+            flex: 7;
             min-width: 300px;
+            text-align: right;
+            padding-right: 20px;
+            order: 1;
+            margin-right: 20px;
+        }
+        
+        .profile-section h1 {
+            font-weight: bold;
+            font-size: 35px;
+            margin-top: 30px;
+            -webkit-text-stroke: 0px black; /* Viền đen */
+            text-stroke: 0px black;
+        }
+        
+        .profile-section .tagline {
+            font-size: 33px;
+            font-weight: bold;
+            margin-top: -30px;
+            -webkit-text-stroke: 0px black; /* Viền đen */
+            text-stroke: 0px black;
+        }
+        
+        .profile-section p, .profile-section span {
+            -webkit-text-stroke: 0px black; /* Viền đen mỏng hơn cho p và span */
+            text-stroke: 0px black;
+        }
+        
+        .profile-image-container {
+            flex: 3;
+            min-width: 300px;
+            text-align: left;
+            padding-left: 0px;
+            position: relative;
+            order: 2;
         }
         
         .profile-image {
             width: 300px;
-            height: 400px;
+            height: 430px;
             object-fit: cover;
             border: 0px solid white;
             box-shadow: 0 5px 15px rgba(0,0,0,0.0);
-            position: absolute;
-            bottom: -20px; /* Đặt phần dưới của ảnh ở đáy header */
-            right: 0px; /* Đặt ảnh ở phía bên phải */
-            z-index: 0; /* Đảm bảo ảnh nằm trên lớp phủ tối */
+            position: relative;
+            bottom: -30px;
+            margin-left: 10px;
         }
         
         .company-logo {
@@ -146,6 +208,7 @@
             transition: all 0.3s ease;
             margin-top: 20px;
             border: 2px solid var(--accent);
+            font-size: 22px;
         }
         
         .cta-button:hover {
@@ -160,7 +223,7 @@
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 0px;
             font-size: 2.2rem;
             position: relative;
         }
@@ -171,7 +234,7 @@
             width: 80px;
             height: 4px;
             background-color: var(--secondary);
-            margin: 15px auto 0;
+            margin: 10px auto 30px;
         }
         
         .features-horizontal {
@@ -341,6 +404,13 @@
             transform: translateY(-5px);
         }
         
+        .testimonial-logo {
+            display: block;
+            width: 100px;
+            height: auto;
+            margin: 0 auto 15px;
+        }
+        
         .testimonial-text {
             font-style: italic;
             color: var(--text);
@@ -443,13 +513,14 @@
             
             .profile-section {
                 text-align: center;
+                padding-right: 0;
+                order: 1;
             }
             
-            .profile-image {
-                position: relative; /* Trở lại position relative trên mobile */
-                right: auto;
-                margin: 0 auto;
-                bottom: auto;
+            .profile-image-container {
+                text-align: center;
+                padding-left: 0;
+                order: 2;
             }
             
             .company-logo {
@@ -741,6 +812,21 @@
             color: var(--secondary);
         }
         
+        .contact-email {
+            margin-bottom: 20px;
+        }
+        
+        .contact-email a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-email a:hover {
+            color: var(--accent);
+        }
+        
         .footer-logo {
             display: flex;
             align-items: center;
@@ -753,6 +839,18 @@
             height: 30px;
             width: auto;
         }
+        
+        .hashtag-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 0.9rem;
+        }
+        
+        .hashtag-links a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -764,17 +862,18 @@
         <div class="container">
             <div class="header-content">
                 <div class="profile-section">
-                    <div class="current-position" style="font-size: 1.3rem;">Senior Data Engineer</div>
                     <h1>Phu Viet</h1>
-                    <p class="tagline" style="font-size: 1.8rem;">Spezialist für KI- und Big-Data-Lösungen</p>
-                    <p>Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung</p>
-                    <span style="font-size: 20px;"> 
-                        Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?<BR>
-                        <a href="https://i.imgur.com/mshYpZT.png">Kontaktieren Sie mich über Upwork!</a>
+                    <p class="tagline" style="font-size: 2em;">Preisgekrönter Dateningenieur und Datenanalyst</p>
+                    <p style="font-weight: bold;font-size: 18px;">Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung</p>
+                    <span style="font-size: 22px; font-weight: bold;"> 
+                        Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?<br>
+                        <a href="https://www.upwork.com/freelancers/phuviet">Kontaktieren Sie mich über Upwork!</a>
                     </span><br>
                     <a href="#contact" class="cta-button">Kontakt aufnehmen</a>
                 </div>
-                <img src="https://i.imgur.com/mshYpZT.png" alt="Phu Viet Profile" class="profile-image">
+                <div class="profile-image-container">
+                    <img src="https://i.imgur.com/Nz5Q2MH.png" alt="Phu Viet - Data Science Specialist" class="profile-image">
+                </div>
             </div>
         </div>
     </header>
@@ -798,7 +897,7 @@
                     </div>
                 </div>
                 <div class="award-card">
-                    <img src="https://scontent.fhan5-11.fna.fbcdn.net/v/t1.15752-9/489004360_1440871150229558_8538154225490519925_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHlPAj0DXLvJQnY5OJGXFj_Ql4E9MsuVoBCXgT0yy5WgJaXEeJW7NpT5e1BMclE0PmxaAz4uyBX2Eo_NWu3NBnG&_nc_ohc=XP9S5QcKv_sQ7kNvwHQreY6&_nc_oc=Adkm4wxn_NSQO3EdEA_O8SLSwu4vAoKiKNDlChq0Sf0iWvzJUERpqD_6gOSAv9MpW6jf_JkyLN8g5zbP2G68nL25&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fhan5-11.fna&oh=03_Q7cD2AGeJndWnaI511ZL6qUJUt8BGrc7Eo-n4zfMfmhYFGRPMw&oe=68295051" alt="Top 1 % Freelancer Upwork & Top Rated Plus" class="award-image">
+                    <img src="https://scontent.fhan5-11.fna.fbcdn.net/v/t1.15752-9/489004360_1440871150229558_8538154225490519925_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Yn64JVa3J8kQ7kNvwGdrnM_&_nc_oc=AdmfvXR4bP7FA4Axgg_AyIjMPPSnj3YToTkouPm-pH5fii37W0EWJUqECqjB9DQt6aHlJVvMRtxWhsBHQ31xVYJA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fhan5-11.fna&oh=03_Q7cD2QFDp08rswOv2iah0sVagSH4A7RW_0nSX0jy8kSSrAsLeQ&oe=68529F51" alt="Top 1 % Freelancer Upwork & Top Rated Plus" class="award-image">
                     <div class="award-content">
                         <h3 class="award-title">Top 1 % Freelancer Upwork & Top Rated Plus</h3>
                         <p>Anerkannt als einer der besten 1 % der Freelancer auf Upwork und "Top-bewertet" für hervorragende Arbeitsqualität, 100 % Kundenzufriedenheit, das Lösen komplexer Herausforderungen und das Überzeugen internationaler Kunden.</p>
@@ -813,21 +912,24 @@
             <h2 class="section-title">Was Kunden sagen</h2>
             <div class="testimonials-container">
                 <div class="testimonial-card" data-testimonial="bosch">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p class="testimonial-text">"Herr Pham beherrschte sein Aufgabengebiet immer äußerst sicher und bearbeitete dies jederzeit mit ausgezeichneter Motivation und Eigeninitiative...Herr Pham war ein Innovationstreiber für das Team..."</p>
+                    <img src="https://i.imgur.com/BrcFMb3.png" alt="Bosch Logo" class="testimonial-logo">
                     <p class="testimonial-author">Bosch Deutschland</p>
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"Herr Phạm war ein Innovationstreiber... eines sehr erfolgreichen datengetriebenen Service „Rapid Pivot“, welcher in kürzester Zeit Massendaten pivotiert und in dieser Art neu am Markt und bei Bosch ist."</p>
                     <p class="testimonial-role"></p>
                 </div>
                 <div class="testimonial-card" data-testimonial="solarworld">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p class="testimonial-text">"Herr Pham verfügt über umfassende und vielseitige Fachkenntnisse, die er jederzeit sicher und gekonnt in der Praxis einsetzte. Er bildete sich stets in eigener Initiative beruflich weiter und war dabei immer sehr erfolgreich..."</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/SolarWorld_logo.svg" alt="SolarWorld Logo" class="testimonial-logo">
                     <p class="testimonial-author">SolarWorld Deutschland</p>
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"Herr Pham verfügt über umfassende und vielseitige Fachkenntnisse, die er jederzeit sicher und gekonnt in der Praxis einsetzte. Er bildete sich stets in eigener Initiative beruflich weiter und war dabei immer sehr erfolgreich."</p>
                     <p class="testimonial-role"></p>
                 </div>
                 <div class="testimonial-card" data-testimonial="upwork">
+                    <img src="https://i.imgur.com/cxXxg6N.png" alt="Upwork Logo" class="testimonial-logo">
+                    <p class="testimonial-author">Upwork Deutschland Kunde 1M USD</p>
                     <i class="fas fa-quote-left quote-icon"></i>
                     <p class="testimonial-text">"Phu, it was an honor working with you. You are very talented and an expert when it comes to BI and Databases. I really would love to continue working with u. Best Regards Daniel."</p>
-                    <p class="testimonial-author">Upwork Deutschland Kunde 1M USD</p>
                     <p class="testimonial-role"></p>
                 </div>
             </div>
@@ -944,7 +1046,7 @@
                     <div class="skill-details" id="databaseTechnologiesDetails">
                         <div class="skill-details-content">
                             <p>Tiefgehende Expertise in mehreren Datenbankplattformen:</p><br>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9arOIN0buMJl2v0e_H4lsqpwYUbd3IvrjfQ&s" style="width: 500px; height: 400px;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9arOIN0buMJl2v0e_H4lsqpwYUbd3IvrjfQ&s" style="width: 500px; height: 400px;" alt="Database Technologies">
                             <h4>Schlüsselkompetenzen:</h4>
                             <ul>
                                 <li><strong>MS SQL Server:</strong> Über 15 Jahre Erfahrung mit dem gesamten Stack (SSIS, SSAS, SSRS)</li>
@@ -963,7 +1065,7 @@
                     <div class="skill-details" id="dataIntegrationDetails">
                         <div class="skill-details-content">
                             <p>End-to-End-Datenintegrationslösungen:</p><br>
-                            <img src="https://www.xplm.com/fileadmin/_processed_/a/8/csm_Infografik_Integrationsloesungen_2_079f3a3699.png" style="width: 500px; height: 400px;">
+                            <img src="https://www.xplm.com/fileadmin/_processed_/a/8/csm_Infografik_Integrationsloesungen_2_079f3a3699.png" style="width: 500px; height: 400px;" alt="Data Integration">
                             <h4>Integrationsfähigkeiten:</h4>
                             <ul>
                                 <li>Über 50 Datenquellentypen integriert (SAP, MES, Excel, CSV, etc.)</li>
@@ -1016,7 +1118,7 @@
                     <div class="skill-details" id="optimizationDetails">
                         <div class="skill-details-content">
                             <p>Lösungen für Leistungsoptimierung und Tuning:</p><br>
-                            <img src="https://cdn-icons-png.freepik.com/512/11647/11647266.png" style="width: 400px; height: 500px;">
+                            <img src="https://cdn-icons-png.freepik.com/512/11647/11647266.png" style="width: 400px; height: 500px;" alt="Optimization">
                             <h4>Optimierungsdienste:</h4>
                             <ul>
                                 <li><strong>Data Warehouse Design:</strong> Erstellung optimierter Schemata für analytische Workloads</li>
@@ -1035,7 +1137,7 @@
                     <div class="skill-details" id="analyticsDetails">
                         <div class="skill-details-content">
                             <p>Umfassende Analyselösungen:</p><br>
-                            <img src="https://www.it-daily.net/images/Aufmacherbilder/Analytics_601834022-700.jpg" style="width: 500px; height: 500px;">
+                            <img src="https://www.it-daily.net/images/Aufmacherbilder/Analytics_601834022-700.jpg" style="width: 500px; height: 500px;" alt="Analytics">
                             <h4>Analyse-Fähigkeiten:</h4>
                             <ul>
                                 <li><strong>Hadoop Ecosystem:</strong> HIVE, Impala, HBase Implementierungen</li>
@@ -1053,7 +1155,7 @@
                     <div class="skill-details" id="businessIntelligenceDetails">
                         <div class="skill-details-content">
                             <p>Unternehmens-BI-Lösungen für datengetriebene Entscheidungsfindung:</p><br>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ScnBTnT3-7IPQUvgOOZqSPowVmPas19geQ0w&s" style="width: 500px; height: 500px;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ScnBTnT3-7IPQUvgOOZqSPowVmPas19geQ0w&s" style="width: 500px; height: 500px;" alt="Business Intelligence">
                             <h4>BI-Plattformerfahrung:</h4>
                             <ul>
                                 <li><strong>Tableau:</strong> Desktop- und Server-Implementierungen</li>
@@ -1106,7 +1208,7 @@
                     <div class="skill-details" id="automationDetails">
                         <div class="skill-details-content">
                             <p>Effizienz durch Automatisierungslösungen:</p><br>
-                            <img src="https://derechoynegocios.net/wp-content/uploads/2024/04/El-archivo-electronico-forma-parte-de-la-transformacion-digital.jpg" style="width: 500px; height: 400px;">
+                            <img src="https://derechoynegocios.net/wp-content/uploads/2024/04/El-archivo-electronico-forma-parte-de-la-transformacion-digital.jpg" style="width: 500px; height: 400px;" alt="Automation">
                             <h4>Automatisierungs-Fähigkeiten:</h4>
                             <ul>
                                 <li><strong>Microsoft Power Automate:</strong> Workflow-Automatisierung über Office 365</li>
@@ -1130,7 +1232,7 @@
                     <div class="skill-details" id="n8nDetails">
                         <div class="skill-details-content">
                             <p>Automatisierung und Integration mit n8n:</p><br>
-                            <img src="https://n8n.io/favicon/favicon-512x512.png" style="width: 500px; height: 400px;">
+                            <img src="https://n8n.io/favicon/favicon-512x512.png" style="width: 500px; height: 400px;" alt="n8n">
                             <h4>n8n-Fähigkeiten:</h4>
                             <ul>
                                 <li><strong>Workflow-Automatisierung:</strong> Erstellung komplexer Workflows für Datenintegration</li>
@@ -1148,7 +1250,7 @@
                     <div class="skill-details" id="googleAnalyticsDetails">
                         <div class="skill-details-content">
                             <p>Web-Analyse mit Google Analytics:</p><br>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:T2kJ5L8v7e7WvK8vYqW7p0qL6yN8qXz5h5g&s" style="width: 500px; height: 400px;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:T2kJ5L8v7e7WvK8vYqW7p0qL6yN8qXz5h5g&s" style="width: 500px; height: 400px;" alt="Google Analytics">
                             <h4>Google Analytics-Fähigkeiten:</h4>
                             <ul>
                                 <li><strong>Web-Tracking:</strong> Analyse von Nutzerverhalten und Traffic-Quellen</li>
@@ -1182,7 +1284,7 @@
                     <div class="benefit-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <p>Bewährter Erfolg bei der Implementierung preisgekrönter Lösungen</p>
+                    <p>Bewährter Erfolg bei der Implementierung preisgekrönten Lösungen</p>
                 </div>
                 <div class="benefit">
                     <div class="benefit-icon">
@@ -1231,12 +1333,41 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/your-twitter-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:datatis.de@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
             <p>© <span id="year"></span> Phu Viet. Alle Rechte vorbehalten.</p>
+            <div class="hashtag-links">
+                <p><strong>Hashtags:</strong></p>
+                <div>
+                    <a href="https://twitter.com/search?q=%23datascience" target="_blank" rel="noopener noreferrer">#data science</a>
+                    <a href="https://twitter.com/search?q=%23ai" target="_blank" rel="noopener noreferrer">#ai</a>
+                    <a href="https://twitter.com/search?q=%23bigdata" target="_blank" rel="noopener noreferrer">#big data</a>
+                    <a href="https://twitter.com/search?q=%23coding" target="_blank" rel="noopener noreferrer">#coding</a>
+                    <a href="https://twitter.com/search?q=%23datatis" target="_blank" rel="noopener noreferrer">#datatis</a>
+                    <a href="https://twitter.com/search?q=%23machinelearning" target="_blank" rel="noopener noreferrer">#machine learning</a>
+                    <a href="https://twitter.com/search?q=%23dataanalytics" target="_blank" rel="noopener noreferrer">#data analytics</a>
+                    <a href="https://twitter.com/search?q=%23dataengineer" target="_blank" rel="noopener noreferrer">#data engineer</a>
+                    <a href="https://twitter.com/search?q=%23programming" target="_blank" rel="noopener noreferrer">#programming</a>
+                    <a href="https://twitter.com/search?q=%23python" target="_blank" rel="noopener noreferrer">#python</a>
+                    <a href="https://twitter.com/search?q=%23datavisualization" target="_blank" rel="noopener noreferrer">#data visualization</a>
+                    <a href="https://twitter.com/search?q=%23cloudcomputing" target="_blank" rel="noopener noreferrer">#cloud computing</a>
+                    <a href="https://twitter.com/search?q=%23devops" target="_blank" rel="noopener noreferrer">#devops</a>
+                    <a href="https://twitter.com/search?q=%23cybersecurity" target="_blank" rel="noopener noreferrer">#cyber security</a>
+                    <a href="https://twitter.com/search?q=%23sql" target="_blank" rel="noopener noreferrer">#sql</a>
+                    <a href="https://twitter.com/search?q=%23nosql" target="_blank" rel="noopener noreferrer">#nosql</a>
+                    <a href="https://twitter.com/search?q=%23frontend" target="_blank" rel="noopener noreferrer">#frontend</a>
+                    <a href="https://twitter.com/search?q=%23backend" target="_blank" rel="noopener noreferrer">#backend</a>
+                    <a href="https://twitter.com/search?q=%23fullstack" target="_blank" rel="noopener noreferrer">#fullstack</a>
+                    <a href="https://twitter.com/search?q=%23uidesign" target="_blank" rel="noopener noreferrer">#uidesign</a>
+                    <a href="https://twitter.com/search?q=%23uxdesign" target="_blank" rel="noopener noreferrer">#uxdesign</a>
+                    <a href="https://twitter.com/search?q=%23innovation" target="_blank" rel="noopener noreferrer">#innovation</a>
+                    <a href="https://twitter.com/search?q=%23internetangebotdesStatistischen" target="_blank" rel="noopener noreferrer">#Internetangebot des Statistischen</a>
+                    <a href="https://twitter.com/search?q=%23zahlenundfakten" target="_blank" rel="noopener noreferrer">#Zahlen und Fakten</a>
+                </div>
+            </div>
         </div>
     </footer>
     <script>
