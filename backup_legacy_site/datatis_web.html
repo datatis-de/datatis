@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phu Viet | Data Science & Big Data Specialist</title>
+    <meta name="description" content="Phu Viet - Data Science und KI-Spezialist mit über 12 Jahren Erfahrung in Big Data, Web Development und innovativen Lösungen.">
+    <meta name="keywords" content="data science, web development, AI, big data, coding, datatis, machine learning, data analytics, web design, software development, programming, python, javascript, data visualization, cloud computing, devops, cybersecurity, blockchain, iot, deep learning, nlp, sql, nosql, frontend, backend, fullstack, ui design, ux design, tech, innovation, KI ,Dateningenieur ,Datenvisualisierung ,sql ,python ,tableau ,power bi">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.imgur.com/ts0Pv22.png">
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4K1XLQND0L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4K1XLQND0L');
+    </script>
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Phu Viet - Data Science & Web Development",
+      "url": "https://datatis.org",
+      "keywords": ["data science", "AI", "big data", "coding", "datatis", "data analytics", "smart factory", "business intelligence", "data engineer", "KI", "Dateningenieur", "Datenvisualisierung", "sql", "python", "tableau", "power bi"],
+      "logo": "https://i.imgur.com/ts0Pv22.png"
+    }
+    </script>
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Datatis",
+      "url": "https://datatis.org",
+      "logo": "https://i.imgur.com/ts0Pv22.png",
+      "sameAs": [
+        "https://datatis.org/index.html"
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-image: url('https://i.imgur.com/y9BC7Ne.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 0px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 0px;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.15);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 0px 20px;
+        }
+        
+        .profile-section {
+            flex: 7;
+            min-width: 300px;
+            text-align: right;
+            padding-right: 20px;
+            order: 1;
+            margin-right: 20px;
+        }
+        
+        .profile-section h1 {
+            font-weight: bold;
+            font-size: 35px;
+            margin-top: 30px;
+            -webkit-text-stroke: 0px black; /* Viền đen */
+            text-stroke: 0px black;
+        }
+        
+        .profile-section .tagline {
+            font-size: 33px;
+            font-weight: bold;
+            margin-top: -30px;
+            -webkit-text-stroke: 0px black; /* Viền đen */
+            text-stroke: 0px black;
+        }
+        
+        .profile-section p, .profile-section span {
+            -webkit-text-stroke: 0px black; /* Viền đen mỏng hơn cho p và span */
+            text-stroke: 0px black;
+        }
+        
+        .profile-image-container {
+            flex: 3;
+            min-width: 300px;
+            text-align: left;
+            padding-left: 0px;
+            position: relative;
+            order: 2;
+        }
+        
+        .profile-image {
+            width: 300px;
+            height: 430px;
+            object-fit: cover;
+            border: 0px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.0);
+            position: relative;
+            bottom: -30px;
+            margin-left: 10px;
+        }
+        
+        .company-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .company-logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .company-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .current-position {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            border: 2px solid var(--accent);
+            font-size: 22px;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: white;
+        }
+        
+        .why-me {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 0px;
+            font-size: 2.2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 10px auto 30px;
+        }
+        
+        .features-horizontal {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .feature-card-horizontal {
+            flex: 1 1 200px;
+            min-width: 200px;
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .feature-card-horizontal:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .learn-more-btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        .learn-more-btn:hover {
+            background-color: var(--primary);
+        }
+        
+        .feature-details {
+            display: none;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(10px);
+        }
+        
+        .feature-details.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .feature-details-content {
+            display: none;
+        }
+        
+        .feature-details .feature-details-content.show {
+            display: block;
+        }
+        
+        .feature-details-content h4 {
+            color: var(--primary);
+            margin: 15px 0 10px;
+        }
+        
+        .feature-details-content ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .feature-details-content ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .feature-details-content ul li::before {
+            content: '•';
+            color: var(--secondary);
+            position: absolute;
+            left: -15px;
+        }
+        
+        .awards {
+            padding: 60px 0;
+            background-color: #f5f7fa;
+        }
+        
+        .awards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .award-card {
+            flex: 1 1 300px;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .award-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .award-content {
+            padding: 20px;
+        }
+        
+        .award-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .testimonials {
+            padding: 60px 0;
+            background-color: #ffffff;
+        }
+        
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .testimonial-card {
+            flex: 1 1 300px;
+            max-width: 400px;
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-logo {
+            display: block;
+            width: 100px;
+            height: auto;
+            margin: 0 auto 15px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: var(--secondary);
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 2rem;
+            color: var(--secondary);
+            opacity: 0.2;
+        }
+        
+        .testimonial-details {
+            display: none;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(10px);
+        }
+        
+        .testimonial-details.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .testimonial-details-content {
+            display: none;
+        }
+        
+        .testimonial-details .testimonial-details-content.show {
+            display: block;
+        }
+        
+        .testimonial-details-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+            align-items: center;
+        }
+        
+        .nav-button {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-section {
+                text-align: center;
+                padding-right: 0;
+                order: 1;
+            }
+            
+            .profile-image-container {
+                text-align: center;
+                padding-left: 0;
+                order: 2;
+            }
+            
+            .company-logo {
+                position: static;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .feature-card-horizontal {
+                flex: 1 1 100%;
+            }
+            
+            .testimonial-card {
+                flex: 1 1 100%;
+            }
+            
+            .nav-buttons {
+                position: static;
+                justify-content: center;
+                margin: 20px 0;
+                flex-wrap: wrap;
+            }
+            
+            .nav-button {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        .expertise {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .skills-grid {
+            display: block;
+        }
+        
+        .skill-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .details-container {
+            display: none;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(10px);
+        }
+        
+        .details-container.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .skill-details {
+            display: none;
+        }
+        
+        .details-container .skill-details.show {
+            display: block;
+        }
+        
+        .skill-category {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            background-color: #f0f5f9;
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-category h3 i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .skill-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        .skill-details-content h4 {
+            color: var(--primary);
+            margin: 15px 0 10px;
+        }
+        
+        .skill-details-content ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .skill-details-content ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .skill-details-content ul li::before {
+            content: '•';
+            color: var(--secondary);
+            position: absolute;
+            left: -15px;
+        }
+        
+        .download-report {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .download-report:hover {
+            background-color: var(--primary);
+        }
+        
+        .report-iframe {
+            width: 100%;
+            height: 600px;
+            min-height: 500px;
+            border: none;
+            margin: 20px 0;
+        }
+        
+        .details-container {
+            width: 100%;
+            max-width: 1200px;
+            overflow-x: auto;
+        }
+        
+        .skill-details-content {
+            width: 100%;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .report-iframe {
+                height: 600px;
+            }
+        }
+        
+        .why-choose {
+            padding: 80px 0;
+            background: url('https://i.imgur.com/K2gkYew.png') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .benefit {
+            flex: 1 1 200px;
+            max-width: 250px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 25px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        .submit-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .contact-email {
+            margin-bottom: 20px;
+        }
+        
+        .contact-email a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-email a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 30px;
+            width: auto;
+        }
+        
+        .hashtag-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 0.9rem;
+        }
+        
+        .hashtag-links a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-buttons">
+            <a href="#testimonials" class="nav-button">Was Kunden sagen</a>
+            <a href="#expertise" class="nav-button">Meine Expertise</a>
+        </div>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-section">
+                    <h1>Phu Viet</h1>
+                    <p class="tagline" style="font-size: 2em;">Preisgekrönter Dateningenieur und Datenanalyst</p>
+                    <p style="font-weight: bold;font-size: 18px;">Innovative Lösungen für Ihre Datenherausforderungen mit über 12 Jahren Erfahrung</p>
+                    <span style="font-size: 22px; font-weight: bold;"> 
+                        Bereit, Ihre Daten in bahnbrechende Lösungen zu verwandeln?<br>
+                        <a href="https://www.upwork.com/freelancers/phuviet">Kontaktieren Sie mich über Upwork!</a>
+                    </span><br>
+                    <a href="#contact" class="cta-button">Kontakt aufnehmen</a>
+                </div>
+                <div class="profile-image-container">
+                    <img src="https://i.imgur.com/Nz5Q2MH.png" alt="Phu Viet - Data Science Specialist" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </header>
+  
+    <section class="awards">
+        <div class="container">
+            <h2 class="section-title">Auszeichnungen & Anerkennung</h2>
+            <div class="awards-container">
+                <div class="award-card">
+                    <img src="https://res.cloudinary.com/sternwald-systems/image/upload/ar_16:9,c_crop,f_auto,h_844,q_auto,w_1500,x_0,y_0/v1/hugoprd/BILD_HIGHRES/D31D55080386FE89E0531408060A5EF5/FC02E65D2BEC85B7EEC176773FB2BE0C" alt="Deutschland Smart Factory 4.0 Auszeichnung" class="award-image">
+                    <div class="award-content">
+                        <h3 class="award-title">Deutschland Smart Factory 4.0 Auszeichnung</h3>
+                        <p>Anerkannt für die Entwicklung einer innovativen Echtzeit-Big-Data-Lösung, die Fertigungsprozesse bei Datatis transformiert hat.</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <img src="https://png.pngtree.com/thumb_back/fh260/background/20230524/pngtree-golden-trophy-on-a-background-with-bokeh-light-image_2612293.jpg" alt="3. Platz im KI-Wettbewerb" class="award-image">
+                    <div class="award-content">
+                        <h3 class="award-title">3. Platz im KI-Wettbewerb</h3>
+                        <p>Ausgezeichnet für innovative Ansätze in der KI mit praktischen Anwendungen im Unternehmensbereich.</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <img src="https://scontent.fhan5-11.fna.fbcdn.net/v/t1.15752-9/489004360_1440871150229558_8538154225490519925_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Yn64JVa3J8kQ7kNvwGdrnM_&_nc_oc=AdmfvXR4bP7FA4Axgg_AyIjMPPSnj3YToTkouPm-pH5fii37W0EWJUqECqjB9DQt6aHlJVvMRtxWhsBHQ31xVYJA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fhan5-11.fna&oh=03_Q7cD2QFDp08rswOv2iah0sVagSH4A7RW_0nSX0jy8kSSrAsLeQ&oe=68529F51" alt="Top 1 % Freelancer Upwork & Top Rated Plus" class="award-image">
+                    <div class="award-content">
+                        <h3 class="award-title">Top 1 % Freelancer Upwork & Top Rated Plus</h3>
+                        <p>Anerkannt als einer der besten 1 % der Freelancer auf Upwork und "Top-bewertet" für hervorragende Arbeitsqualität, 100 % Kundenzufriedenheit, das Lösen komplexer Herausforderungen und das Überzeugen internationaler Kunden.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Was Kunden sagen</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card" data-testimonial="bosch">
+                    <img src="https://i.imgur.com/BrcFMb3.png" alt="Bosch Logo" class="testimonial-logo">
+                    <p class="testimonial-author">Bosch Deutschland</p>
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"Herr Phạm war ein Innovationstreiber... eines sehr erfolgreichen datengetriebenen Service „Rapid Pivot“, welcher in kürzester Zeit Massendaten pivotiert und in dieser Art neu am Markt und bei Bosch ist."</p>
+                    <p class="testimonial-role"></p>
+                </div>
+                <div class="testimonial-card" data-testimonial="solarworld">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/SolarWorld_logo.svg" alt="SolarWorld Logo" class="testimonial-logo">
+                    <p class="testimonial-author">SolarWorld Deutschland</p>
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"Herr Pham verfügt über umfassende und vielseitige Fachkenntnisse, die er jederzeit sicher und gekonnt in der Praxis einsetzte. Er bildete sich stets in eigener Initiative beruflich weiter und war dabei immer sehr erfolgreich."</p>
+                    <p class="testimonial-role"></p>
+                </div>
+                <div class="testimonial-card" data-testimonial="upwork">
+                    <img src="https://i.imgur.com/cxXxg6N.png" alt="Upwork Logo" class="testimonial-logo">
+                    <p class="testimonial-author">Upwork Deutschland Kunde 1M USD</p>
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"Phu, it was an honor working with you. You are very talented and an expert when it comes to BI and Databases. I really would love to continue working with u. Best Regards Daniel."</p>
+                    <p class="testimonial-role"></p>
+                </div>
+            </div>
+            <div id="testimonial-details" class="testimonial-details">
+                <div class="testimonial-details-content" id="boschDetails">
+                    <img src="https://i.imgur.com/adVORqs.jpeg" alt="Bosch Team">
+                </div>
+                <div class="testimonial-details-content" id="solarworldDetails">
+                    <img src="https://i.imgur.com/OTBCqeD.jpeg" alt="SolarWorld Team">
+                </div>
+                <div class="testimonial-details-content" id="upworkDetails">
+                    <img src="https://i.imgur.com/tbZ595x.jpeg" alt="Upwork Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-me">
+        <div class="container">
+            <h2 class="section-title">Warum mit mir arbeiten?</h2>
+            <div class="features-horizontal">
+                <div class="feature-card-horizontal">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="feature-title">Innovationsführer</h3>
+                    <p>Erfinder einer preisgekrönten Echtzeit-Big-Data-Lösung für Smart Factory 4.0</p>
+                </div>
+                <div class="feature-card-horizontal">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title">KI-Expertise</h3>
+                    <p>3. Platz im unternehmensinternen KI-Wettbewerb für praktische Geschäftsanwendungen</p>
+                </div>
+                <div class="feature-card-horizontal">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Bewährte Erfolgsbilanz</h3>
+                    <p>Über 10 Jahre Erfahrung in der Bereitstellung hochwirksamer Lösungen für deutsche Unternehmen</p>
+                </div>
+                <div class="feature-card-horizontal">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="feature-title">Mehrsprachig</h3>
+                    <p>Fließend in Deutsch, Englisch und Vietnamesisch für nahtlose Zusammenarbeit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise" id="expertise">
+        <div class="container">
+            <h2 class="section-title">Meine Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-row" id="first-row">
+                    <div class="skill-category" data-category="dataArchitecture" data-group="group1">
+                        <h3><i class="fas fa-database"></i> Datenarchitektur</h3>
+                        <ul class="skill-list">
+                            <li>3NF, Kimball, Data Vault 2.0 Methodologien</li>
+                            <li>Echtzeitarchitekturen</li>
+                            <li>SAP Power Designer, pg modeler</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-category="databaseTechnologies" data-group="group1">
+                        <h3><i class="fas fa-server"></i> Datenbanktechnologien</h3>
+                        <ul class="skill-list">
+                            <li>MS SQL Server (SSIS, SSAS, SSMS, SSRS)</li>
+                            <li>Postgres SQL, MySQL</li>
+                            <li>Redshift Data Warehousing</li>
+                            <li>Azure/AWS Cloud-Datenbanken</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-category="dataIntegration" data-group="group1">
+                        <h3><i class="fas fa-exchange-alt"></i> Datenintegration</h3>
+                        <ul class="skill-list">
+                            <li>Mehrere Quellformate (CSV, Excel, SAP)</li>
+                            <li>Talend, SSIS ETL</li>
+                            <li>Python ETL-Pipelines</li>
+                            <li>Airflow Orchestrierung</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="details-container-group1" class="details-container">
+                    <div class="skill-details" id="dataArchitectureDetails">
+                        <div class="skill-details-content">
+                            <p>Umfassende Lösungen für Datenarchitektur mit über 12 Jahren Erfahrung:</p>
+                            <iframe 
+                                src="https://datatis-de.github.io/datatis/luzmo_report.html" 
+                                class="report-iframe" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                scrolling="yes"
+                            ></iframe>
+                            <h4>Wichtige Erfolge:</h4>
+                            <ul>
+                                <li>Entwurf und Implementierung von Datenarchitekturen für über 15 Unternehmenskunden</li>
+                                <li>Entwicklung von Echtzeit-Datenverarbeitungssystemen mit unter 50ms Latenz</li>
+                                <li>Erstellung standardisierter Datenmodellierungspraktiken mit SAP Power Designer</li>
+                                <li>Implementierung von Git-basierter Versionskontrolle für Datenbankschemata</li>
+                                <li>Containerisierte Datenpipelines, die die Bereitstellungszeit um 70% reduziert haben</li>
+                            </ul>
+                            <h4>Methodologien:</h4>
+                            <ul>
+                                <li><strong>3NF:</strong> Normalisierte Transaktionsdatenbanken für optimale Leistung</li>
+                                <li><strong>Kimball:</strong> Dimensionale Modellierung für Analysen und Berichte</li>
+                                <li><strong>Data Vault 2.0:</strong> Skalierbare Data-Warehouse-Architektur</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill-details" id="databaseTechnologiesDetails">
+                        <div class="skill-details-content">
+                            <p>Tiefgehende Expertise in mehreren Datenbankplattformen:</p><br>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9arOIN0buMJl2v0e_H4lsqpwYUbd3IvrjfQ&s" style="width: 500px; height: 400px;" alt="Database Technologies">
+                            <h4>Schlüsselkompetenzen:</h4>
+                            <ul>
+                                <li><strong>MS SQL Server:</strong> Über 15 Jahre Erfahrung mit dem gesamten Stack (SSIS, SSAS, SSRS)</li>
+                                <li><strong>PostgreSQL/MySQL:</strong> Design von Hochverfügbarkeits-Clustern</li>
+                                <li><strong>Redshift:</strong> Petabyte-großes Data Warehousing</li>
+                                <li><strong>Cloud Databases:</strong> Azure SQL, Cosmos DB, AWS RDS/Aurora</li>
+                            </ul>
+                            <h4>Leistungsoptimierung:</h4>
+                            <ul>
+                                <li>Abfragenoptimierung, die die Laufzeit von Stunden auf Minuten reduziert</li>
+                                <li>Entwicklung von Indexstrategien</li>
+                                <li>Partitionierung für große Datensätze</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill-details" id="dataIntegrationDetails">
+                        <div class="skill-details-content">
+                            <p>End-to-End-Datenintegrationslösungen:</p><br>
+                            <img src="https://www.xplm.com/fileadmin/_processed_/a/8/csm_Infografik_Integrationsloesungen_2_079f3a3699.png" style="width: 500px; height: 400px;" alt="Data Integration">
+                            <h4>Integrationsfähigkeiten:</h4>
+                            <ul>
+                                <li>Über 50 Datenquellentypen integriert (SAP, MES, Excel, CSV, etc.)</li>
+                                <li>Cloud-Migrationsstrategien ohne Ausfallzeiten</li>
+                                <li>Entwicklung von ETL/ELT-Pipelines</li>
+                                <li>Echtzeit-Datenstreaming-Architekturen</li>
+                            </ul>
+                            <h4>Tools & Technologien:</h4>
+                            <ul>
+                                <li>Talend Open Studio und Enterprise Edition</li>
+                                <li>Microsoft SSIS mit benutzerdefinierten Komponenten</li>
+                                <li>Apache Airflow für Workflow-Orchestrierung</li>
+                                <li>Python-basierte ETL-Pipelines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-row" id="second-row">
+                    <div class="skill-category" data-category="optimization" data-group="group2">
+                        <h3><i class="fas fa-tachometer-alt"></i> Optimierung</h3>
+                        <ul class="skill-list">
+                            <li>Data Warehouse Design</li>
+                            <li>Implementierungsstrategien</li>
+                            <li>Leistungsoptimierung</li>
+                            <li>Datenbank-Performance-Tuning</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-category="analytics" data-group="group2">
+                        <h3><i class="fas fa-chart-bar"></i> Analytik</h3>
+                        <ul class="skill-list">
+                            <li>Hadoop Ökosystem (HIVE, Impala)</li>
+                            <li>Fortgeschrittene Datenanalyse</li>
+                            <li>Datenvisualisierung</li>
+                            <li>Statistische Modellierung</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-category="businessIntelligence" data-group="group2">
+                        <h3><i class="fas fa-chart-pie"></i> Business Intelligence</h3>
+                        <ul class="skill-list">
+                            <li>Tableau Desktop und Server</li>
+                            <li>Microsoft Power BI</li>
+                            <li>Qlikview Dashboards</li>
+                            <li>Datenberichtserstellung</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="details-container-group2" class="details-container">
+                    <div class="skill-details" id="optimizationDetails">
+                        <div class="skill-details-content">
+                            <p>Lösungen für Leistungsoptimierung und Tuning:</p><br>
+                            <img src="https://cdn-icons-png.freepik.com/512/11647/11647266.png" style="width: 400px; height: 500px;" alt="Optimization">
+                            <h4>Optimierungsdienste:</h4>
+                            <ul>
+                                <li><strong>Data Warehouse Design:</strong> Erstellung optimierter Schemata für analytische Workloads</li>
+                                <li><strong>Implementation Strategies:</strong> Entwicklung schrittweiser Einführungspläne für komplexe Systeme</li>
+                                <li><strong>Performance Tuning:</strong> Durchschnittliche Verbesserung der Abfrageleistung um 300%</li>
+                            </ul>
+                            <h4>Fallstudie: Manufacturing Data Warehouse</h4>
+                            <p>Optimierung eines Fertigungs-Data-Warehouse, das die Berichtsgenerierungszeit von 4 Stunden auf 15 Minuten reduziert hat durch:</p>
+                            <ul>
+                                <li>Implementierung einer Partitionierungsstrategie</li>
+                                <li>Optimierung materialisierter Sichten</li>
+                                <li>Analyse von Abfrageplänen und Index-Tuning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill-details" id="analyticsDetails">
+                        <div class="skill-details-content">
+                            <p>Umfassende Analyselösungen:</p><br>
+                            <img src="https://www.it-daily.net/images/Aufmacherbilder/Analytics_601834022-700.jpg" style="width: 500px; height: 500px;" alt="Analytics">
+                            <h4>Analyse-Fähigkeiten:</h4>
+                            <ul>
+                                <li><strong>Hadoop Ecosystem:</strong> HIVE, Impala, HBase Implementierungen</li>
+                                <li><strong>Advanced Analysis:</strong> Prädiktive Modellierung, Trendanalyse, Anomalieerkennung</li>
+                                <li><strong>Data Visualization:</strong> Interaktive Dashboards und Berichte</li>
+                            </ul>
+                            <h4>Schlüsselprojekte:</h4>
+                            <ul>
+                                <li>Echtzeit-Produktionsüberwachungssystem mit Impala</li>
+                                <li>Kundenabwanderungs-Vorhersagemodell mit 85% Genauigkeit</li>
+                                <li>Interaktive Dashboards für Verkaufsleistung</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill-details" id="businessIntelligenceDetails">
+                        <div class="skill-details-content">
+                            <p>Unternehmens-BI-Lösungen für datengetriebene Entscheidungsfindung:</p><br>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ScnBTnT3-7IPQUvgOOZqSPowVmPas19geQ0w&s" style="width: 500px; height: 500px;" alt="Business Intelligence">
+                            <h4>BI-Plattformerfahrung:</h4>
+                            <ul>
+                                <li><strong>Tableau:</strong> Desktop- und Server-Implementierungen</li>
+                                <li><strong>Power BI:</strong> Unternehmenseinsätze mit Sicherheit auf Zeilenebene</li>
+                                <li><strong>QlikView:</strong> Entwicklung benutzerdefinierter Dashboards</li>
+                            </ul>
+                            <h4>BI-Implementierungsansatz:</h4>
+                            <ol>
+                                <li>Anforderungserhebung mit Geschäftsinteressenten</li>
+                                <li>Datenmodelldesign optimiert für BI-Tools</li>
+                                <li>Dashboard-Prototyping und Nutzerfeedback</li>
+                                <li>Leistungsoptimierung und Bereitstellung</li>
+                                <li>Benutzerschulung und Dokumentation</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-row" id="third-row">
+                    <div class="skill-category" data-category="automation" data-group="group3">
+                        <h3><i class="fas fa-cogs"></i> Automatisierung</h3>
+                        <ul class="skill-list">
+                            <li>Microsoft Power Automate</li>
+                            <li>Python Automatisierungsskripte</li>
+                            <li>Workflow-Automatisierung</li>
+                            <li>Integration APIs</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-category="n8n" data-group="group3">
+                        <h3><i class="fas fa-link"></i> n8n</h3>
+                        <ul class="skill-list">
+                            <li>Workflow-Automatisierung</li>
+                            <li>Integration von APIs</li>
+                            <li>Low-Code-Lösungen</li>
+                            <li>Prozessoptimierung</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category" data-category="googleAnalytics" data-group="group3">
+                        <h3><i class="fas fa-chart-line"></i> Google Analytics</h3>
+                        <ul class="skill-list">
+                            <li>Web-Tracking und Analyse</li>
+                            <li>Benutzerdefinierte Berichte</li>
+                            <li>Conversion-Tracking</li>
+                            <li>Datenintegration mit anderen Tools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="details-container-group3" class="details-container">
+                    <div class="skill-details" id="automationDetails">
+                        <div class="skill-details-content">
+                            <p>Effizienz durch Automatisierungslösungen:</p><br>
+                            <img src="https://derechoynegocios.net/wp-content/uploads/2024/04/El-archivo-electronico-forma-parte-de-la-transformacion-digital.jpg" style="width: 500px; height: 400px;" alt="Automation">
+                            <h4>Automatisierungs-Fähigkeiten:</h4>
+                            <ul>
+                                <li><strong>Microsoft Power Automate:</strong> Workflow-Automatisierung über Office 365</li>
+                                <li><strong>Python Scripts:</strong> Benutzerdefinierte Automatisierung für Datenprozesse</li>
+                            </ul>
+                            <h4>Automatisierungserfolge:</h4>
+                            <ul>
+                                <li>Automatisierter monatlicher Finanzberichtsprozess, der 40 Stunden/Monat spart</li>
+                                <li>Datenvalidierungsskripte, die Fehler um 90% reduziert haben</li>
+                                <li>Selbstheilende ETL-Prozesse, die automatisch von Fehlern erholen</li>
+                            </ul>
+                            <h4>Automatisierungs-Framework:</h4>
+                            <p>Entwicklung eines wiederverwendbaren Automatisierungs-Frameworks, das Folgendes umfasst:</p>
+                            <ul>
+                                <li>Fehlerbehandlung und Benachrichtigungen</li>
+                                <li>Leistungsprotokollierung</li>
+                                <li>Konfigurationsmanagement</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill-details" id="n8nDetails">
+                        <div class="skill-details-content">
+                            <p>Automatisierung und Integration mit n8n:</p><br>
+                            <img src="https://n8n.io/favicon/favicon-512x512.png" style="width: 500px; height: 400px;" alt="n8n">
+                            <h4>n8n-Fähigkeiten:</h4>
+                            <ul>
+                                <li><strong>Workflow-Automatisierung:</strong> Erstellung komplexer Workflows für Datenintegration</li>
+                                <li><strong>API-Integration:</strong> Verbindung mit Drittanbieter-Diensten wie Slack, Google Sheets und mehr</li>
+                                <li><strong>Low-Code-Lösungen:</strong> Benutzerfreundliche Oberfläche zur Automatisierung ohne tiefgehende Programmierkenntnisse</li>
+                            </ul>
+                            <h4>Projekterfolge:</h4>
+                            <ul>
+                                <li>Automatisierte Benachrichtigungen für Echtzeit-Datenaktualisierungen</li>
+                                <li>Integration von CRM- und ERP-Systemen zur Optimierung von Geschäftsprozessen</li>
+                                <li>Reduzierung manueller Aufgaben um 60% durch maßgeschneiderte Workflows</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill-details" id="googleAnalyticsDetails">
+                        <div class="skill-details-content">
+                            <p>Web-Analyse mit Google Analytics:</p><br>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:T2kJ5L8v7e7WvK8vYqW7p0qL6yN8qXz5h5g&s" style="width: 500px; height: 400px;" alt="Google Analytics">
+                            <h4>Google Analytics-Fähigkeiten:</h4>
+                            <ul>
+                                <li><strong>Web-Tracking:</strong> Analyse von Nutzerverhalten und Traffic-Quellen</li>
+                                <li><strong>Benutzerdefinierte Berichte:</strong> Erstellung von Dashboards für spezifische KPIs</li>
+                                <li><strong>Conversion-Tracking:</strong> Optimierung von Marketingkampagnen durch Zielverfolgung</li>
+                            </ul>
+                            <h4>Projekterfolge:</h4>
+                            <ul>
+                                <li>Verbesserung der Conversion-Rate um 25% durch datenbasierte Optimierungen</li>
+                                <li>Einrichtung von Event-Tracking für E-Commerce-Websites</li>
+                                <li>Analyse von Nutzerpfaden zur Verbesserung der UX</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Warum mich wählen?</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <p>Über 12 Jahre praktische Erfahrung in Data Engineering und Analytik</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <p>Bewährter Erfolg bei der Implementierung preisgekrönten Lösungen</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <p>Expertise in einer Vielzahl von Datentechnologien und Plattformen</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <p>Starke Kommunikationsfähigkeiten in Deutsch, Englisch und Vietnamesisch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Lass uns zusammenarbeiten</h2>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Betreff</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nachricht</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Nachricht senden</button>
+                </form>
+                <div id="formMessage" style="margin-top: 20px; display: none;"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/your-twitter-profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:datatis.de@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>© <span id="year"></span> Phu Viet. Alle Rechte vorbehalten.</p>
+            <div class="hashtag-links">
+                <p><strong>Hashtags:</strong></p>
+                <div>
+                    <a href="https://twitter.com/search?q=%23datascience" target="_blank" rel="noopener noreferrer">#data science</a>
+                    <a href="https://twitter.com/search?q=%23ai" target="_blank" rel="noopener noreferrer">#ai</a>
+                    <a href="https://twitter.com/search?q=%23bigdata" target="_blank" rel="noopener noreferrer">#big data</a>
+                    <a href="https://twitter.com/search?q=%23coding" target="_blank" rel="noopener noreferrer">#coding</a>
+                    <a href="https://twitter.com/search?q=%23datatis" target="_blank" rel="noopener noreferrer">#datatis</a>
+                    <a href="https://twitter.com/search?q=%23machinelearning" target="_blank" rel="noopener noreferrer">#machine learning</a>
+                    <a href="https://twitter.com/search?q=%23dataanalytics" target="_blank" rel="noopener noreferrer">#data analytics</a>
+                    <a href="https://twitter.com/search?q=%23dataengineer" target="_blank" rel="noopener noreferrer">#data engineer</a>
+                    <a href="https://twitter.com/search?q=%23programming" target="_blank" rel="noopener noreferrer">#programming</a>
+                    <a href="https://twitter.com/search?q=%23python" target="_blank" rel="noopener noreferrer">#python</a>
+                    <a href="https://twitter.com/search?q=%23datavisualization" target="_blank" rel="noopener noreferrer">#data visualization</a>
+                    <a href="https://twitter.com/search?q=%23cloudcomputing" target="_blank" rel="noopener noreferrer">#cloud computing</a>
+                    <a href="https://twitter.com/search?q=%23devops" target="_blank" rel="noopener noreferrer">#devops</a>
+                    <a href="https://twitter.com/search?q=%23cybersecurity" target="_blank" rel="noopener noreferrer">#cyber security</a>
+                    <a href="https://twitter.com/search?q=%23sql" target="_blank" rel="noopener noreferrer">#sql</a>
+                    <a href="https://twitter.com/search?q=%23nosql" target="_blank" rel="noopener noreferrer">#nosql</a>
+                    <a href="https://twitter.com/search?q=%23frontend" target="_blank" rel="noopener noreferrer">#frontend</a>
+                    <a href="https://twitter.com/search?q=%23backend" target="_blank" rel="noopener noreferrer">#backend</a>
+                    <a href="https://twitter.com/search?q=%23fullstack" target="_blank" rel="noopener noreferrer">#fullstack</a>
+                    <a href="https://twitter.com/search?q=%23uidesign" target="_blank" rel="noopener noreferrer">#uidesign</a>
+                    <a href="https://twitter.com/search?q=%23uxdesign" target="_blank" rel="noopener noreferrer">#uxdesign</a>
+                    <a href="https://twitter.com/search?q=%23innovation" target="_blank" rel="noopener noreferrer">#innovation</a>
+                    <a href="https://twitter.com/search?q=%23internetangebotdesStatistischen" target="_blank" rel="noopener noreferrer">#Internetangebot des Statistischen</a>
+                    <a href="https://twitter.com/search?q=%23zahlenundfakten" target="_blank" rel="noopener noreferrer">#Zahlen und Fakten</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cập nhật năm trong footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Xử lý toggle cho các danh mục kỹ năng
+            const skillCategories = document.querySelectorAll('.skill-category');
+            skillCategories.forEach(category => {
+                category.addEventListener('click', () => {
+                    const group = category.getAttribute('data-group');
+                    const categoryName = category.getAttribute('data-category');
+                    const detailsContainer = document.getElementById(`details-container-${group}`);
+                    const skillDetails = document.getElementById(`${categoryName}Details`);
+
+                    const isContainerVisible = detailsContainer.classList.contains('show');
+                    const isCurrentCategoryVisible = skillDetails.classList.contains('show');
+
+                    if (isContainerVisible && isCurrentCategoryVisible) {
+                        detailsContainer.classList.remove('show');
+                        skillDetails.classList.remove('show');
+                    } else {
+                        detailsContainer.querySelectorAll('.skill-details').forEach(detail => {
+                            detail.classList.remove('show');
+                        });
+
+                        detailsContainer.classList.add('show');
+                        skillDetails.classList.add('show');
+
+                        detailsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Xử lý toggle cho các mục trong "Was Kunden sagen"
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            testimonialCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const testimonialName = card.getAttribute('data-testimonial');
+                    const testimonialDetails = document.getElementById('testimonial-details');
+                    const testimonialDetailContent = document.getElementById(`${testimonialName}Details`);
+
+                    const isContainerVisible = testimonialDetails.classList.contains('show');
+                    const isCurrentTestimonialVisible = testimonialDetailContent.classList.contains('show');
+
+                    if (isContainerVisible && isCurrentTestimonialVisible) {
+                        testimonialDetails.classList.remove('show');
+                        testimonialDetailContent.classList.remove('show');
+                    } else {
+                        testimonialDetails.querySelectorAll('.testimonial-details-content').forEach(detail => {
+                            detail.classList.remove('show');
+                        });
+
+                        testimonialDetails.classList.add('show');
+                        testimonialDetailContent.classList.add('show');
+
+                        testimonialDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Thêm sự kiện cuộn mượt mà cho các nút điều hướng
+            document.querySelectorAll('.nav-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = button.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Khởi tạo EmailJS
+            emailjs.init("If5KK4bSze2qdiJye");
+
+            // Xử lý gửi biểu mẫu liên hệ
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                emailjs.send("service_joxvfmg", "template_5o31ltp", formData)
+                    .then(() => {
+                        formMessage.style.display = 'block';
+                        formMessage.style.color = 'green';
+                        formMessage.textContent = "Nachricht erfolgreich gesendet!";
+                        contactForm.reset();
+                    }, (error) => {
+                        formMessage.style.display = 'block';
+                        formMessage.style.color = 'red';
+                        formMessage.textContent = "Fehler beim Senden der Nachricht.";
+                        console.error('EmailJS error:', error);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

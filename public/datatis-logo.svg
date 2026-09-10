@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 180" role="img" aria-labelledby="title desc">
+  <title id="title">DATATIS Next Future</title>
+  <desc id="desc">DATATIS logo with a four-part abstract symbol</desc>
+  <rect width="620" height="180" fill="none"/>
+  <text x="8" y="94" font-family="Arial,Helvetica,sans-serif" font-size="92" font-weight="900" letter-spacing="-5" fill="#111316">DATATIS</text>
+  <g transform="translate(505 12)">
+    <path d="M36 0c20 0 36 16 36 36v17H54c-20 0-36-16-36-36S20 0 36 0Z" fill="#58b8a2"/>
+    <path d="M72 36c0-20 16-36 36-36s36 16 36 36v17h-18c-20 0-36-16-36-36Z" fill="#164b83" transform="rotate(90 108 36)"/>
+    <path d="M36 72c20 0 36 16 36 36s-16 36-36 36H19V126c0-20 16-36 36-36Z" fill="#17191d" transform="rotate(180 54 108)"/>
+    <path d="M0 36c0-20 16-36 36-36h17v18c0 20-16 36-36 36H0Z" fill="#0f1114" transform="rotate(270 36 36)"/>
+  </g>
+  <text x="207" y="154" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700" letter-spacing="5" fill="#58b8a2">NEXT FUTURE</text>
+</svg>
