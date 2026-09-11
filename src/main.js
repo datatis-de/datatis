@@ -96,7 +96,7 @@ cases.push(
 );
 
 let lang = localStorage.getItem('language');
-if (!copy[lang]) lang = 'en';
+if (!copy[lang]) lang = 'de';
 let filter = 0;
 let showAllCases = false;
 const pick = (value) => value[lang === 'en' ? 0 : 1];
@@ -119,6 +119,13 @@ function render() {
       <section id="contact" class="contact"><div><h2>${t.contactTitle}</h2><p>${t.contactText}</p><a href="mailto:info@datatis.org">info@datatis.org</a></div><form id="contact-form"><label>${t.form[0]}<input required name="name" autocomplete="name" /></label><label>${t.form[1]}<input required name="email" type="email" autocomplete="email" /></label><label>${t.form[2]}<input name="company" autocomplete="organization" /></label><label>${t.form[3]}<textarea required name="message" rows="4"></textarea></label><button class="button primary" type="submit">${t.form[4]} <span>→</span></button><p id="form-message" role="status"></p></form></section>
     </main><footer><p><a href="/datenschutzerklaerung.html">Datenschutzerklärung</a> · <a href="/impressum.html">Impressum</a></p><p>© ${new Date().getFullYear()} DATATIS · Data & AI organisation</p><p>info@datatis.org</p></footer><div class="case-modal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" aria-label="Close">×</button><div class="modal-image"></div><div class="modal-content"></div></div></div>`;
   bindEvents();
+  showCookieBanner();
+}
+
+function showCookieBanner() {
+  if (localStorage.getItem('datatis-cookie-consent') || document.querySelector('#cookie-banner')) return;
+  document.body.insertAdjacentHTML('beforeend', `<aside id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title"><div><h2 id="cookie-title">Einwilligung zu Datenerhebung und -übermittlung</h2><p>Diese Website verwendet nur notwendige Technologien, die für den sicheren Betrieb erforderlich sind. Nicht notwendige Analyse- oder Marketingtechnologien werden nur mit Ihrer Einwilligung eingesetzt. Weitere Informationen finden Sie in unserer <a href="/datenschutzerklaerung.html">Datenschutzerklärung</a> und im <a href="/impressum.html">Impressum</a>.</p></div><div class="cookie-actions"><button data-cookie="settings">Einwilligungs-Einstellungen</button><button data-cookie="necessary">Nur notwendige Technologien</button><button data-cookie="all">Alle akzeptieren</button></div></aside>`);
+  document.querySelectorAll('[data-cookie]').forEach((button) => button.addEventListener('click', () => { localStorage.setItem('datatis-cookie-consent', button.dataset.cookie); document.querySelector('#cookie-banner')?.remove(); }));
 }
 
 function bindEvents() {
