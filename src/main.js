@@ -17,7 +17,7 @@ const copy = {
     contactKicker: 'Let’s talk', contactTitle: 'Make your data a competitive advantage.', contactText: 'Tell us what is slowing your team down. We will come back with a focused next step.',
     form: ['Name', 'Business email', 'Company', 'What would you like to improve?', 'Send enquiry'],
     formSuccess: 'Thank you. Your message has been sent.', formError: 'Your message could not be sent. Please email us directly.',
-    teamKicker: 'Who you work with', teamTitle: 'Phu Viet and trusted specialists.', teamText: 'Senior Data Engineer and AI Solution Architect with 12+ years in data engineering and automation.', teamHighlights: ['Contributed to Bosch Bamberg’s Deutschland Smart Factory 4.0 award through a real-time big-data solution.', '3rd place at Wecheer AI competition.'], teamCta: 'View Upwork profile', upworkRating: '5.0 ★ Top Rated on Upwork',
+    teamKicker: 'Who you work with', teamTitle: 'Phu Viet — Expert Lead & Delivery Partner.', teamText: 'Senior Data Engineer and AI Solution Architect with 12+ years in data engineering and automation.', teamHighlights: ['Made a major contribution to Bosch Bamberg’s Deutschland Smart Factory 4.0 victory by inventing a real-time big-data solution that became the foundation for optimized, data-driven solutions.', '3rd place at Wecheer AI competition.'], teamCta: 'View Upwork profile', upworkRating: '5.0 ★ Top Rated on Upwork',
     footer: 'Data & AI consulting for ambitious operations.'
   },
   de: {
@@ -36,7 +36,7 @@ const copy = {
     contactKicker: 'Sprechen wir', contactTitle: 'Machen Sie Daten zu Ihrem Wettbewerbsvorteil.', contactText: 'Erzählen Sie uns, was Ihr Team ausbremst. Wir melden uns mit einem fokussierten nächsten Schritt.',
     form: ['Name', 'Geschäftliche E-Mail', 'Unternehmen', 'Was möchten Sie verbessern?', 'Anfrage senden'],
     formSuccess: 'Vielen Dank. Ihre Nachricht wurde gesendet.', formError: 'Ihre Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns direkt eine E-Mail.',
-    teamKicker: 'Mit wem Sie arbeiten', teamTitle: 'Phu Viet und vertraute Spezialisten.', teamText: 'Senior Data Engineer und AI Solution Architect mit über 12 Jahren Erfahrung in Data Engineering und Automatisierung.', teamHighlights: ['Beitrag zum Gewinn des Deutschland Smart Factory 4.0 Preises von BOSCH Bamberg durch eine Echtzeit-Big-Data-Lösung.', '3. Platz beim Wecheer AI-Wettbewerb.'], teamCta: 'Upwork-Profil ansehen', upworkRating: '5.0 ★ Top bewertet auf Upwork',
+    teamKicker: 'Mit wem Sie arbeiten', teamTitle: 'Phu Viet — Expert Lead & Delivery Partner.', teamText: 'Senior Data Engineer und AI Solution Architect mit über 12 Jahren Erfahrung in Data Engineering und Automatisierung.', teamHighlights: ['Wesentlicher Beitrag zum Sieg von Bosch Bamberg beim Deutschland Smart Factory 4.0 Preis: Entwicklung einer Echtzeit-Big-Data-Lösung als Grundlage für optimierte, datengetriebene Anwendungen.', '3. Platz beim Wecheer AI-Wettbewerb.'], teamCta: 'Upwork-Profil ansehen', upworkRating: '5.0 ★ Top bewertet auf Upwork',
     footer: 'Data- & AI-Beratung für ambitionierte Unternehmen.'
   }
 };
