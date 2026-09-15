@@ -99,6 +99,9 @@ let lang = localStorage.getItem('language');
 if (!copy[lang]) lang = 'de';
 let filter = 0;
 let showAllCases = false;
+let caseOffset = 0;
+let caseTimer;
+let caseAnimate = false;
 const pick = (value) => value[lang === 'en' ? 0 : 1];
 const esc = (value) => String(value).replace(/[&<>"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[character]);
 
@@ -107,17 +110,18 @@ function render() {
   document.documentElement.lang = lang;
   document.title = lang === 'en' ? 'DATATIS | Data & AI Consulting' : 'DATATIS | Data- & AI-Beratung';
   const matchingCases = cases.filter((item) => !filter || item.cat === filter);
-  const shownCases = showAllCases ? matchingCases : matchingCases.slice(0, 6);
+  const shownCases = showAllCases ? matchingCases : matchingCases.length > 6 ? [...matchingCases.slice(caseOffset), ...matchingCases.slice(0, caseOffset)].slice(0, 6) : matchingCases;
   document.querySelector('#app').innerHTML = `
     <header class="site-header"><a class="brand brand-logo" href="#top"><img src="/logo.png" alt="DATATIS Next Future" /></a><nav>${t.nav.map((item, i) => `<a href="#${['services','cases','team','approach','contact'][i]}">${item}</a>`).join('')}</nav><div class="lang"><button data-lang="en" class="${lang === 'en' ? 'active' : ''}">EN</button><button data-lang="de" class="${lang === 'de' ? 'active' : ''}">DE</button></div></header>
     <main id="top">
       <section class="hero" style="background-image:linear-gradient(90deg,#fff 0%,#fff 44%,rgba(255,255,255,.85) 54%,rgba(255,255,255,.15) 68%,rgba(255,255,255,0) 100%),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=90');background-size:cover;background-position:center right"><div class="hero-copy"><h1>${t.hero}</h1><p class="lead">${t.intro}</p><div class="actions"><a class="button primary" href="#services">${t.primary} <span>→</span></a><a class="button quiet" href="#contact">${t.secondary}</a></div></div></section>
       <section id="services" class="section"><h2>${t.servicesTitle}</h2><div class="services">${services.map((item) => `<article class="service"><span class="service-icon">${item.icon}</span><h3>${pick(item.title)}</h3><p>${pick(item.text)}</p><ul>${pick(item.bullets).map((bullet) => `<li>${bullet}</li>`).join('')}</ul><a href="#contact">${t.serviceLink} <span>→</span></a></article>`).join('')}</div></section>
-      <section id="cases" class="section cases"><div class="section-head"><div><h2>${t.casesTitle}</h2><p>${t.casesIntro}</p></div><div class="filters">${t.filters.map((label, index) => `<button data-filter="${index}" class="${filter === index ? 'active' : ''}">${label}</button>`).join('')}</div></div><div class="case-grid">${shownCases.map((item) => `<button class="case" data-case="${cases.indexOf(item)}"><div class="case-image"><img src="${caseVisuals[cases.indexOf(item)%caseVisuals.length]}" alt="" /></div><div class="case-body"><div class="case-top"><span>${pick(item.tag)}</span></div><h3>${pick(item.title)}</h3><p class="case-highlight"><span class="case-highlight-icon">↑</span>${pick(item.highlight)}</p><p class="open-case">${lang === 'en' ? 'View case study' : 'Fallstudie ansehen'} <span>→</span></p></div></button>`).join('')}</div>${matchingCases.length > 6 ? `<button class="button quiet show-more" data-more>${showAllCases ? (lang === 'en' ? 'Show less' : 'Weniger anzeigen') : (lang === 'en' ? 'Load 6 more case studies' : '6 weitere Fallstudien laden')} →</button>` : ''}</section>
+      <section id="cases" class="section cases"><div class="section-head"><div><h2>${t.casesTitle}</h2><p>${t.casesIntro}</p></div><div class="filters">${t.filters.map((label, index) => `<button data-filter="${index}" class="${filter === index ? 'active' : ''}">${label}</button>`).join('')}</div></div><div class="case-grid" data-case-carousel>${shownCases.map((item) => `<button class="case" data-case="${cases.indexOf(item)}"><div class="case-image"><img src="${caseVisuals[cases.indexOf(item)%caseVisuals.length]}" alt="" /></div><div class="case-body"><div class="case-top"><span>${pick(item.tag)}</span></div><h3>${pick(item.title)}</h3><p class="case-highlight"><span class="case-highlight-icon">↑</span>${pick(item.highlight)}</p><p class="open-case">${lang === 'en' ? 'View case study' : 'Fallstudie ansehen'} <span>→</span></p></div></button>`).join('')}</div>${matchingCases.length > 6 ? `<button class="button quiet show-more" data-more>${showAllCases ? (lang === 'en' ? 'Show less' : 'Weniger anzeigen') : (lang === 'en' ? 'Load 6 more case studies' : '6 weitere Fallstudien laden')} →</button>` : ''}</section>
       <section id="team" class="section team"><div class="team-photo"><img src="https://i.imgur.com/Nz5Q2MH.png?v=2" referrerpolicy="no-referrer" loading="eager" alt="Phu Viet" /></div><div><h2>${t.teamTitle}</h2><p>${t.teamText}</p><ul class="team-highlights">${t.teamHighlights.map((highlight) => `<li>${highlight}</li>`).join('')}</ul><div class="team-evidence"><img src="/bosch.png" alt="Bosch Smart Factory 4.0 award evidence" /><img src="/wechee.png" alt="AI competition award evidence" /></div><div class="team-actions"><div class="upwork-badge"><span class="upwork-stars">★★★★★</span><span class="upwork-text">${t.upworkRating}</span></div><a class="button primary" href="https://www.upwork.com/freelancers/phuviet" target="_blank" rel="noreferrer">${t.teamCta} <span>↗</span></a></div></div></section>
       <section id="approach" class="section approach"><h2>${t.approachTitle}</h2><div class="approach-flow"><div class="flow-line"></div><div class="steps">${approach.map((step) => `<article><span class="step-node">${step[0]}</span><h3>${pick(step[1])}</h3><p>${pick(step[2])}</p></article>`).join('')}</div></div></section>
       <section id="contact" class="contact"><div><h2>${t.contactTitle}</h2><p>${t.contactText}</p><a href="mailto:info@datatis.org">info@datatis.org</a></div><form id="contact-form"><label>${t.form[0]}<input required name="name" autocomplete="name" /></label><label>${t.form[1]}<input required name="email" type="email" autocomplete="email" /></label><label>${t.form[2]}<input name="company" autocomplete="organization" /></label><label>${t.form[3]}<textarea required name="message" rows="4"></textarea></label><button class="button primary" type="submit">${t.form[4]} <span>→</span></button><p id="form-message" role="status"></p></form></section>
     </main><footer><p><a href="/datenschutzerklaerung.html">Datenschutzerklärung</a> · <a href="/impressum.html">Impressum</a></p><p>© ${new Date().getFullYear()} DATATIS · Data & AI organisation</p><p>info@datatis.org</p></footer><div class="case-modal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" aria-label="Close">×</button><div class="modal-image"></div><div class="modal-content"></div></div></div>`;
+  if (caseAnimate) { document.querySelector('[data-case-carousel]')?.classList.add('case-carousel-enter'); caseAnimate = false; }
   bindEvents();
   showCookieBanner();
 }
@@ -131,6 +135,17 @@ function showCookieBanner() {
 }
 
 function bindEvents() {
+  clearTimeout(caseTimer);
+  const carousel = document.querySelector('[data-case-carousel]');
+  if (carousel && cases.filter((item) => !filter || item.cat === filter).length > 6 && !showAllCases) {
+    let touchStartX = 0;
+    const rotateCases = (direction = 1) => { const total = cases.filter((item) => !filter || item.cat === filter).length; caseOffset = (caseOffset + direction * 3 + total) % total; caseAnimate = true; render(); };
+    caseTimer = setTimeout(() => rotateCases(1), 12000);
+    carousel.addEventListener('mouseenter', () => clearTimeout(caseTimer));
+    carousel.addEventListener('mouseleave', () => { clearTimeout(caseTimer); caseTimer = setTimeout(() => rotateCases(1), 12000); });
+    carousel.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].screenX; clearTimeout(caseTimer); }, { passive: true });
+    carousel.addEventListener('touchend', (event) => { const delta = event.changedTouches[0].screenX - touchStartX; if (Math.abs(delta) > 45) rotateCases(delta < 0 ? 1 : -1); else caseTimer = setTimeout(() => rotateCases(1), 12000); }, { passive: true });
+  }
   if (!document.querySelector('#team-highlights-style')) document.head.insertAdjacentHTML('beforeend', '<style id="team-highlights-style">.team-highlights{list-style:none;padding:0;margin:24px 0 12px;display:grid;gap:10px;max-width:680px}.team-highlights li{padding:12px 16px;background:#f3f8fc;border-left:3px solid #20c997;color:#31516b;line-height:1.55}.team-highlights li:before{content:"✓";color:#10a982;font-weight:800;margin-right:10px}</style>');
   if (!document.querySelector('#team-evidence-style')) document.head.insertAdjacentHTML('beforeend', '<style id="team-evidence-style">.team-evidence{display:flex;gap:20px;flex-wrap:wrap;margin:22px 0 28px}.team-evidence img{width:420px;height:270px;object-fit:contain;background:#fff;border:1px solid #dce7f1;padding:12px;box-shadow:0 12px 28px rgba(16,42,67,.12)}@media(max-width:700px){.team-evidence img{width:min(100%,420px);height:auto}}</style>');
   if (!document.querySelector('#brand-image-style')) document.head.insertAdjacentHTML('beforeend', '<style id="brand-image-style">.brand-logo{display:flex;align-items:center}.brand-logo img{display:block;width:154px;height:auto}</style>');
